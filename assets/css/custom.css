@@ -1,0 +1,60 @@
+/* 隐藏文章页面的日期（footline 区域） */
+.footline {
+    display: none;
+}
+
+article ul, .content ul {
+    margin-left: 2rem !important;
+}
+/* 强制覆盖所有标题字体 */
+#R-body-inner h1,
+#R-body-inner h2,
+#R-body-inner h3,
+#R-body-inner h4,
+article h1,
+.default h1,
+body h1 {
+    font-family: "SimHei", Arial, sans-serif !important;
+}
+
+/* 电脑端：5列网格 */
+#R-body-inner .children-list {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1rem !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+/* 手机端：双列 Grid 布局 */
+@media (max-width: 768px) {
+    #R-body-inner .children-list {
+        display: grid !important;               /* 改为 grid */
+        grid-template-columns: repeat(2, 1fr) !important;  /* 双列 */
+        gap: 0.8rem !important;                /* 列间距 */
+        padding-left: 0 !important;            /* 可选：去掉左侧内边距 */
+    }
+    #R-body-inner .children-list li {
+        margin-bottom: 0.5rem !important;
+        /* 如果需要去掉列表项前的圆点，可以加 list-style: none; */
+    }
+}
+
+/* Grid 布局下用伪元素模拟圆点 */
+.children-list li {
+    position: relative;
+    list-style: none;  /* 去掉原生圆点 */
+    padding-left: 1.2rem;
+}
+.children-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000;  /* 圆点颜色，可改 */
+    font-size: 1.2em;
+}
+
+
+#R-sidebar, #R-sidebar * {
+    font-size: 1.1rem !important;
+}

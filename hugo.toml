@@ -1,0 +1,48 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+title = '白起文案汇编'
+theme = 'hugo-theme-relearn'
+defaultContentLanguage = "zh"
+
+# 启用搜索功能，Relearn 需要输出 JSON 索引文件[reference:2]
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+[menus]
+ [[menu.main]]
+    name = "搜索"
+    url = "/search.html"
+    weight = 5
+ [[menus.main]]
+    identifier = "yuehui"
+    name = "约会"
+    url = "/约会/"
+    weight = 10
+  [[menus.main]]
+    identifier = "xunxi"
+    name = "讯息"
+    url = "/讯息/"
+    weight = 20
+  [[menus.main]]
+    identifier = "zhuxian"
+    name = "主线"
+    url = "/主线/"
+    weight = 30
+  [[menus.main]]
+    identifier = "qita"
+    name = "其他"
+    url = "/其他/"
+    weight = 40
+  [[menus.main]]
+    identifier = "xianshihuixiang"
+    name = "现实回响"
+    url = "/现实回响/"
+    weight = 50
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  themeVariant = "blue"
+  custom_css = ["css/custom.css"]
+  alwaysopen = false
+  collapsibleMenu = true

@@ -1,0 +1,10 @@
+{{- $pages := .Page.Pages -}}
+{{- if $pages -}}
+  <ul class="children-list" data-pagefind-ignore>
+  {{- range .Page.Pages }}
+    <li data-pagefind-ignore><a href="{{ .RelPermalink }}">{{ .Title | default .Name }}</a></li>
+    {{- end -}}
+  </ul>
+{{- else -}}
+  <p>该目录下暂无内容。</p>
+{{- end -}}

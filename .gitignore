@@ -1,0 +1,7 @@
+public/
+resources/
+.hugo_build.lock
+themes/
+pagefind_extended.exe
+*.log
+node_modules/
