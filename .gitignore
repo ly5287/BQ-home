@@ -13,7 +13,7 @@ resources/
 *~
 
 # Pagefind 可执行文件（可重新下载）
-pagefind_extended.exe
+# pagefind_extended.exe
 
 # 可选：如果不想提交主题，可以取消注释下一行
 # themes/
