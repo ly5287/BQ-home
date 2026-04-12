@@ -26,7 +26,7 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Pagefind
         run: |
-          wget -O ${{ runner.temp }}/pagefind.tar.gz https://github.com/CloudCannon/pagefind/releases/download/v1.5.0/pagefind-extended-v1.5.0-x86_64-unknown-linux-musl.tar.gz
+          wget -O ${{ runner.temp }}/pagefind.tar.gz https://github.com/Pagefind/pagefind/releases/download/v1.5.0/pagefind-extended-v1.5.0-x86_64-unknown-linux-musl.tar.gz
           tar -xzf ${{ runner.temp }}/pagefind.tar.gz -C ${{ runner.temp }}
           sudo mv ${{ runner.temp }}/pagefind_extended /usr/local/bin/pagefind_extended
       - name: Checkout
