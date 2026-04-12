@@ -50,15 +50,11 @@ jobs:
       # 👇
       - name: Run Pagefind
         run: pagefind --site public --output-path public/pagefind
-
+      - name: Override search page with template
+        run: cp static/search-template.html public/search/index.html
       # 👇
       - name: Post-process search page
         run: pwsh replace-search.ps1
-      - name: Debug search page
-        run: |
-          echo "=== First 50 lines of public/search/index.html ==="
-          head -50 public/search/index.html
-          echo "=== End of snippet ==="
 
       # 👇 关键：只上传public根目录，绝对不要加/public
       - name: Upload artifact
