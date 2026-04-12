@@ -53,7 +53,7 @@ jobs:
 
       # 👇
       - name: Post-process search page
-         run: pwsh replace-search.ps1
+        run: pwsh replace-search.ps1
 
       # 👇 关键：只上传public根目录，绝对不要加/public
       - name: Upload artifact

@@ -1,5 +1,5 @@
 # 替换 public/search/index.html 中的内容为 Pagefind 搜索界面
-$file = "public\search\index.html"
+$file = "public/search/index.html"
 if (Test-Path $file) {
     $content = Get-Content $file -Raw -Encoding UTF8
     # 找到 <main id="R-body-inner"...> 和 </main> 之间的内容
