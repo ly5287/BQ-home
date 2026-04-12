@@ -3,7 +3,7 @@ languageCode = 'zh-cn'
 title = '白起文案汇编'
 theme = 'hugo-theme-relearn'
 defaultContentLanguage = "zh"
-canonifyURLs=true #强制绝对路径
+canonifyURLs = true  # 强制正确路径，避免404
 
 # 启用搜索功能，Relearn 需要输出 JSON 索引文件[reference:2]
 [outputs]

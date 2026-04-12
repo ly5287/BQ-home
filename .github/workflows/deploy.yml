@@ -24,20 +24,38 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Install Pagefind
         run: npm install -g pagefind
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      # 👇 关键：hugo构建不加-d，默认生成到public，避免嵌套
       - name: Build with Hugo
         run: |
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      # 👇
       - name: Run Pagefind
         run: pagefind --site public --output-path public/pagefind
+
+      # 👇
+      - name: Post-process search page
+         run: pwsh replace-search.ps1
+
+      # 👇 关键：只上传public根目录，绝对不要加/public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
