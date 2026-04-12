@@ -102,7 +102,7 @@
       {{- end }}
     {{- end }}
   {{- end }}
-        <search>{{ if $link }}<form action="{{ "search/" | relURL }}" method="get" class="searchbox default-animation">{{ end }}
+        <search>{{ if $link }}<form action="/search/" method="get">{{ end }}
           <div class="searchbox default-animation">
             {{ if $link }}<button class="search-detail" type="submit" title="{{ T "Search" }} (CTRL+ALT+f)">{{ end }}<i class="fas fa-fw fa-search"{{ if not $link }} title="{{ T "Search" }} (CTRL+ALT+f)"{{ end }}></i>{{ if $link }}</button>{{ end }}
             <label class="a11y-only" for="R-search-by">{{ T "Search" }}</label>

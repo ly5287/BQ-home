@@ -1,6 +1,6 @@
 @echo off
 cd /d F:\bq\_website\mywebsite
-hugo
+hugo --baseURL http://localhost:3001/
 .\pagefind_extended.exe --site public
 echo 替换搜索页面...
 powershell -ExecutionPolicy Bypass -File replace-search.ps1
