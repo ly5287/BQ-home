@@ -37,7 +37,7 @@ jobs:
         run: |
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Run Pagefind
-        run: pagefind --site public
+        run: pagefind --site public --output public/pagefind
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
