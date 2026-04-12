@@ -7,8 +7,6 @@ title: "白起文案汇编"
 
 </div>
 
-[🔍 点击使用高级搜索](/search.html)
-
 这里包含以下几个主要版块：
 
 <span style="font-size:25px">

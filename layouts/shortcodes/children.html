@@ -1,8 +1,9 @@
 {{- $pages := .Page.Pages -}}
 {{- if $pages -}}
-  <ul class="children-list" data-pagefind-ignore>
+  <ul class="children-list" data-pagefind-ignore style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 0.8rem;">
   {{- range .Page.Pages }}
-    <li data-pagefind-ignore><a href="{{ .RelPermalink }}">{{ .Title | default .Name }}</a></li>
+    <li data-pagefind-ignore style="margin: 0;">
+         <a href="{{ .RelPermalink }}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #fff; color: #333; text-decoration: none; border-radius: 4px; font-size:1.3rem;">{{ .Title | default .Name }}</a></li>
     {{- end -}}
   </ul>
 {{- else -}}

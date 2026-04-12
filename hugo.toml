@@ -44,5 +44,6 @@ defaultContentLanguage = "zh"
 [params]
   themeVariant = "blue"
   custom_css = ["css/custom.css"]
+  custom_js = ["/js/custom.js"]
   alwaysopen = false
   collapsibleMenu = true

@@ -20,7 +20,7 @@ body h1 {
 /* 电脑端：5列网格 */
 #R-body-inner .children-list {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 1rem !important;
     list-style: none !important;
     padding-left: 0 !important;
@@ -44,17 +44,31 @@ body h1 {
 .children-list li {
     position: relative;
     list-style: none;  /* 去掉原生圆点 */
-    padding-left: 1.2rem;
+    padding-left: 0.6rem;
+    line-height: 1;
 }
 .children-list li::before {
     content: "•";
     position: absolute;
     left: 0;
+    top: 30%;
+    font-size: 30px;    /* 固定大小，不随字体缩放 */
+    margin-top: -7px;    /* 使用 margin-top 微调垂直位置，基于当前字体大小 */
     color: #000;  /* 圆点颜色，可改 */
-    font-size: 1.2em;
 }
 
-
+/* 侧边栏文字大小 */
 #R-sidebar, #R-sidebar * {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
+}
+
+/* 调整标签区域的下边距和左侧空白 */
+.R-taxonomy.taxonomy-tags {
+    margin-bottom: -10px !important;  /* 减小与正文的距离，原值可能较大 */
+    padding-left: 0 !important;        /* 去除左侧空白 */
+}
+/* 如果内部 ul 也有左侧空白，一并去除 */
+.R-taxonomy.taxonomy-tags ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
