@@ -1,7 +1,19 @@
+# Hugo 生成目录
 public/
 resources/
 .hugo_build.lock
-themes/
-pagefind_extended.exe
+
+# 本地服务器相关
+.DS_Store
 *.log
-node_modules/
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+
+# Pagefind 可执行文件（可重新下载）
+pagefind_extended.exe
+
+# 可选：如果不想提交主题，可以取消注释下一行
+# themes/
