@@ -60,7 +60,7 @@
       {{- if .IsHome }}
         {{- $templateres := resources.Get $searchIndexTemplate }}
         {{- $resultres := $templateres | resources.ExecuteAsTemplate $searchIndexUrl site.Home }}
-        {{- /* the following code causes Hugo to generate our file in public */}}
+        {{- /* 强制 Hugo 在 public 目录生成文件 */}}
         {{- $url := $resultres.RelPermalink }}
       {{- end }}
       {{- with resources.Get (printf "/js/search-%s.js" $adapter) }}
@@ -112,9 +112,10 @@
         {{ if $link }}</form>{{ end }}</search>
 {{- end }}
 
-{{- if or (eq $location "default") .Store.Get "hasSearch" }}
+{{- if or (eq $location "default") $page.Store.Get "hasSearch" }}
   {{- if not $disableSearchIndex }}
-    {{- $dep := printf "dependencies/search-%s.html" $adapter }}
-    {{- partial $dep (dict "page" $page "location" $location) }}
+    {{- /* 适配自定义 partial 路径：调用 dependencies/search.html 时传递参数 */}}
+    {{- $dep := "dependencies/search.html" }}
+    {{- partial $dep (dict "page" $page "location" $location "adapter" $adapter) }}
   {{- end }}
 {{- end }}
