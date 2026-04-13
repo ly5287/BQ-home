@@ -13,12 +13,19 @@
             document.getElementById('pagefind-search').innerHTML = '<p style="color:red;">搜索功能加载失败，请刷新页面重试。</p>';
             return;
           }
-          new PagefindUI({
-            element: "#pagefind-search",
-            baseUrl: {{ "pagefind/" | relURL | jsonify | safeJS }},
-            showSubResults: true,
-            autofocus: true
-          });
+new PagefindUI({
+  element: "#pagefind-search",
+  baseUrl: {{ "pagefind/" | relURL | jsonify | safeJS }},
+  showSubResults: false,  // 关闭子结果展示，防止锚点片段单独显示
+  processResult: (result) => {
+    // 如果结果中存在多个片段，只保留第一个（通常是正文主片段）
+    if (result.sub_results && result.sub_results.length > 0) {
+      // 清除子结果，避免重复链接
+      result.sub_results = [];
+    }
+    return result;
+  }
+});
           const urlParams = new URLSearchParams(window.location.search);
           const q = urlParams.get('q');
           if (q) {
