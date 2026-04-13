@@ -30,9 +30,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Pagefind
-        run: npm install -g pagefind
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -48,18 +45,10 @@ jobs:
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       # 👇
-      - name: Run Pagefind
-        run: pagefind --site public --output-path public/pagefind
-
-      # ========== 以下是我只新增的 3 行（不影响任何原有功能） ==========
-      - name: Install PowerShell
-        run: sudo apt-get install -y powershell
-      
-      - name: Replace search page
-        run: pwsh ./replace-search.ps1
-      # ========== 以上是我只新增的 3 行 ==========
-
-      # 👇 关键：只上传public根目录，绝对不要加/public
+      - name: Index with Pagefind
+        run: npx pagefind@1.5.0 --site public
+ 
+      # 👇
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
