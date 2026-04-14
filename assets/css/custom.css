@@ -72,15 +72,3 @@ body h1 {
     padding-left: 0 !important;
     margin-left: 0 !important;
 }
-
-
-/* 尝试修改页面主题颜色 */
-:root {
-  --MAIN-LINK-color: #2D7FCC; /* 正文中超链接的颜色 */
-  --MENU-HEADER-BG-color: #2D7FCC; /* 左侧边栏顶部区域的背景色 */
-  --MENU-SEARCH-BG-color: #1f5a8e; /* 左侧搜索框的背景色（通常比主色深） */
-  --MENU-VISITED-color: #2D7FCC; /* 侧边栏已访问过链接的颜色 */
-  --MENU-SECTIONS-ACTIVE-BG-color: #1b1f22; /* 保持默认 */
-  --MENU-HEADER-BORDER-color: #4d9fe0; /* 左侧边栏顶部的边框色（通常比主色浅） */
-  --MENU-SEARCH-BORDER-color: #4d9fe0; /* 搜索框的边框色 */
-}
