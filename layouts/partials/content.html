@@ -1,23 +1,6 @@
-{{- $content := .Content -}}
-
-{{- /* 1. 白起段落（带加粗）变色 #1c90f3 */ -}}
-{{- $regexBaiQiStrong := `<p><strong>(白起[：:])</strong>(.*?)</p>` -}}
-{{- $replacementBaiQiStrong := `<p><span style="color: #1c90f3;"><strong>$1</strong>$2</span></p>` -}}
-{{- $content = $content | replaceRE $regexBaiQiStrong $replacementBaiQiStrong -}}
-
-{{- /* 2. 玩家段落（带加粗，支持 HTML 实体引号和直接字符引号）变色 #E2B245 */ -}}
-{{- $regexPlayerStrong := `<p><strong>(&ldquo;玩家名称&rdquo;|“玩家名称”|"玩家名称"|\[玩家姓名\])[：:]</strong>(.*?)</p>` -}}
-{{- $replacementPlayerStrong := `<p><span style="color: #E2B245;"><strong>$1：</strong>$2</span></p>` -}}
-{{- $content = $content | replaceRE $regexPlayerStrong $replacementPlayerStrong -}}
-
-{{- /* 3. 玩家段落（不带加粗，处理意外情况）变色 #E2B245 */ -}}
-{{- $regexPlayerPlain := `<p>(&ldquo;玩家名称&rdquo;|“玩家名称”|"玩家名称"|\[玩家姓名\])[：:](.*?)</p>` -}}
-{{- $replacementPlayerPlain := `<p><span style="color: #E2B245;">$1：$2</span></p>` -}}
-{{- $content = $content | replaceRE $regexPlayerPlain $replacementPlayerPlain -}}
-
-{{- $content | safeHTML -}}
-
 {{- partial "tags.html" . }}
+
+{{- .Content | safeHTML -}}
 
 {{- if .Parent }}
 <div class="back-to-parent" style="margin-top: 2rem; text-align: right;">

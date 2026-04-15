@@ -3,9 +3,12 @@
     display: none;
 }
 
-article ul, .content ul {
-    margin-left: 2rem !important;
+/* 仅针对 children 短代码生成的列表缩进 */
+.children-list {
+    margin-left: 2rem !important;   /* 或者 padding-left: 2rem，根据实际效果调整 */
+    padding-left: 0;                /* 避免双重缩进 */
 }
+
 /* 强制覆盖所有标题字体 */
 #R-body-inner h1,
 #R-body-inner h2,
@@ -57,9 +60,20 @@ body h1 {
     color: #000;  /* 圆点颜色，可改 */
 }
 
-/* 侧边栏文字大小 */
+
+/* 侧边栏整体文字大小 */
 #R-sidebar, #R-sidebar * {
     font-size: 1.2rem !important;
+}
+/* 标题字号，并用 !important 覆盖通配符 */
+#R-logo .logo-title {
+    font-size: 1.8rem !important;
+    line-height: 1.8;          /* 增加行高，让标题本身更透气 */
+}
+@media (max-width: 768px) {
+    #R-logo .logo-title {
+        font-size: 1.5rem !important;
+    }
 }
 
 /* 调整标签区域的下边距和左侧空白 */
@@ -72,3 +86,4 @@ body h1 {
     padding-left: 0 !important;
     margin-left: 0 !important;
 }
+
