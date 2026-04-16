@@ -1,0 +1,29 @@
+<!-- compat way of adding custom scripts in old Hugo documentation -->
+{{- $assetBusting := partialCached "assetbusting.gotmpl" site.Home }}
+
+{{- $filePath := "css/custom.css" }}
+{{- with (resources.Get (printf "/%s" $filePath)) }}
+    <link href="{{ .RelPermalink }}{{ $assetBusting }}" rel="stylesheet">
+{{- else }}
+  {{- if (fileExists (printf "/static/%s" $filePath)) }}
+    <link href="{{ printf "%s" $filePath | relURL }}{{ $assetBusting }}" rel="stylesheet">
+  {{- end }}
+{{- end }}
+
+{{- $filePath := "js/custom.js" }}
+{{- with (resources.Get (printf "/%s" $filePath)) }}
+    <script src="{{ .RelPermalink }}{{ $assetBusting }}" defer></script>
+{{- else }}
+  {{- if (fileExists (printf "/static/%s" $filePath)) }}
+    <script src="{{ printf "%s" $filePath | relURL }}{{ $assetBusting }}" defer></script>
+  {{- end }}
+{{- end }}
+
+<!-- 预加载图标字体，解决首次加载不显示的问题 -->
+<link rel="preload" href="{{ "fonts/fontawesome/webfonts/fa-solid-900.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ "fonts/fontawesome/webfonts/fa-brands-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ "fonts/fontawesome/webfonts/fa-regular-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+
+{{- if eq .RelPermalink "/search/" }}
+<meta name="pagefind" content="false">
+{{- end }}
