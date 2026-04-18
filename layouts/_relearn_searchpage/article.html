@@ -15,7 +15,7 @@
           }
 new PagefindUI({
   element: "#pagefind-search",
-  baseUrl: {{ "pagefind/" | relURL | jsonify | safeJS }},
+  baseUrl: {{ if or (hasPrefix site.BaseURL "https://ly5287.github.io") (eq hugo.Environment "development") }}"/BQ-home/"{{ else }}"/"{{ end }},
   showSubResults: false,  // 关闭子结果展示，防止锚点片段单独显示
   processResult: (result) => {
     // 如果结果中存在多个片段，只保留第一个（通常是正文主片段）
