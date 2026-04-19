@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>其他 :: 白起文案汇编</title>
+    <link>http://localhost:3001/%E5%85%B6%E4%BB%96/index.html</link>
+    <description>—— 散落在风中的碎片太多，但一片也舍不得遗落。 该目录下暂无内容。</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

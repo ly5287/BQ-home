@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>现实回响 :: 白起文案汇编</title>
+    <link>http://localhost:3001/%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/index.html</link>
+    <description>——屏幕之外，也有他留下的温度。 该目录下暂无内容。</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

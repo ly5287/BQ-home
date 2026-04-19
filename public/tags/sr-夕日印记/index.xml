@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SR-夕日印记 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/sr-%E5%A4%95%E6%97%A5%E5%8D%B0%E8%AE%B0/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/sr-%E5%A4%95%E6%97%A5%E5%8D%B0%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>印记之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E5%8D%B0%E8%AE%B0%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E5%8D%B0%E8%AE%B0%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SR-夕日印记 解锁 好感度达到 4 级 约会简介 久违的同学聚会，我邀请白起和我一起去参加。熟悉的恋语高中，却发生了一些和以前都不一样的事，但也正因如此，我和白起对彼此的过去有了更多的了解，更在回忆中留下了共同的痕迹。</description>
+    </item>
+  </channel>
+</rss>

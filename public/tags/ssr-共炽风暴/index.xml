@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSR-共炽风暴 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/ssr-%E5%85%B1%E7%82%BD%E9%A3%8E%E6%9A%B4/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/ssr-%E5%85%B1%E7%82%BD%E9%A3%8E%E6%9A%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>侠盗之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E4%BE%A0%E7%9B%97%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E4%BE%A0%E7%9B%97%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SSR-共炽风暴 解锁 好感度达到 6 级 约会简介 作为一名优秀的新人警员，由于卷入了一场暗藏阴谋的宝石失窃案，我被警局开除。就在我为了查明幕后黑手，潜入赛车俱乐部时，一个名为白起的俱乐部新贵主动邀我合作。但渐渐地我发现，他似乎还有更加隐秘的身份……</description>
+    </item>
+    <item>
+      <title>加班夜宵</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0220_%E5%8A%A0%E7%8F%AD%E5%A4%9C%E5%AE%B5_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0220_%E5%8A%A0%E7%8F%AD%E5%A4%9C%E5%AE%B5_head/index.html</guid>
+      <description>获取途径：SSR-共炽风暴进化解锁</description>
+    </item>
+    <item>
+      <title>怪盗飞车</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0266_%E6%80%AA%E7%9B%97%E9%A3%9E%E8%BD%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0266_%E6%80%AA%E7%9B%97%E9%A3%9E%E8%BD%A6_head/index.html</guid>
+      <description>获取途径：SSR-共炽风暴拿卡解锁</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SR-童趣时光 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/sr-%E7%AB%A5%E8%B6%A3%E6%97%B6%E5%85%89/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/sr-%E7%AB%A5%E8%B6%A3%E6%97%B6%E5%85%89/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>游乐场之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E6%B8%B8%E4%B9%90%E5%9C%BA%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E6%B8%B8%E4%B9%90%E5%9C%BA%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SR-璀璨的心、SR-童趣时光、R-任性邀约 中任意一个 好感度达到 7 级 约会简介 我和白起一起约好参加游乐场嘉年华，一件件意想不到的事情接踵而至，心情也像过山车般起伏不定。</description>
+    </item>
+  </channel>
+</rss>

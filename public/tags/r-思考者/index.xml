@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R-思考者 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/r-%E6%80%9D%E8%80%83%E8%80%85/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/r-%E6%80%9D%E8%80%83%E8%80%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>随访之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E9%9A%8F%E8%AE%BF%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E9%9A%8F%E8%AE%BF%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SR-激战、R-思考者 中任意一个 好感度达到 4 级 约会简介 在警局采访时遇到了白起，女警对他频频献殷勤引来误会重重。令人没想到的是一场惊心动魄的枪战正等着我们。</description>
+    </item>
+  </channel>
+</rss>

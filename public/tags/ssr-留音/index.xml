@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSR-留音 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/ssr-%E7%95%99%E9%9F%B3/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/ssr-%E7%95%99%E9%9F%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>香影之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E9%A6%99%E5%BD%B1%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E9%A6%99%E5%BD%B1%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SSR-留音 解锁 好感度达到 6 级 约会简介 根据组织上的命令，我和白起伪装成一对新婚夫妻来接近我们的目标人物。为了顺利转移所有的情报，我们举办了一场盛大的酒会，但在酒会结束后，白起却告诉我……</description>
+    </item>
+    <item>
+      <title>谍战小说</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0113_%E8%B0%8D%E6%88%98%E5%B0%8F%E8%AF%B4_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0113_%E8%B0%8D%E6%88%98%E5%B0%8F%E8%AF%B4_head/index.html</guid>
+      <description>获取途径：SSR-留音拿卡解锁</description>
+    </item>
+    <item>
+      <title>派对准备</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0114_%E6%B4%BE%E5%AF%B9%E5%87%86%E5%A4%87_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0114_%E6%B4%BE%E5%AF%B9%E5%87%86%E5%A4%87_head/index.html</guid>
+      <description>获取途径：SSR-留音进化解锁</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+/* 隐藏文章页面的日期（footline 区域） */
+.footline {
+    display: none;
+}
+
+/* 仅针对 children 短代码生成的列表缩进 */
+.children-list {
+    margin-left: 2rem !important;   /* 或者 padding-left: 2rem，根据实际效果调整 */
+    padding-left: 0;                /* 避免双重缩进 */
+}
+
+/* 强制覆盖所有标题字体 */
+#R-body-inner h1,
+#R-body-inner h2,
+#R-body-inner h3,
+#R-body-inner h4,
+article h1,
+.default h1,
+body h1 {
+    font-family: "SimHei", Arial, sans-serif !important;
+}
+
+/* 电脑端：5列网格 */
+#R-body-inner .children-list {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+/* 手机端：双列 Grid 布局 */
+@media (max-width: 768px) {
+    #R-body-inner .children-list {
+        display: grid !important;               /* 改为 grid */
+        grid-template-columns: repeat(2, 1fr) !important;  /* 双列 */
+        gap: 0.8rem !important;                /* 列间距 */
+        padding-left: 0 !important;            /* 可选：去掉左侧内边距 */
+    }
+    #R-body-inner .children-list li {
+        margin-bottom: 0.5rem !important;
+        /* 如果需要去掉列表项前的圆点，可以加 list-style: none; */
+    }
+}
+
+/* Grid 布局下用伪元素模拟圆点 */
+.children-list li {
+    position: relative;
+    list-style: none;  /* 去掉原生圆点 */
+    padding-left: 0.6rem;
+    line-height: 1;
+}
+.children-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-size: 30px;    /* 固定大小，不随字体缩放 */
+    margin-top: -7px;    /* 使用 margin-top 微调垂直位置，基于当前字体大小 */
+    color: #000;  /* 圆点颜色，可改 */
+}
+
+
+/* 侧边栏整体文字大小 */
+#R-sidebar, #R-sidebar * {
+    font-size: 1.2rem !important;
+}
+/* 标题字号，并用 !important 覆盖通配符 */
+#R-logo .logo-title {
+    font-size: 1.8rem !important;
+    line-height: 1.8;          /* 增加行高，让标题本身更透气 */
+}
+@media (max-width: 768px) {
+    #R-logo .logo-title {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* 调整标签区域的下边距和左侧空白 */
+.R-taxonomy.taxonomy-tags {
+    margin-bottom: -10px !important;  /* 减小与正文的距离，原值可能较大 */
+    padding-left: 0 !important;        /* 去除左侧空白 */
+}
+/* 如果内部 ul 也有左侧空白，一并去除 */
+.R-taxonomy.taxonomy-tags ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+

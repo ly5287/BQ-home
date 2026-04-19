@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SR-起跑线 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/sr-%E8%B5%B7%E8%B7%91%E7%BA%BF/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/sr-%E8%B5%B7%E8%B7%91%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>觅趣之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E8%A7%85%E8%B6%A3%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E8%A7%85%E8%B6%A3%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SR-起跑线 解锁 好感度达到 8 级 约会简介 搜罗趣闻的最后一天，我和白起邂逅了一场市民接力赛，并收到了两位大叔的参与邀请。就在我想拒绝时，白起却出乎意料地鼓励我参加，并告诉了我特殊的理由……</description>
+    </item>
+  </channel>
+</rss>

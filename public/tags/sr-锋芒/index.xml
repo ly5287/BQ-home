@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SR-锋芒 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/sr-%E9%94%8B%E8%8A%92/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/sr-%E9%94%8B%E8%8A%92/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>竞技之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E7%AB%9E%E6%8A%80%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/sr/%E7%AB%9E%E6%8A%80%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SR-锋芒 解锁 好感度达到 7 级 约会简介 我和白起来到一家俱乐部参加真人CS竞技，在这里，我收获了一段与他并肩作战的独特体验。更重要的是，将我的心声也传递给了他……</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSR-圈地侵夺 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/ssr-%E5%9C%88%E5%9C%B0%E4%BE%B5%E5%A4%BA/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/ssr-%E5%9C%88%E5%9C%B0%E4%BE%B5%E5%A4%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>黎光之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E9%BB%8E%E5%85%89%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E9%BB%8E%E5%85%89%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SSR-圈地侵夺 解锁 好感度达到 6 级 约会简介 情人节临近，白起正在执行任务，我也在为刚策划的婚恋节目忙碌着。我做好要和工作一起过节的准备，谁知节日当天，白起以一场惊人的方式出现在了我面前。惊喜之余，我了解到原来他为了和我共度情人节，早已谋划许久……</description>
+    </item>
+  </channel>
+</rss>

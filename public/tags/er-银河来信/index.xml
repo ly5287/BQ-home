@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ER-银河来信 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/er-%E9%93%B6%E6%B2%B3%E6%9D%A5%E4%BF%A1/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/er-%E9%93%B6%E6%B2%B3%E6%9D%A5%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>流星之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/er/%E6%B5%81%E6%98%9F%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/er/%E6%B5%81%E6%98%9F%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 ER-银河来信 解锁 好感度达到 5 级 约会简介 我收到了一封意味不明的邀请函，恰好白起打来电话，告诉我有一件案子的线索和我的公司有关，我们在约好的地点碰面后，我告诉了白起邀请函的事，白起说这是一份犯罪预告函……</description>
+    </item>
+    <item>
+      <title>流浪的行星</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0102_%E6%B5%81%E6%B5%AA%E7%9A%84%E8%A1%8C%E6%98%9F_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0102_%E6%B5%81%E6%B5%AA%E7%9A%84%E8%A1%8C%E6%98%9F_head/index.html</guid>
+      <description>获取途径：ER-银河来信四阶解锁</description>
+    </item>
+  </channel>
+</rss>

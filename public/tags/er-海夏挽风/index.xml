@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ER-海夏挽风 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/er-%E6%B5%B7%E5%A4%8F%E6%8C%BD%E9%A3%8E/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/er-%E6%B5%B7%E5%A4%8F%E6%8C%BD%E9%A3%8E/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>椰岛之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/er/%E6%A4%B0%E5%B2%9B%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/er/%E6%A4%B0%E5%B2%9B%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 ER-海夏挽风 解锁 好感度达到 4 级 约会简介 因为被宫老师的一张落日照片吸引，我和白起来到了海岛旅游，在这里我们拜访了正在教学交流的宫老师，在他的帮助下，我们阴差阳错地收获了海岛上的“最美的落日”。</description>
+    </item>
+    <item>
+      <title>贝壳星座</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0135_%E8%B4%9D%E5%A3%B3%E6%98%9F%E5%BA%A7_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0135_%E8%B4%9D%E5%A3%B3%E6%98%9F%E5%BA%A7_head/index.html</guid>
+      <description>获取途径：ER-海夏挽风四阶解锁</description>
+    </item>
+  </channel>
+</rss>

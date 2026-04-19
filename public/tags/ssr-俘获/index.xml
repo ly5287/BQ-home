@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSR-俘获 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/ssr-%E4%BF%98%E8%8E%B7/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/ssr-%E4%BF%98%E8%8E%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>试炼之约</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E8%AF%95%E7%82%BC%E4%B9%8B%E7%BA%A6_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A/ssr/%E8%AF%95%E7%82%BC%E4%B9%8B%E7%BA%A6_head/index.html</guid>
+      <description>解锁条件：&#xA;获得羁绊 SSR-俘获 解锁 好感度达到 7 级 约会简介 白起自从这次结束任务回家后，整个人都有些不对劲。时刻与我保持距离，整个人像紧绷的弦，在跟顾征了解到缘由后，我决定好好帮他放松一下……</description>
+    </item>
+    <item>
+      <title>念念</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0131_%E5%BF%B5%E5%BF%B5_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0131_%E5%BF%B5%E5%BF%B5_head/index.html</guid>
+      <description>获取途径：SSR-俘获拿卡解锁</description>
+    </item>
+    <item>
+      <title>恶意报复</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0132_%E6%81%B6%E6%84%8F%E6%8A%A5%E5%A4%8D_head/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/%E7%BE%81%E7%BB%8A%E8%A7%A3%E9%94%81/0132_%E6%81%B6%E6%84%8F%E6%8A%A5%E5%A4%8D_head/index.html</guid>
+      <description>获取途径：SSR-俘获进化解锁</description>
+    </item>
+  </channel>
+</rss>
