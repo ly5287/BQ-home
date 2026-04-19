@@ -48,3 +48,28 @@ document.addEventListener('DOMContentLoaded', function () {
     p.innerHTML = html;
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 仅处理标签详情页（URL 包含 /tags/ 且不是 /tags/ 本身）
+    if (window.location.pathname.includes('/tags/') && !window.location.pathname.endsWith('/tags/')) {
+        // 1. 修改主标题：将 :: 改为 : 并强制设置字号
+        const mainTitle = document.querySelector('article > h1');
+        if (mainTitle) {
+            mainTitle.textContent = mainTitle.textContent.replace('::', ':');
+            mainTitle.style.fontSize = '2.5rem';  // 直接内联样式，必定生效
+        }
+
+        // 2. 隐藏所有分组大字（h2 标签）
+        document.querySelectorAll('article > h2').forEach(h2 => {
+            h2.style.display = 'none';
+        });
+
+        // 3. 精准删除面包屑段落中的多余字符串 {class=...}，保留面包屑文本
+        const allParagraphs = document.querySelectorAll('article ul li p');
+        allParagraphs.forEach(p => {
+            // 移除 "{class=...}" 及其前面的空格
+            p.innerHTML = p.innerHTML.replace(/\s*\{class=.*?\}/g, '');
+        });
+    }
+});

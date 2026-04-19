@@ -1,0 +1,8 @@
+# Pagefind 配置文件
+force_language: zh
+exclude_selectors:
+  - "#R-sidebar"
+  - "#R-topbar"
+  - ".topbar-breadcrumbs"
+glob_exclude:
+  - "search/index.html"
