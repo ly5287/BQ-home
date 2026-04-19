@@ -46,13 +46,24 @@ jobs:
 
       # 👇
       - name: Index with Pagefind
-        run: npx pagefind@1.5.0 --site public --force-language zh
+        run: npx pagefind@1.5.0 --site public
+
+      # 👇用于在构建日志中确认分片文件存在
+      - name: Debug - List Pagefind output
+        run: |
+          echo "=== Pagefind root ==="
+          ls -la public/pagefind/
+          echo "=== Fragments ==="
+          ls -la public/pagefind/fragments/ || echo "Fragments dir not found"
+          echo "=== Index ==="
+          ls -la public/pagefind/index/ || echo "Index dir not found"
  
       # 👇
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './public'
+          retention-days: 1
 
   deploy:
     environment:
