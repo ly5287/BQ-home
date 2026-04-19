@@ -46,7 +46,7 @@ jobs:
 
       # 👇
       - name: Index with Pagefind
-        run: npx pagefind@1.5.0 --site public
+        run: npx pagefind@1.5.0 --site public --force-language zh
  
       # 👇
       - name: Upload artifact
