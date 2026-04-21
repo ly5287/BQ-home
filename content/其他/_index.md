@@ -13,8 +13,10 @@ title: "其他"
 <span style="font-size:25px">
 
 <style>
-main .children-list {
-    column-count: 1 !important;         /* 不应用分列 */
+#R-body-inner .children-list {
+    display: block !important;
+    column-count: 1 !important;
+    grid-template-columns: none !important;
 }
 </style>
 
