@@ -3,18 +3,11 @@
   <channel>
     <title>白起文案汇编</title>
     <link>http://localhost:3001/index.html</link>
-    <description>——关于他的故事和心动，都安放在这里。 这里包含以下几个主要版块：&#xA;讯息&#xD;约会&#xD;主线&#xD;其他&#xD;现实回响</description>
+    <description>——关于他的故事和心动，都安放在这里。 这里包含以下几个主要版块：&#xA;约会&#xD;主线&#xD;讯息&#xD;其他&#xD;现实回响</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:3001/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>讯息</title>
-      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/index.html</link>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/index.html</guid>
-      <description>——翻开手机，他的消息从不缺席。 朋友圈&#xD;电话&#xD;短信</description>
-    </item>
     <item>
       <title>约会</title>
       <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/index.html</link>
@@ -28,6 +21,13 @@
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/%E4%B8%BB%E7%BA%BF/index.html</guid>
       <description>——从特遣B-7到总指挥官，他每一步都走得很扎实。 第一季&#xD;第二季&#xD;第三季</description>
+    </item>
+    <item>
+      <title>讯息</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/index.html</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/index.html</guid>
+      <description>——翻开手机，他的消息从不缺席。 朋友圈&#xD;电话&#xD;短信</description>
     </item>
     <item>
       <title>其他</title>
