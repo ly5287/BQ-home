@@ -3,24 +3,17 @@
   <channel>
     <title>讯息 :: 白起文案汇编</title>
     <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/index.html</link>
-    <description>——翻开手机，他的消息从不缺席。 朋友圈&#xD;电话&#xD;短信</description>
+    <description>——翻开手机，他的消息从不缺席。 电话&#xD;短信&#xD;朋友圈</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:3001/%E8%AE%AF%E6%81%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>朋友圈</title>
-      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/index.html</link>
-      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/index.html</guid>
-      <description>周常朋友圈&#xD;陪伴朋友圈&#xD;羁绊朋友圈&#xD;特殊掉落</description>
-    </item>
-    <item>
       <title>电话</title>
       <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/index.html</guid>
-      <description>活动解锁&#xD;羁绊解锁&#xD;剧情解锁</description>
+      <description>剧情解锁&#xD;羁绊解锁&#xD;活动解锁</description>
     </item>
     <item>
       <title>短信</title>
@@ -28,6 +21,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E7%9F%AD%E4%BF%A1/index.html</guid>
       <description>自制擀面&#xD;自制擀面测试</description>
+    </item>
+    <item>
+      <title>朋友圈</title>
+      <link>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/index.html</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/index.html</guid>
+      <description>周常朋友圈&#xD;陪伴朋友圈&#xD;羁绊朋友圈&#xD;特殊掉落</description>
     </item>
   </channel>
 </rss>

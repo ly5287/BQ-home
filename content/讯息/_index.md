@@ -1,5 +1,6 @@
 ---
 title: "讯息"
+weight: 20
 ---
 <div style="text-align: center;">
 
