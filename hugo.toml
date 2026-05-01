@@ -6,7 +6,7 @@ defaultContentLanguage = "zh"
 
 # 启用搜索功能，Relearn 需要输出 JSON 索引文件[reference:2]
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 [menus]
  [[menu.main]]
     name = "搜索"

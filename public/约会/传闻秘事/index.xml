@@ -3,9 +3,30 @@
   <channel>
     <title>传闻秘事 :: 白起文案汇编</title>
     <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/index.html</link>
-    <description>该目录下暂无内容。</description>
+    <description>第一季&#xD;第二季&#xD;第三季</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一季</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%80%E5%AD%A3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%80%E5%AD%A3/index.html</guid>
+      <description>1.韩野的备忘录&#xD;2.倾斜时光&#xD;3.小弟的自我修养&#xD;4.浴火&#xD;5.小小守护者&#xD;6.最佳拍档&#xD;7.何谓正义&#xD;8.迷航&#xD;9.界限&#xD;10.与风同行&#xD;11.追随者&#xD;12.NW计划&#xD;13.折叠的时光</description>
+    </item>
+    <item>
+      <title>第二季</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%BA%8C%E5%AD%A3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%BA%8C%E5%AD%A3/index.html</guid>
+      <description>该目录下暂无内容。</description>
+    </item>
+    <item>
+      <title>第三季</title>
+      <link>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.html</guid>
+      <description>该目录下暂无内容。</description>
+    </item>
   </channel>
 </rss>
