@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第三季 :: 白起文案汇编</title>
+    <link>http://localhost:3001/1.%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.html</link>
+    <description>该目录下暂无内容。</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/1.%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>主线 :: 白起文案汇编</title>
+    <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/index.html</link>
+    <description>——从特遣B-7到总指挥官，他每一步都走得很扎实。 第一季&#xD;第二季&#xD;第三季</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一季</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/index.html</guid>
+      <description>该目录下暂无内容。</description>
+    </item>
+    <item>
+      <title>第二季</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/index.html</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/index.html</guid>
+      <description>41章 回归线</description>
+    </item>
+    <item>
+      <title>第三季</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%89%E5%AD%A3/index.html</guid>
+      <description>该目录下暂无内容。</description>
+    </item>
+  </channel>
+</rss>
