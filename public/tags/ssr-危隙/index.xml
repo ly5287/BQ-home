@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSR-危隙 :: 标签 :: 白起文案汇编</title>
+    <link>http://localhost:3001/tags/ssr-%E5%8D%B1%E9%9A%99/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/tags/ssr-%E5%8D%B1%E9%9A%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安全通报</title>
+      <link>http://localhost:3001/2.%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/%E7%BE%81%E7%BB%8A%E6%9C%8B%E5%8F%8B%E5%9C%88/ssr-%E5%8D%B1%E9%9A%99%E5%9B%9B%E6%98%9F_%E5%AE%89%E5%85%A8%E9%80%9A%E6%8A%A5/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/2.%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/%E7%BE%81%E7%BB%8A%E6%9C%8B%E5%8F%8B%E5%9C%88/ssr-%E5%8D%B1%E9%9A%99%E5%9B%9B%E6%98%9F_%E5%AE%89%E5%85%A8%E9%80%9A%E6%8A%A5/index.html</guid>
+      <description>获取途径：SSR-危隙四星&#xA;白起 ：最近特遣署会发布最新的安全手册，请大家及时阅读。&#xA;[玩家姓名] ：没事，我相信有特遣署在大家都会安心的。&#xA;白起 回复 [玩家姓名] ： 嗯，但依然要提高个人防范意识。&#xA;[玩家姓名] ：是最近的案件有了眉目吗？&#xA;白起 回复 [玩家姓名] ： 有关这点，不便告知。&#xA;[玩家姓名] ：所以安全手册上有什么内容是要注意的？&#xA;白起 回复 [玩家姓名] ： 具体的可以等正式通告。</description>
+    </item>
+  </channel>
+</rss>
