@@ -1,6 +1,6 @@
 baseURL = "https://ly5287.github.io/BQ-home/"
 languageCode = 'zh-cn'
-title = '白起文案汇编'
+title = '87档案室'
 theme = 'hugo-theme-relearn'
 defaultContentLanguage = "zh"
 
