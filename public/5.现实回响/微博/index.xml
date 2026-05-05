@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设定集 :: 87档案室</title>
+    <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.html</link>
+    <description>@白起7&#xD;@恋与制作人</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@白起7</title>
+      <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/%E7%99%BD%E8%B5%B77/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/%E7%99%BD%E8%B5%B77/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>@恋与制作人</title>
+      <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/%E5%AE%98%E5%8D%9A/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/%E5%AE%98%E5%8D%9A/index.html</guid>
+      <description>关于白起的十件事&#xD;如果礼物会说话&#xD;白起的信仰与道路&#xD;他如何度过你缺席的时光&#xD;信仰守护者</description>
+    </item>
+  </channel>
+</rss>
