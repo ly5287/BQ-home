@@ -64,3 +64,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// 强制主题高亮使用地址栏查询词
+(function() {
+  if (!window.relearn) return;
+  const q = new URLSearchParams(window.location.search).get('q')?.trim();
+  if (!q) return;
+  
+  // 将查询词写入 sessionStorage，覆盖左侧搜索框残留
+  window.sessionStorage.setItem(
+    window.relearn.absBaseUri + "/search-value",
+    q
+  );
+  
+  // 触发主题的高亮函数
+  function applyHighlight() {
+    if (typeof window.relearn.markSearch === 'function') {
+      window.relearn.markSearch(q);
+    } else {
+      setTimeout(applyHighlight, 50);
+    }
+  }
+  applyHighlight();
+})();
+
+// 返回搜索按钮（仅在详情页显示）
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const q = urlParams.get('q');
+  if (!q) return;
+
+  // 排除独立搜索页本身（路径包含 /search/ 时不显示按钮）
+  if (window.location.pathname.includes('/search/')) return;
+
+  const button = document.createElement('a');
+  // 直接跳转到独立搜索页并携带查询词
+  button.href = `/search/?q=${encodeURIComponent(q)}`;
+  button.className = 'back-to-search-btn';
+  button.innerHTML = '← 返回搜索结果';
+  button.title = '返回搜索结果页面';
+
+  const bodyInner = document.querySelector('#R-body-inner');
+  if (bodyInner) {
+    bodyInner.insertBefore(button, bodyInner.firstChild);
+  }
+})();
