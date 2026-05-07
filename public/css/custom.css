@@ -90,11 +90,11 @@ body h1 {
     margin-left: 0 !important;
 }
 
-
+/* 返回搜搜结果按钮 */
 .back-to-search-btn {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 330px;
   z-index: 999;
   padding: 0.6rem 1.2rem;
   background: #1c90f3;       /* 可按需换色 */
@@ -113,4 +113,41 @@ body h1 {
   transform: translateY(-2px);
   text-decoration: none;
   color: #fff;
+}
+
+/* 返回顶部按钮 */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1c90f3;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s;
+}
+#back-to-top:hover {
+  background: #0e7ad9;
+}
+
+
+
+/* 搜索结果层级 */
+.result-breadcrumb {
+  color: #888;
+  margin: -0.1rem 0 0.2rem 0;  /* 稍微上移，更贴近标题 */
+  font-weight: normal;
+  font-size: inherit;           /* 与周围文本一致 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
