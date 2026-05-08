@@ -94,7 +94,7 @@ body h1 {
 .back-to-search-btn {
   position: fixed;
   bottom: 30px;
-  left: 330px;
+  right: 80px;
   z-index: 999;
   padding: 0.6rem 1.2rem;
   background: #1c90f3;       /* 可按需换色 */
