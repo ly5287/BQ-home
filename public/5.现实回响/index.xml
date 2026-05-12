@@ -3,23 +3,23 @@
   <channel>
     <title>现实回响 :: 87档案室</title>
     <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/index.html</link>
-    <description>——屏幕之外，也有他留下的温度。 设定集&#xD;设定集</description>
+    <description>——屏幕之外，也有他留下的温度。 设定集&#xD;微博</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>设定集</title>
-      <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.html</guid>
-      <description>@白起7&#xD;@恋与制作人</description>
-    </item>
     <item>
       <title>设定集</title>
       <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E8%AE%BE%E5%AE%9A%E9%9B%86/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E8%AE%BE%E5%AE%9A%E9%9B%86/index.html</guid>
       <description>设定集一&#xD;设定集一 别册&#xD;设定集二&#xD;官网设定</description>
+    </item>
+    <item>
+      <title>微博</title>
+      <link>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/5.%E7%8E%B0%E5%AE%9E%E5%9B%9E%E5%93%8D/%E5%BE%AE%E5%8D%9A/index.html</guid>
+      <description>@白起7&#xD;@恋与制作人</description>
     </item>
   </channel>
 </rss>

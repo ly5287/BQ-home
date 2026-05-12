@@ -5,8 +5,18 @@ theme = 'hugo-theme-relearn'
 defaultContentLanguage = "zh"
 
 # 启用搜索功能，Relearn 需要输出 JSON 索引文件[reference:2]
+# 定义自定义输出格式（全文本 JSON 索引）
+[outputFormats.FulltextJSON]
+  name = "FulltextJSON"
+  mediaType = "application/json"
+  baseName = "fulltext"
+  isPlainText = true
+  notAlternative = true
+# 为首页启用该输出（home 是 Hugo 的首页页面类型）
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "FulltextJSON"]
+  page = ["HTML"]
+
 [menus]
  [[menu.main]]
     name = "搜索"

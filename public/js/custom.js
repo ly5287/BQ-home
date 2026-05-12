@@ -155,132 +155,195 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// 保底：手动补充 Pagefind 缺失的精确结果（支持多条目）
-// 强制补充结果 + 预览 + 返回按钮修复
-const missingWords = {
-  "手链": [
-    { title: "8.迷航", url: "/1.约会/传闻秘事/第一季/8.迷航/", excerpt: "……想到这，白起的脚步不禁放慢了些，他想起之前那个被落下的银杏手链，还有那名女孩。" },
-    { title: "9.界限", url: "/1.约会/传闻秘事/第一季/9.界限/", excerpt: "他也看到自己把一串手链放在女孩手心，金黄的银杏在她细瘦的手腕上飘荡；" },
-    { title: "占卜之约", url: "/1.约会/约会/er/占卜之约/", excerpt: "店里还卖很多用来转运的小道具呢，什么晶石戒指和手链之类的。" },
-    { title: "秋深之约", url: "/1.约会/约会/er/秋深之约/", excerpt: "重新遇见他时的场景、腕上银杏手链陪我度过的每个日夜，我们等过的每个日出、看过的每夜星光……" },
-    { title: "家居城之约", url: "/1.约会/约会/sr/家居城之约/", excerpt: "抬起手的瞬间看到挂在手腕上的银杏手链，想到了那个深夜赶来替我救场的男人。" },
-    { title: "录影棚之约", url: "/1.约会/约会/sr/录影棚之约/", excerpt: "白起没有说话，一个眼神把我的视线引向放了跟踪器的银杏手链。" },
-    { title: "故地之约", url: "/1.约会/约会/sr/故地之约/", excerpt: "小珠子串成的手链、有点儿旧但被保存得很好的布娃娃、透明的糖纸……" },
-    { title: "三人之约", url: "/1.约会/约会/ssr/三人之约/", excerpt: "一切正常，手链我也一直戴在身上。" },
-    { title: "微醺之约", url: "/1.约会/约会/ssr/微醺之约/", excerpt: "你送给我的礼物我很喜欢，送给我的手链我很喜欢。" },
-    { title: "炙热之约", url: "/1.约会/约会/ssr/炙热之约/", excerpt: "Kevin老师： 哎呀手链不能这样戴，太土了！" },
-    { title: "长旅之约", url: "/1.约会/约会/ssr/长旅之约_head/", excerpt: "当白起用小些的水晶为我制作了手链时，爱凑热闹的妖精们纷纷跑来祝福我们……" },
-    { title: "香影之约", url: "/1.约会/约会/ssr/香影之约/", excerpt: "恰好被白起口袋里的一条胭脂匣手链勾住了。" },
-    { title: "黎光之约", url: "/1.约会/约会/ssr/黎光之约/", excerpt: "他握住我的手腕，将手链的银杏叶压在我的脉搏上。" },
-    { title: "银杏胸针", url: "/2.讯息/朋友圈/羁绊朋友圈/SSR-圈地侵夺四星_银杏胸针/", excerpt: "我也很喜欢那个银杏叶的胸针~和我的手链正好凑一对！" },
-    { title: "手链与追踪器", url: "/2.讯息/电话/剧情解锁/0001_手链与追踪器/", excerpt: "那串手链…… 手链？哦，你说追踪器吗？ 我想问……学长，为什么手链是银杏呢？" },
-    { title: "并肩作战", url: "/2.讯息/电话/剧情解锁/0009_并肩作战/", excerpt: "嗯，不过，我一直都有戴着你送我的手链哦。" }
-  ]
-  // 以后添加新词只需在这里加，例如：
-  // "小混混": [
-  //   { title: "晚安心愿", url: "/约会/晚安心愿/", excerpt: "白起：有，但我没有很刻意地想你。" }
-  // ]
-};
-
+// ========== 全文本精确补充搜索（延迟注入，确保容器已存在） ==========
 (function() {
-  // 高亮函数
-  function highlightText(text, query) {
-    if (!query) return text;
-    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark class="search">$1</mark>');
+  let fulltextData = null;
+  let isLoading = false;
+
+  // 加载索引（只执行一次）
+  function loadFulltextIndex() {
+    if (fulltextData || isLoading) return;
+    isLoading = true;
+    fetch('/fulltext.json')
+      .then(res => res.json())
+      .then(data => {
+        fulltextData = data;
+        console.log('全文本索引加载完成，共', data.length, '个页面');
+        // 如果当前已有搜索结果（如 URL 带 q），立即补充
+        const query = (new URLSearchParams(window.location.search)).get('q')?.trim();
+        if (query) injectFulltextResults(query);
+      })
+      .catch(() => console.warn('全文本索引加载失败'))
+      .finally(() => isLoading = false);
   }
 
-  // 给 URL 附加 ?q= 参数
-  function appendQueryParam(url, query) {
-    const separator = url.includes('?') ? '&' : '?';
-    return `${url}${separator}q=${encodeURIComponent(query)}`;
-  }
+  // 注入补充结果
+  function injectFulltextResults(query, waitCount = 0) {
+    if (!query || !fulltextData || fulltextData.length === 0) return;
 
-  function injectAllAndFixCounter() {
-    const query = (new URLSearchParams(window.location.search)).get('q')?.trim();
-    if (!query || !missingWords[query]) return;
-
+    // 等待 Pagefind 的结果容器出现（最多等 2 秒）
     const container = document.querySelector('.pagefind-ui__results');
-    if (!container) return;
-
-    // 避免重复注入
-    if (container.querySelector('.manual-injected')) return;
-
-    const items = missingWords[query];
-    const templateResult = container.querySelector('.pagefind-ui__result:not(.manual-injected)');
-
-    items.forEach(item => {
-      let div;
-      if (templateResult) {
-        div = templateResult.cloneNode(true);
-        div.classList.add('manual-injected');
-        const link = div.querySelector('a');
-        if (link) {
-          link.href = appendQueryParam(item.url, query);   // ← 带上 ?q= 参数
-          link.textContent = item.title;
-        }
-        const excerptEl = div.querySelector('.pagefind-ui__result-excerpt');
-        if (excerptEl) {
-          excerptEl.innerHTML = highlightText(item.excerpt || '', query);
-        }
-      } else {
-        div = document.createElement('div');
-        div.className = 'pagefind-ui__result manual-injected';
-        div.innerHTML = `
-          <div class="pagefind-ui__result-inner">
-            <a class="pagefind-ui__result-link" href="${appendQueryParam(item.url, query)}">${item.title}</a>
-            <p class="pagefind-ui__result-excerpt">${highlightText(item.excerpt || '', query)}</p>
-          </div>`;
+    if (!container) {
+      if (waitCount < 25) {                     // 最多等待 5 秒（25 × 200ms）
+        setTimeout(() => injectFulltextResults(query, waitCount + 1), 200);
       }
-      container.insertBefore(div, container.firstChild);
-    });
-
-    // 强制更新计数（立即执行，并持续监控）
-    // 初始更新计数
-    updateCounter(container);
-  }
-
-  function updateCounter(container) {
-    const countEl = document.querySelector('.pagefind-ui__results-count');
-    if (!countEl || !container) return;
-    const total = container.querySelectorAll('.pagefind-ui__result').length;
-    const expected = `找到 ${total} 个结果`;
-    if (countEl.textContent !== expected) {
-      countEl.textContent = expected;
-    }
-  }
-
-  // 启动计数保护
-  function startCounterGuard() {
-    const countEl = document.querySelector('.pagefind-ui__results-count');
-    if (!countEl || countEl.dataset.guardReady) return;
-    countEl.dataset.guardReady = '1';
-    
-    const container = document.querySelector('.pagefind-ui__results');
-    if (!container) return;
-
-    const guard = new MutationObserver(() => {
-      const query = (new URLSearchParams(window.location.search)).get('q')?.trim();
-      if (!query || !missingWords[query]) return;
-      const total = container.querySelectorAll('.pagefind-ui__result').length;
-      const expected = `找到 ${total} 个结果`;
-      if (countEl.textContent !== expected) {
-        countEl.textContent = expected;
-      }
-    });
-    guard.observe(countEl, { childList: true, characterData: true, subtree: true });
-  }
-
-  // 定时注入（保留原有逻辑）
-  const timer = setInterval(() => {
-    if (document.querySelector('.pagefind-ui__results .manual-injected')) {
-      clearInterval(timer);
-      startCounterGuard();  // 注入成功后启动保护
       return;
     }
-    injectAllAndFixCounter();
-  }, 300);
+
+    // 构建路径→元素映射，并收集已有路径
+    const pathToElement = new Map();
+    const existingPaths = new Set();
+    container.querySelectorAll('.pagefind-ui__result').forEach(el => {
+      const a = el.querySelector('a[href]');
+      if (a) {
+        try {
+          const path = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
+          pathToElement.set(path, el);
+          existingPaths.add(path);
+        } catch(e) {}
+      }
+    });
+
+    // 找出全文本匹配的所有页面
+    const allMatches = fulltextData.filter(page => {
+      try {
+        const text = (page.title + ' ' + page.content).toLowerCase();
+        return text.includes(query.toLowerCase());
+      } catch(e) { return false; }
+    });
+
+    // 删除与全文本匹配重复的 Pagefind 条目，并记录重复数
+    let duplicateCount = 0;
+    allMatches.forEach(page => {
+      try {
+        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
+        if (existingPaths.has(pagePath)) {
+          const element = pathToElement.get(pagePath);
+          if (element) element.remove();
+          duplicateCount++;
+          existingPaths.delete(pagePath); // 允许作为新增插入
+        }
+      } catch(e) {}
+    });
+
+    // 现在所有全文本匹配的页面都作为新增（因为旧条目已被删除）
+    const matches = allMatches;
+
+if (matches.length === 0) {
+  var totalMatched = fulltextData.filter(function(p) {
+    return (p.title + ' ' + p.content).toLowerCase().indexOf(query.toLowerCase()) !== -1;
+  }).length;
+  if (window.updatePagefindMessage) {
+    window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
+  }
+  return;
+}
+
+    // 克隆模板（使用 Pagefind 原生结果的样式）
+    const template = container.querySelector('.pagefind-ui__result:not(.fulltext-injected)');
+    const fragment = document.createDocumentFragment();
+
+    matches.forEach(page => {
+      const div = template ? template.cloneNode(true) : document.createElement('div');
+      div.classList.add('fulltext-injected');
+      div.classList.add('breadcrumb-added');
+
+      // 设置链接（附加 ?q= 参数）
+      const link = div.querySelector('a[href]');
+      if (link) {
+        const sep = page.url.includes('?') ? '&' : '?';
+        link.href = page.url + sep + 'q=' + encodeURIComponent(query);
+        link.textContent = page.title;
+      }
+
+      // 生成摘要并高亮关键词
+      const excerptEl = div.querySelector('.pagefind-ui__result-excerpt');
+      if (excerptEl) {
+        const idx = page.content.toLowerCase().indexOf(query.toLowerCase());
+        if (idx !== -1) {
+          const start = Math.max(0, idx - 40);
+          const end = Math.min(page.content.length, idx + query.length + 60);
+          let snippet = page.content.substring(start, end);
+          if (start > 0) snippet = '…' + snippet;
+          if (end < page.content.length) snippet += '…';
+          snippet = snippet.replace(new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+            '<mark class="search">$&</mark>');
+          excerptEl.innerHTML = snippet;
+        } else {
+          excerptEl.textContent = page.content.substring(0, 80) + '…';
+        }
+      }
+
+      // ---- 修复层级重复和位置 ----
+      // 先移除克隆模板中可能已存在的旧层级元素（定时器添加的）
+      const existingCrumb = div.querySelector('.result-breadcrumb');
+      if (existingCrumb) existingCrumb.remove();
+
+      // 只添加一个我们自己的层级，放在标题链接的下方
+      if (typeof window.getBreadcrumb === 'function') {
+        const crumbText = window.getBreadcrumb(page.url);
+        if (crumbText) {
+          const crumbDiv = document.createElement('div');
+          crumbDiv.className = 'result-breadcrumb';
+          crumbDiv.textContent = crumbText;
+
+          // 寻找标题所在的容器
+          const inner = div.querySelector('.pagefind-ui__result-inner') || div;
+          const titleLink = inner.querySelector('a[href]');
+          if (titleLink) {
+            // 插入到标题链接的父元素（通常是 <p> 或 <div>）之后
+            titleLink.parentNode.insertAdjacentElement('afterend', crumbDiv);
+          } else {
+            inner.appendChild(crumbDiv);
+          }
+        }
+      }
+
+
+      fragment.appendChild(div);
+    });
+
+    container.insertBefore(fragment, container.firstChild);
+    // 简单统计并更新消息
+    var allMatches = fulltextData.filter(p => (p.title + ' ' + p.content).toLowerCase().includes(query.toLowerCase()));
+    if (window.updatePagefindMessage) {
+      window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
+    }
+  }
+
+  // 监听搜索框输入，延迟 800ms 后执行补充（等待 Pagefind 渲染完毕）
+  function bindSearchTrigger() {
+    const input = document.querySelector('.pagefind-ui__search-input');
+    if (!input) {
+      setTimeout(bindSearchTrigger, 300);
+      return;
+    }
+
+    let debounceTimer;
+    input.addEventListener('input', function() {
+      clearTimeout(debounceTimer);
+      const query = this.value.trim();
+      if (query) {
+        debounceTimer = setTimeout(() => injectFulltextResults(query), 800);
+      }
+    });
+
+    // 也监听 URL 参数（如从侧边栏搜索跳转过来）
+    const urlQ = (new URLSearchParams(window.location.search)).get('q')?.trim();
+    if (urlQ) {
+      setTimeout(() => injectFulltextResults(urlQ), 800);
+    }
+  }
+
+  // 页面加载时启动
+  loadFulltextIndex();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindSearchTrigger);
+  } else {
+    bindSearchTrigger();
+  }
 })();
+
 
 
 
@@ -335,4 +398,37 @@ window.getBreadcrumb = function(url) {
   }
   addAll();
   setInterval(addAll, 500);
+})();
+
+
+
+
+// ========== 消息前缀 + 全文本统计（极简，无 observer） ==========
+(function() {
+  function updateMessage() {
+    var msg = document.querySelector('.pagefind-ui__message');
+    if (!msg) return;
+    var text = msg.textContent.trim();
+    if (!text.startsWith('pagefind')) {
+      msg.textContent = 'pagefind' + text;
+    }
+    // 统计信息只能通过全文本模块手动触发，这里仅添加前缀
+  }
+
+  // 页面加载后等一小会儿再执行，避免冲突
+  setTimeout(updateMessage, 400);
+
+  // 暴露全局函数，供全文本模块在注入后调用一次
+window.updatePagefindMessage = function(stats) {
+    var msg = document.querySelector('.pagefind-ui__message');
+    if (!msg) return;
+    var base = msg.textContent.trim();
+    // 移除旧统计
+    base = base.replace(/\s*\[遍历全文本补充 \d+ 个相关结果，去除重复 \d+ 个\]$/, '');
+    // 添加新统计
+    if (stats) {
+        base += ' [遍历全文本补充 ' + stats.totalMatched + ' 个相关结果，去除重复 ' + (stats.duplicateCount || 0) + ' 个]';
+    }
+    msg.textContent = base;
+};
 })();

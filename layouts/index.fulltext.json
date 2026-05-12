@@ -1,0 +1,9 @@
+{{- /* 生成完整纯文本搜索索引，不截断，压缩空白 */ -}}
+{{- $pages := where site.RegularPages "Type" "not in" (slice "tags" "categories" "search") -}}
+{{- $result := slice -}}
+{{- range $pages -}}
+  {{- $content := .Plain | replaceRE "\\s+" " " | plainify -}}  {{/* 压缩空白，保留所有文字 */}}
+  {{- $entry := dict "url" .RelPermalink "title" .Title "content" $content -}}
+  {{- $result = $result | append $entry -}}
+{{- end -}}
+{{- $result | jsonify -}}

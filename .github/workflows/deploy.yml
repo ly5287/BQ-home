@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,7 +46,7 @@ jobs:
 
       # 👇
       - name: Index with Pagefind
-        run: npx pagefind@1.5.0 --site public --config pagefind.yml
+        run: npx pagefind@1.5.0 --site public
 
       # 👇用于在构建日志中确认分片文件存在
       - name: Debug - List Pagefind output
