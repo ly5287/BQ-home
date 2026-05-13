@@ -190,51 +190,41 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // 构建路径→元素映射，并收集已有路径
-    const pathToElement = new Map();
+    // 收集已有路径（只比较路径，忽略 ?q= 等参数，实现准确去重）
     const existingPaths = new Set();
-    container.querySelectorAll('.pagefind-ui__result').forEach(el => {
-      const a = el.querySelector('a[href]');
-      if (a) {
-        try {
-          const path = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
-          pathToElement.set(path, el);
-          existingPaths.add(path);
-        } catch(e) {}
-      }
-    });
-
-    // 找出全文本匹配的所有页面
-    const allMatches = fulltextData.filter(page => {
+    container.querySelectorAll('a[href]').forEach(a => {
       try {
-        const text = (page.title + ' ' + page.content).toLowerCase();
-        return text.includes(query.toLowerCase());
-      } catch(e) { return false; }
-    });
-
-    // 删除与全文本匹配重复的 Pagefind 条目，并记录重复数
-    let duplicateCount = 0;
-    allMatches.forEach(page => {
-      try {
-        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
-        if (existingPaths.has(pagePath)) {
-          const element = pathToElement.get(pagePath);
-          if (element) element.remove();
-          duplicateCount++;
-          existingPaths.delete(pagePath); // 允许作为新增插入
-        }
+        const u = new URL(a.href, location.origin);
+        existingPaths.add(u.pathname.replace(/\/$/, ''));
       } catch(e) {}
     });
 
-    // 现在所有全文本匹配的页面都作为新增（因为旧条目已被删除）
-    const matches = allMatches;
+// 隐藏与全文本匹配重复的 Pagefind 旧条目
+container.querySelectorAll('.pagefind-ui__result').forEach(el => {
+    const a = el.querySelector('a[href]');
+    if (a && existingPaths.has(new URL(a.href, location.origin).pathname.replace(/\/$/, ''))) {
+        el.style.display = 'none';   // 隐藏，不删除
+    }
+});
+
+    // 过滤：页面路径在已有路径中不存在，且 title 或 content 含查询词
+    const matches = fulltextData.filter(page => {
+      try {
+        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
+        if (existingPaths.has(pagePath)) return false;
+        const text = (page.title + ' ' + page.content).toLowerCase();
+        return text.includes(query.toLowerCase());
+      } catch(e) {
+        return false;
+      }
+    });
 
 if (matches.length === 0) {
   var totalMatched = fulltextData.filter(function(p) {
     return (p.title + ' ' + p.content).toLowerCase().indexOf(query.toLowerCase()) !== -1;
   }).length;
   if (window.updatePagefindMessage) {
-    window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
+    window.updatePagefindMessage({ totalMatched: totalMatched, addedCount: 0 });
   }
   return;
 }
@@ -307,7 +297,7 @@ if (matches.length === 0) {
     // 简单统计并更新消息
     var allMatches = fulltextData.filter(p => (p.title + ' ' + p.content).toLowerCase().includes(query.toLowerCase()));
     if (window.updatePagefindMessage) {
-      window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
+      window.updatePagefindMessage({ totalMatched: allMatches.length, addedCount: matches.length });
     }
   }
 
@@ -419,16 +409,17 @@ window.getBreadcrumb = function(url) {
   setTimeout(updateMessage, 400);
 
   // 暴露全局函数，供全文本模块在注入后调用一次
-window.updatePagefindMessage = function(stats) {
+  window.updatePagefindMessage = function(stats) {
     var msg = document.querySelector('.pagefind-ui__message');
     if (!msg) return;
     var base = msg.textContent.trim();
     // 移除旧统计
-    base = base.replace(/\s*\[遍历全文本补充 \d+ 个相关结果，去除重复 \d+ 个\]$/, '');
+    base = base.replace(/\s*\[遍历全文本补充 \d+ 个，去除重复 \d+ 个\]$/, '');
     // 添加新统计
     if (stats) {
-        base += ' [遍历全文本补充 ' + stats.totalMatched + ' 个相关结果，去除重复 ' + (stats.duplicateCount || 0) + ' 个]';
+      var removed = stats.totalMatched - stats.addedCount;
+      base += ' [遍历全文本补充 ' + stats.totalMatched + ' 个相关结果，去除重复 ' + removed + ' 个]';
     }
     msg.textContent = base;
-};
+  };
 })();
