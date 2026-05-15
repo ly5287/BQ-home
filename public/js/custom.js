@@ -199,14 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } catch(e) {}
     });
 
-// 隐藏与全文本匹配重复的 Pagefind 旧条目
-container.querySelectorAll('.pagefind-ui__result').forEach(el => {
-    const a = el.querySelector('a[href]');
-    if (a && existingPaths.has(new URL(a.href, location.origin).pathname.replace(/\/$/, ''))) {
-        el.style.display = 'none';   // 隐藏，不删除
-    }
-});
-
     // 过滤：页面路径在已有路径中不存在，且 title 或 content 含查询词
     const matches = fulltextData.filter(page => {
       try {
