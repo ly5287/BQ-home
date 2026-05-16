@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 注入补充结果
   function injectFulltextResults(query, waitCount = 0) {
+   console.log('injectFulltextResults 被调用，fulltextData:', !!fulltextData, 'query:', query);
     if (!query || !fulltextData || fulltextData.length === 0) return;
 
     // 等待 Pagefind 的结果容器出现（最多等 2 秒）
@@ -198,7 +199,34 @@ document.addEventListener('DOMContentLoaded', function() {
         existingPaths.add(u.pathname.replace(/\/$/, ''));
       } catch(e) {}
     });
+    // 找出全文本匹配的所有页面（用于隐藏重复）
+    const allMatches = fulltextData.filter(page => {
+      try {
+        const text = (page.title + ' ' + page.content).toLowerCase();
+        return text.includes(query.toLowerCase());
+      } catch(e) { return false; }
+    });
 
+    let duplicateCount = 0;
+    allMatches.forEach(page => {
+      try {
+        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
+        if (existingPaths.has(pagePath)) {
+          // 隐藏对应的 Pagefind 条目
+          container.querySelectorAll('.pagefind-ui__result').forEach(el => {
+            const a = el.querySelector('a[href]');
+            if (a) {
+              const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
+              if (elPath === pagePath) {
+                el.style.display = 'none';
+                  existingPaths.delete(pagePath);
+              }
+            }
+          });
+          duplicateCount++;
+        }
+      } catch(e) {}
+    });
     // 过滤：页面路径在已有路径中不存在，且 title 或 content 含查询词
     const matches = fulltextData.filter(page => {
       try {
@@ -211,12 +239,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
+console.log('allMatches 数量:', allMatches.length, 'duplicateCount:', duplicateCount, 'matches 数量:', matches.length);
+console.log('existingPaths 大小:', existingPaths.size);
+
 if (matches.length === 0) {
   var totalMatched = fulltextData.filter(function(p) {
     return (p.title + ' ' + p.content).toLowerCase().indexOf(query.toLowerCase()) !== -1;
   }).length;
   if (window.updatePagefindMessage) {
-    window.updatePagefindMessage({ totalMatched: totalMatched, addedCount: 0 });
+    window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
   }
   return;
 }
@@ -228,10 +259,23 @@ if (matches.length === 0) {
     matches.forEach(page => {
       const div = template ? template.cloneNode(true) : document.createElement('div');
       div.classList.add('fulltext-injected');
+      div.style.display = '';   // 清除可能从隐藏模板继承的 display:none
       div.classList.add('breadcrumb-added');
+      // 移除残留的 loading 类（关键修复）
+      div.querySelectorAll('.pagefind-ui__loading').forEach(el => el.classList.remove('pagefind-ui__loading'));
 
       // 设置链接（附加 ?q= 参数）
-      const link = div.querySelector('a[href]');
+      let link = div.querySelector('a[href]');
+      if (!link) {
+        // 模板为骨架屏占位，手动重建标题与链接
+        const titleEl = div.querySelector('.pagefind-ui__result-title');
+        if (titleEl) {
+          titleEl.innerHTML = ''; // 清除占位点
+          link = document.createElement('a');
+          link.className = 'pagefind-ui__result-link';
+          titleEl.appendChild(link);
+        }
+      }
       if (link) {
         const sep = page.url.includes('?') ? '&' : '?';
         link.href = page.url + sep + 'q=' + encodeURIComponent(query);
@@ -243,8 +287,8 @@ if (matches.length === 0) {
       if (excerptEl) {
         const idx = page.content.toLowerCase().indexOf(query.toLowerCase());
         if (idx !== -1) {
-          const start = Math.max(0, idx - 40);
-          const end = Math.min(page.content.length, idx + query.length + 60);
+          const start = Math.max(0, idx - 20);
+          const end = Math.min(page.content.length, idx + query.length + 20);
           let snippet = page.content.substring(start, end);
           if (start > 0) snippet = '…' + snippet;
           if (end < page.content.length) snippet += '…';
@@ -252,7 +296,7 @@ if (matches.length === 0) {
             '<mark class="search">$&</mark>');
           excerptEl.innerHTML = snippet;
         } else {
-          excerptEl.textContent = page.content.substring(0, 80) + '…';
+          excerptEl.textContent = page.content.substring(0, 50) + '…';
         }
       }
 
@@ -287,9 +331,8 @@ if (matches.length === 0) {
 
     container.insertBefore(fragment, container.firstChild);
     // 简单统计并更新消息
-    var allMatches = fulltextData.filter(p => (p.title + ' ' + p.content).toLowerCase().includes(query.toLowerCase()));
     if (window.updatePagefindMessage) {
-      window.updatePagefindMessage({ totalMatched: allMatches.length, addedCount: matches.length });
+      window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
     }
   }
 
@@ -306,16 +349,39 @@ if (matches.length === 0) {
       clearTimeout(debounceTimer);
       const query = this.value.trim();
       if (query) {
-        debounceTimer = setTimeout(() => injectFulltextResults(query), 800);
+        debounceTimer = setTimeout(() => {
+          if (!fulltextData) {
+            // 索引尚未加载，等待它加载完成再注入
+            const waitForData = setInterval(() => {
+              if (fulltextData) {
+                clearInterval(waitForData);
+                injectFulltextResults(query);
+              }
+            }, 200);
+          } else {
+            injectFulltextResults(query);
+          }
+        }, 800);
       }
     });
 
     // 也监听 URL 参数（如从侧边栏搜索跳转过来）
     const urlQ = (new URLSearchParams(window.location.search)).get('q')?.trim();
     if (urlQ) {
-      setTimeout(() => injectFulltextResults(urlQ), 800);
+      setTimeout(() => {
+        if (!fulltextData) {
+          const waitForData = setInterval(() => {
+            if (fulltextData) {
+              clearInterval(waitForData);
+              injectFulltextResults(urlQ);
+            }
+          }, 200);
+        } else {
+          injectFulltextResults(urlQ);
+        }
+      }, 800);
     }
-  }
+    }
 
   // 页面加载时启动
   loadFulltextIndex();
@@ -406,11 +472,11 @@ window.getBreadcrumb = function(url) {
     if (!msg) return;
     var base = msg.textContent.trim();
     // 移除旧统计
-    base = base.replace(/\s*\[遍历全文本补充 \d+ 个，去除重复 \d+ 个\]$/, '');
+    base = base.replace(/\s*\[精准匹配共 \d+ 条，过滤 \d+ 个重复结果\]$/, '');
     // 添加新统计
     if (stats) {
-      var removed = stats.totalMatched - stats.addedCount;
-      base += ' [遍历全文本补充 ' + stats.totalMatched + ' 个相关结果，去除重复 ' + removed + ' 个]';
+      var removed = stats.duplicateCount || 0;
+      base += ' [精准匹配共 ' + stats.totalMatched + ' 条，过滤 ' + removed + ' 个重复结果]';
     }
     msg.textContent = base;
   };

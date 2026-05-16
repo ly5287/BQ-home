@@ -140,6 +140,15 @@ body h1 {
 }
 
 
+/* 隐藏搜索结果缩略图占位符 */
+.pagefind-ui__result-thumb {
+  display: none !important;
+}
+/* 搜索结果列表项增加左侧缩进 */
+.pagefind-ui__result {
+  padding-left: 1.5rem !important;  /* 可根据喜好调整数值 */
+  margin-left: 0 !important;
+}
 
 /* 搜索结果层级 */
 .result-breadcrumb {
