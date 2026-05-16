@@ -1,20 +1,9 @@
----
-title: "@白起7"
-weight: 10
----
+---  
+title: "@白起7"  
+weight: 10  
+---  
+
+[——点击跳转@白起7](https://weibo.com/n/%E7%99%BD%E8%B5%B77)  
 
 
-<span style="font-size:25px">
-
-<style>
-#R-body-inner .children-list {
-    display: block !important;
-    column-count: 1 !important;
-    grid-template-columns: none !important;
-}
-</style>
-
-
-
-
-{{%children type="tree"%}}
+{{%children type="tree"%}}  

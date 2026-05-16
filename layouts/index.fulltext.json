@@ -1,4 +1,5 @@
 {{- /* 生成完整纯文本搜索索引，不截断，压缩空白 */ -}}
+{{- $pages := where site.RegularPages ".Params.pagefind" "!=" false -}}
 {{- $pages := where site.RegularPages "Type" "not in" (slice "tags" "categories" "search") -}}
 {{- $result := slice -}}
 {{- range $pages -}}
