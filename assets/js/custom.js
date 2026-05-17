@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
 // ========== 全文本精确补充搜索（延迟注入，确保容器已存在） ==========
 (function() {
   let fulltextData = null;
@@ -203,7 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // 防重复：如果当前 query 已经成功处理过，跳过
     if (injectFulltextResults._lastQuery === query) return;
     injectFulltextResults._lastQuery = query;
 
@@ -241,10 +239,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     const matchedPaths = injectFulltextResults.matchedPaths;
 
-    // MutationObserver：自动隐藏后续加载的原生重复条目
+    // MutationObserver：自动隐藏后续原生重复条目，并立即更新统计和层级
     if (!injectFulltextResults.observer) {
       injectFulltextResults.observer = new MutationObserver(() => {
-        let changed = false;
         container.querySelectorAll('.pagefind-ui__result:not(.fulltext-injected)').forEach(el => {
           const a = el.querySelector('a[href]');
           if (a) {
@@ -252,12 +249,12 @@ document.addEventListener('DOMContentLoaded', function() {
               const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
               if (matchedPaths.has(elPath)) {
                 el.style.display = 'none';
-                changed = true;
               }
             } catch(e) {}
           }
         });
-        if (changed) updateStatsBar();
+        if (window.addBreadcrumbs) window.addBreadcrumbs();
+        updateStatsBar();
       });
       injectFulltextResults.observer.observe(container, { childList: true, subtree: true });
     }
@@ -282,7 +279,6 @@ document.addEventListener('DOMContentLoaded', function() {
     matchedFulltextPaths.forEach(p => matchedPaths.add(p));
 
     // 隐藏当前所有匹配的原生条目
-    let duplicateCount = 0;
     container.querySelectorAll('.pagefind-ui__result:not(.fulltext-injected)').forEach(el => {
       const a = el.querySelector('a[href]');
       if (a) {
@@ -290,13 +286,12 @@ document.addEventListener('DOMContentLoaded', function() {
           const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
           if (matchedFulltextPaths.has(elPath)) {
             el.style.display = 'none';
-            duplicateCount++;
           }
         } catch(e) {}
       }
     });
 
-    // 轮询兜底隐藏
+    // 轮询兜底隐藏（保留，但基本由 Observer 完成）
     if (!injectFulltextResults.hideInterval) {
       let unchangedCount = 0;
       injectFulltextResults.hideInterval = setInterval(() => {
@@ -335,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return true;
     });
 
-    console.log('allMatches 数量:', allMatches.length, 'duplicateCount:', duplicateCount, 'matches 数量:', matches.length);
+    console.log('allMatches 数量:', allMatches.length, 'matches 数量:', matches.length);
 
     injectFulltextResults.lastStats = { totalMatched: allMatches.length };
 
@@ -352,10 +347,15 @@ document.addEventListener('DOMContentLoaded', function() {
       div.classList.add('fulltext-injected');
       div.style.display = '';
       div.classList.add('breadcrumb-added');
-      div.querySelectorAll('.pagefind-ui__loading').forEach(el => el.classList.remove('pagefind-ui__loading'));
-
-      let link = div.querySelector('a[href]');
+      // 彻底删除所有加载占位元素
+      div.querySelectorAll('.pagefind-ui__loading').forEach(el => el.remove());
+      
+      // 清空标题容器并获取引用
       const titleEl = div.querySelector('.pagefind-ui__result-title');
+      if (titleEl) titleEl.innerHTML = '';
+
+      // 设置链接
+      let link = div.querySelector('a[href]');
       if (!link && titleEl) {
         link = document.createElement('a');
         link.className = 'pagefind-ui__result-link';
@@ -376,6 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.textContent = page.title;
       }
 
+      // 生成摘要
       let excerptEl = div.querySelector('.pagefind-ui__result-excerpt');
       if (!excerptEl) {
         const inner = div.querySelector('.pagefind-ui__result-inner') || div;
@@ -400,6 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
         excerptEl.textContent = page.content.substring(0, 50) + '…';
       }
 
+      // 层级
       const existingCrumb = div.querySelector('.result-breadcrumb');
       if (existingCrumb) existingCrumb.remove();
       if (typeof window.getBreadcrumb === 'function') {
@@ -432,14 +434,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // 页面初次加载，同步 URL 查询词
     const initialQ = getCurrentQuery();
     if (initialQ) {
       input.value = initialQ;
       injectFulltextResults(initialQ);
     }
 
-    // 页面重新显示（包括 bfcache 后退）
     window.addEventListener('pageshow', function(event) {
       const currentQ = getCurrentQuery();
       if (currentQ) {
@@ -448,16 +448,9 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         input.value = '';
         injectFulltextResults._lastQuery = '';
-        const container = document.querySelector('.pagefind-ui__results');
-        if (container) {
-          container.querySelectorAll('.fulltext-injected').forEach(el => el.remove());
-          const statsBar = document.getElementById('custom-search-stats');
-          if (statsBar) statsBar.remove();
-        }
       }
     });
 
-    // 监听 popstate（前进/后退）
     window.addEventListener('popstate', function() {
       const q = getCurrentQuery();
       if (q) {
@@ -466,7 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // 搜索框输入
     let debounceTimer;
     input.addEventListener('input', function() {
       const query = this.value.trim();
@@ -490,7 +482,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 800);
     });
 
-    // 加载更多
     document.addEventListener('click', function(e) {
       if (e.target.matches('.pagefind-ui__load-more') || e.target.closest('.pagefind-ui__load-more')) {
         setTimeout(() => {
@@ -556,4 +547,5 @@ window.getBreadcrumb = function(url) {
   }
   addAll();
   setInterval(addAll, 500);
+  window.addBreadcrumbs = addAll;
 })();
