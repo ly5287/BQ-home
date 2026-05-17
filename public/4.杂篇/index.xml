@@ -3,10 +3,24 @@
   <channel>
     <title>杂篇 :: 87档案室</title>
     <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/index.html</link>
-    <description>—— 杂七杂八的全塞这儿了，你自己翻。 公司项目&#xD;活动剧情</description>
+    <description>—— 杂七杂八的全塞这儿了，你自己翻。 签到语&#xD;百日活动&#xD;公司项目&#xD;活动剧情</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>签到语</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%AD%BE%E5%88%B0%E8%AF%AD/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%AD%BE%E5%88%B0%E8%AF%AD/index.html</guid>
+      <description>2026 2026-5-17&#xA;署里他们又约了剧本杀。陪我去吧，有你在没人敢再针对我。&#xA;2026-4-2&#xA;晨跑顺便带了早餐回来，想让你趁热吃，但看你睡得正香的样子又舍不得叫醒。&#xA;2026-3-12&#xA;听说附近新建了条很漂亮的夜景步道，要不要一起散步？或者，飞过去看。&#xA;2026-2-19&#xA;突然想写一份只属于我们的“年终总结”，和工作不一样，这次我想和你一起完成。&#xA;2026-1-29&#xA;抵抗冷空气我有一个不错的方法，多吃点辣。&#xA;2025 2025-12-9&#xA;我将带着独一无二的惊喜，和你共度即将到来的重要时刻。&#xA;2025-11-7&#xA;天气转凉的日子，我们就该吃点热乎的，当然也可以是辣椒多的。 ​​​&#xA;2025-10-22&#xA;最近署里想组织露营，带家属的那种，我想我们可以趁这个机会去外面好好放松几天。 ​​​&#xA;2025-9-28&#xA;我把小黑送去定期维修了，所以今晚下班我去接你飞回家。 ​​​&#xA;2025-8-20&#xA;听说今天傍晚会有难得一见的晚霞，我想可以在天空上给你找个最佳观赏点。 ​​​&#xA;2025-7-29&#xA;偶尔大半夜来公园散散心也不错，可以跟你“独享”整片草坪和星空。 ​​​&#xA;2025-6-7&#xA;我们去年夏天玩过的那个冲浪板，感觉很快可以再次“出战”。 ​​​&#xA;2025-5-10&#xA;你每天监督我涂的那支护手霜用完了，才发现好像早已习惯了它的味道。 ​​​&#xA;2025-4-2&#xA;今天的风里传来了郁金香的气息，DIY春日花束的任务可以随时启动了。&#xA;2025-2-24&#xA;有两篇不知道怎么润色的报告，不知道能否申请你的“外援”。 ​​​&#xA;2025-1-19&#xA;参与安全防范宣讲之后有人找我签名，我拒绝了，并给他写了一条反诈寄语。 ​​​&#xA;2024 2024-12-19&#xA;一个最重要的“终身任务”马上又要迎来重要的节点，我有些迫不及待了。 ​​​</description>
+    </item>
+    <item>
+      <title>百日活动</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%99%BE%E6%97%A5%E6%B4%BB%E5%8A%A8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%99%BE%E6%97%A5%E6%B4%BB%E5%8A%A8/index.html</guid>
+      <description>2018 30天来信&#xD;2020 百日相伴&#xD;2021 百日沁香&#xD;2022 百日寄情&#xD;2023 百日印迹&#xD;2024 百日心记&#xD;2025 百日轨迹</description>
+    </item>
     <item>
       <title>公司项目</title>
       <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E5%85%AC%E5%8F%B8%E9%A1%B9%E7%9B%AE/index.html</link>

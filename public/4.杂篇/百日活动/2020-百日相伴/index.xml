@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020 百日相伴 :: 87档案室</title>
+    <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%99%BE%E6%97%A5%E6%B4%BB%E5%8A%A8/2020-%E7%99%BE%E6%97%A5%E7%9B%B8%E4%BC%B4/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E7%99%BE%E6%97%A5%E6%B4%BB%E5%8A%A8/2020-%E7%99%BE%E6%97%A5%E7%9B%B8%E4%BC%B4/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
