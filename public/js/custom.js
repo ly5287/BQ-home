@@ -154,13 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
 // ========== 全文本精确补充搜索（延迟注入，确保容器已存在） ==========
 (function() {
   let fulltextData = null;
   let isLoading = false;
 
-  // 加载索引（只执行一次）
   function loadFulltextIndex() {
     if (fulltextData || isLoading) return;
     isLoading = true;
@@ -169,112 +167,208 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         fulltextData = data;
         console.log('全文本索引加载完成，共', data.length, '个页面');
-        // 如果当前已有搜索结果（如 URL 带 q），立即补充
-        const query = (new URLSearchParams(window.location.search)).get('q')?.trim();
-        if (query) injectFulltextResults(query);
+        const q = getCurrentQuery();
+        if (q) injectFulltextResults(q);
       })
       .catch(() => console.warn('全文本索引加载失败'))
       .finally(() => isLoading = false);
   }
 
-  // 注入补充结果
-  function injectFulltextResults(query, waitCount = 0) {
-   console.log('injectFulltextResults 被调用，fulltextData:', !!fulltextData, 'query:', query);
-    if (!query || !fulltextData || fulltextData.length === 0) return;
+  function getCurrentQuery() {
+    const urlQ = (new URLSearchParams(window.location.search)).get('q')?.trim();
+    if (urlQ) return urlQ;
+    const input = document.querySelector('.pagefind-ui__search-input');
+    return input?.value?.trim() || '';
+  }
 
-    // 等待 Pagefind 的结果容器出现（最多等 2 秒）
+  function updateURLQuery(query) {
+    const url = new URL(window.location);
+    if (query) {
+      url.searchParams.set('q', query);
+    } else {
+      url.searchParams.delete('q');
+    }
+    history.replaceState(null, '', url.toString());
+  }
+
+  function injectFulltextResults(query, waitCount = 0) {
+    if (!query) return;
+    if (!fulltextData || fulltextData.length === 0) return;
+
     const container = document.querySelector('.pagefind-ui__results');
     if (!container) {
-      if (waitCount < 25) {                     // 最多等待 5 秒（25 × 200ms）
+      if (waitCount < 25) {
         setTimeout(() => injectFulltextResults(query, waitCount + 1), 200);
       }
       return;
     }
 
-    // 收集已有路径（只比较路径，忽略 ?q= 等参数，实现准确去重）
-    const existingPaths = new Set();
-    container.querySelectorAll('a[href]').forEach(a => {
-      try {
-        const u = new URL(a.href, location.origin);
-        existingPaths.add(u.pathname.replace(/\/$/, ''));
-      } catch(e) {}
-    });
-    // 找出全文本匹配的所有页面（用于隐藏重复）
+    // 防重复：如果当前 query 已经成功处理过，跳过
+    if (injectFulltextResults._lastQuery === query) return;
+    injectFulltextResults._lastQuery = query;
+
+    console.log('injectFulltextResults 被调用，fulltextData:', !!fulltextData, 'query:', query);
+
+    // 隐藏原 Pagefind 消息，创建自定义统计栏
+    const messageEl = document.querySelector('.pagefind-ui__message');
+    if (messageEl) messageEl.style.display = 'none';
+
+    let statsBar = document.getElementById('custom-search-stats');
+    if (!statsBar) {
+      statsBar = document.createElement('div');
+      statsBar.id = 'custom-search-stats';
+      statsBar.style.cssText = 'margin-bottom:1em;padding:0.5em;background:#f5f5f5;border-radius:4px;font-size:0.9em;';
+      container.parentNode.insertBefore(statsBar, container);
+    }
+
+    function updateStatsBar() {
+      if (!statsBar) return;
+      const visibleTotal = Array.from(container.querySelectorAll('.pagefind-ui__result'))
+        .filter(el => getComputedStyle(el).display !== 'none').length;
+      const stats = injectFulltextResults.lastStats || { totalMatched: 0 };
+      statsBar.textContent = `找到 ${visibleTotal} 个结果（其中精准匹配 ${stats.totalMatched} 条）`;
+    }
+
+    // 清除旧的轮询
+    if (injectFulltextResults.hideInterval) {
+      clearInterval(injectFulltextResults.hideInterval);
+      injectFulltextResults.hideInterval = null;
+    }
+
+    // 全局匹配路径
+    if (!injectFulltextResults.matchedPaths) {
+      injectFulltextResults.matchedPaths = new Set();
+    }
+    const matchedPaths = injectFulltextResults.matchedPaths;
+
+    // MutationObserver：自动隐藏后续加载的原生重复条目
+    if (!injectFulltextResults.observer) {
+      injectFulltextResults.observer = new MutationObserver(() => {
+        let changed = false;
+        container.querySelectorAll('.pagefind-ui__result:not(.fulltext-injected)').forEach(el => {
+          const a = el.querySelector('a[href]');
+          if (a) {
+            try {
+              const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
+              if (matchedPaths.has(elPath)) {
+                el.style.display = 'none';
+                changed = true;
+              }
+            } catch(e) {}
+          }
+        });
+        if (changed) updateStatsBar();
+      });
+      injectFulltextResults.observer.observe(container, { childList: true, subtree: true });
+    }
+
+    // 清除旧的注入结果
+    container.querySelectorAll('.fulltext-injected').forEach(el => el.remove());
+
+    // 收集全文本匹配的页面
+    const matchedFulltextPaths = new Set();
     const allMatches = fulltextData.filter(page => {
       try {
         const text = (page.title + ' ' + page.content).toLowerCase();
-        return text.includes(query.toLowerCase());
-      } catch(e) { return false; }
-    });
-
-    let duplicateCount = 0;
-    allMatches.forEach(page => {
-      try {
-        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
-        if (existingPaths.has(pagePath)) {
-          // 隐藏对应的 Pagefind 条目
-          container.querySelectorAll('.pagefind-ui__result').forEach(el => {
-            const a = el.querySelector('a[href]');
-            if (a) {
-              const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
-              if (elPath === pagePath) {
-                el.style.display = 'none';
-                  existingPaths.delete(pagePath);
-              }
-            }
-          });
-          duplicateCount++;
+        if (text.includes(query.toLowerCase())) {
+          const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
+          matchedFulltextPaths.add(pagePath);
+          return true;
         }
       } catch(e) {}
+      return false;
     });
-    // 过滤：页面路径在已有路径中不存在，且 title 或 content 含查询词
-    const matches = fulltextData.filter(page => {
-      try {
-        const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
-        if (existingPaths.has(pagePath)) return false;
-        const text = (page.title + ' ' + page.content).toLowerCase();
-        return text.includes(query.toLowerCase());
-      } catch(e) {
-        return false;
+    matchedPaths.clear();
+    matchedFulltextPaths.forEach(p => matchedPaths.add(p));
+
+    // 隐藏当前所有匹配的原生条目
+    let duplicateCount = 0;
+    container.querySelectorAll('.pagefind-ui__result:not(.fulltext-injected)').forEach(el => {
+      const a = el.querySelector('a[href]');
+      if (a) {
+        try {
+          const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
+          if (matchedFulltextPaths.has(elPath)) {
+            el.style.display = 'none';
+            duplicateCount++;
+          }
+        } catch(e) {}
       }
     });
 
-console.log('allMatches 数量:', allMatches.length, 'duplicateCount:', duplicateCount, 'matches 数量:', matches.length);
-console.log('existingPaths 大小:', existingPaths.size);
+    // 轮询兜底隐藏
+    if (!injectFulltextResults.hideInterval) {
+      let unchangedCount = 0;
+      injectFulltextResults.hideInterval = setInterval(() => {
+        let hiddenAny = false;
+        container.querySelectorAll('.pagefind-ui__result:not(.fulltext-injected)').forEach(el => {
+          const a = el.querySelector('a[href]');
+          if (a) {
+            try {
+              const elPath = new URL(a.href, location.origin).pathname.replace(/\/$/, '');
+              if (matchedFulltextPaths.has(elPath)) {
+                el.style.display = 'none';
+                hiddenAny = true;
+              }
+            } catch(e) {}
+          }
+        });
+        if (hiddenAny) {
+          unchangedCount = 0;
+          updateStatsBar();
+        } else {
+          unchangedCount++;
+          if (unchangedCount >= 3) {
+            clearInterval(injectFulltextResults.hideInterval);
+            injectFulltextResults.hideInterval = null;
+          }
+        }
+      }, 300);
+    }
 
-if (matches.length === 0) {
-  var totalMatched = fulltextData.filter(function(p) {
-    return (p.title + ' ' + p.content).toLowerCase().indexOf(query.toLowerCase()) !== -1;
-  }).length;
-  if (window.updatePagefindMessage) {
-    window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
-  }
-  return;
-}
+    // 注入结果（每个 URL 仅一次）
+    const injectedPaths = new Set();
+    const matches = allMatches.filter(page => {
+      const pagePath = new URL(page.url, location.origin).pathname.replace(/\/$/, '');
+      if (injectedPaths.has(pagePath)) return false;
+      injectedPaths.add(pagePath);
+      return true;
+    });
 
-    // 克隆模板（使用 Pagefind 原生结果的样式）
+    console.log('allMatches 数量:', allMatches.length, 'duplicateCount:', duplicateCount, 'matches 数量:', matches.length);
+
+    injectFulltextResults.lastStats = { totalMatched: allMatches.length };
+
+    if (matches.length === 0) {
+      updateStatsBar();
+      return;
+    }
+
     const template = container.querySelector('.pagefind-ui__result:not(.fulltext-injected)');
     const fragment = document.createDocumentFragment();
 
     matches.forEach(page => {
       const div = template ? template.cloneNode(true) : document.createElement('div');
       div.classList.add('fulltext-injected');
-      div.style.display = '';   // 清除可能从隐藏模板继承的 display:none
+      div.style.display = '';
       div.classList.add('breadcrumb-added');
-      // 移除残留的 loading 类（关键修复）
       div.querySelectorAll('.pagefind-ui__loading').forEach(el => el.classList.remove('pagefind-ui__loading'));
 
-      // 设置链接（附加 ?q= 参数）
       let link = div.querySelector('a[href]');
-      if (!link) {
-        // 模板为骨架屏占位，手动重建标题与链接
-        const titleEl = div.querySelector('.pagefind-ui__result-title');
-        if (titleEl) {
-          titleEl.innerHTML = ''; // 清除占位点
-          link = document.createElement('a');
-          link.className = 'pagefind-ui__result-link';
-          titleEl.appendChild(link);
-        }
+      const titleEl = div.querySelector('.pagefind-ui__result-title');
+      if (!link && titleEl) {
+        link = document.createElement('a');
+        link.className = 'pagefind-ui__result-link';
+        titleEl.appendChild(link);
+      } else if (!link) {
+        const inner = div.querySelector('.pagefind-ui__result-inner') || div;
+        inner.innerHTML = '';
+        const p = document.createElement('p');
+        p.className = 'pagefind-ui__result-title';
+        link = document.createElement('a');
+        link.className = 'pagefind-ui__result-link';
+        p.appendChild(link);
+        inner.appendChild(p);
       }
       if (link) {
         const sep = page.url.includes('?') ? '&' : '?';
@@ -282,42 +376,41 @@ if (matches.length === 0) {
         link.textContent = page.title;
       }
 
-      // 生成摘要并高亮关键词
-      const excerptEl = div.querySelector('.pagefind-ui__result-excerpt');
-      if (excerptEl) {
-        const idx = page.content.toLowerCase().indexOf(query.toLowerCase());
-        if (idx !== -1) {
-          const start = Math.max(0, idx - 20);
-          const end = Math.min(page.content.length, idx + query.length + 20);
-          let snippet = page.content.substring(start, end);
-          if (start > 0) snippet = '…' + snippet;
-          if (end < page.content.length) snippet += '…';
-          snippet = snippet.replace(new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
-            '<mark class="search">$&</mark>');
-          excerptEl.innerHTML = snippet;
-        } else {
-          excerptEl.textContent = page.content.substring(0, 50) + '…';
-        }
+      let excerptEl = div.querySelector('.pagefind-ui__result-excerpt');
+      if (!excerptEl) {
+        const inner = div.querySelector('.pagefind-ui__result-inner') || div;
+        excerptEl = document.createElement('p');
+        excerptEl.className = 'pagefind-ui__result-excerpt';
+        inner.appendChild(excerptEl);
       }
 
-      // ---- 修复层级重复和位置 ----
-      // 先移除克隆模板中可能已存在的旧层级元素（定时器添加的）
+      const idx = page.content.toLowerCase().indexOf(query.toLowerCase());
+      if (idx !== -1) {
+        const start = Math.max(0, idx - 20);
+        const end = Math.min(page.content.length, idx + query.length + 20);
+        let snippet = page.content.substring(start, end);
+        if (start > 0) snippet = '…' + snippet;
+        if (end < page.content.length) snippet += '…';
+        snippet = snippet.replace(
+          new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+          '<mark class="search">$&</mark>'
+        );
+        excerptEl.innerHTML = snippet;
+      } else {
+        excerptEl.textContent = page.content.substring(0, 50) + '…';
+      }
+
       const existingCrumb = div.querySelector('.result-breadcrumb');
       if (existingCrumb) existingCrumb.remove();
-
-      // 只添加一个我们自己的层级，放在标题链接的下方
       if (typeof window.getBreadcrumb === 'function') {
         const crumbText = window.getBreadcrumb(page.url);
         if (crumbText) {
           const crumbDiv = document.createElement('div');
           crumbDiv.className = 'result-breadcrumb';
           crumbDiv.textContent = crumbText;
-
-          // 寻找标题所在的容器
           const inner = div.querySelector('.pagefind-ui__result-inner') || div;
           const titleLink = inner.querySelector('a[href]');
           if (titleLink) {
-            // 插入到标题链接的父元素（通常是 <p> 或 <div>）之后
             titleLink.parentNode.insertAdjacentElement('afterend', crumbDiv);
           } else {
             inner.appendChild(crumbDiv);
@@ -325,18 +418,13 @@ if (matches.length === 0) {
         }
       }
 
-
       fragment.appendChild(div);
     });
 
     container.insertBefore(fragment, container.firstChild);
-    // 简单统计并更新消息
-    if (window.updatePagefindMessage) {
-      window.updatePagefindMessage({ totalMatched: allMatches.length, duplicateCount: duplicateCount });
-    }
+    updateStatsBar();
   }
 
-  // 监听搜索框输入，延迟 800ms 后执行补充（等待 Pagefind 渲染完毕）
   function bindSearchTrigger() {
     const input = document.querySelector('.pagefind-ui__search-input');
     if (!input) {
@@ -344,46 +432,77 @@ if (matches.length === 0) {
       return;
     }
 
-    let debounceTimer;
-    input.addEventListener('input', function() {
-      clearTimeout(debounceTimer);
-      const query = this.value.trim();
-      if (query) {
-        debounceTimer = setTimeout(() => {
-          if (!fulltextData) {
-            // 索引尚未加载，等待它加载完成再注入
-            const waitForData = setInterval(() => {
-              if (fulltextData) {
-                clearInterval(waitForData);
-                injectFulltextResults(query);
-              }
-            }, 200);
-          } else {
-            injectFulltextResults(query);
-          }
-        }, 800);
+    // 页面初次加载，同步 URL 查询词
+    const initialQ = getCurrentQuery();
+    if (initialQ) {
+      input.value = initialQ;
+      injectFulltextResults(initialQ);
+    }
+
+    // 页面重新显示（包括 bfcache 后退）
+    window.addEventListener('pageshow', function(event) {
+      const currentQ = getCurrentQuery();
+      if (currentQ) {
+        input.value = currentQ;
+        injectFulltextResults(currentQ);
+      } else {
+        input.value = '';
+        injectFulltextResults._lastQuery = '';
+        const container = document.querySelector('.pagefind-ui__results');
+        if (container) {
+          container.querySelectorAll('.fulltext-injected').forEach(el => el.remove());
+          const statsBar = document.getElementById('custom-search-stats');
+          if (statsBar) statsBar.remove();
+        }
       }
     });
 
-    // 也监听 URL 参数（如从侧边栏搜索跳转过来）
-    const urlQ = (new URLSearchParams(window.location.search)).get('q')?.trim();
-    if (urlQ) {
-      setTimeout(() => {
+    // 监听 popstate（前进/后退）
+    window.addEventListener('popstate', function() {
+      const q = getCurrentQuery();
+      if (q) {
+        input.value = q;
+        injectFulltextResults(q);
+      }
+    });
+
+    // 搜索框输入
+    let debounceTimer;
+    input.addEventListener('input', function() {
+      const query = this.value.trim();
+      updateURLQuery(query);
+      clearTimeout(debounceTimer);
+      if (!query) {
+        injectFulltextResults._lastQuery = '';
+        return;
+      }
+      debounceTimer = setTimeout(() => {
         if (!fulltextData) {
           const waitForData = setInterval(() => {
             if (fulltextData) {
               clearInterval(waitForData);
-              injectFulltextResults(urlQ);
+              injectFulltextResults(query);
             }
           }, 200);
         } else {
-          injectFulltextResults(urlQ);
+          injectFulltextResults(query);
         }
       }, 800);
-    }
-    }
+    });
 
-  // 页面加载时启动
+    // 加载更多
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('.pagefind-ui__load-more') || e.target.closest('.pagefind-ui__load-more')) {
+        setTimeout(() => {
+          if (fulltextData) {
+            const q = getCurrentQuery();
+            if (q) injectFulltextResults(q);
+          }
+        }, 500);
+      }
+    });
+  }
+
   loadFulltextIndex();
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bindSearchTrigger);
@@ -391,9 +510,6 @@ if (matches.length === 0) {
     bindSearchTrigger();
   }
 })();
-
-
-
 
 // ========== 搜索结果层级（全局函数 + 定时器） ==========
 window.getBreadcrumb = function(url) {
@@ -404,11 +520,8 @@ window.getBreadcrumb = function(url) {
   var parts = path.split('/').filter(function(p) { return p && p !== 'index.html'; });
   if (!parts.length) return '';
   var display = parts.map(function(part) {
-    // 先解码
     part = decodeURIComponent(part);
-    // 去掉开头的数字和点（如 "1.约会" → "约会"）
     part = part.replace(/^\d+\./, '');
-    // 下划线替换为空格
     part = part.replace(/_/g, ' ');
     return part;
   });
@@ -427,13 +540,10 @@ window.getBreadcrumb = function(url) {
       crumb.className = 'result-breadcrumb';
       crumb.textContent = text;
 
-      // 找到标题的容器（<p class="pagefind-ui__result-title">）
       var title = el.querySelector('.pagefind-ui__result-title');
       if (title) {
-        // 把层级插入标题后面（作为标题的下一个兄弟元素）
         title.parentNode.insertBefore(crumb, title.nextSibling);
       } else {
-        // 如果找不到标题结构，回退到放在标题链接后面
         var inner = el.querySelector('.pagefind-ui__result-inner') || el;
         var link = inner.querySelector('a');
         if (link) {
@@ -446,38 +556,4 @@ window.getBreadcrumb = function(url) {
   }
   addAll();
   setInterval(addAll, 500);
-})();
-
-
-
-
-// ========== 消息前缀 + 全文本统计（极简，无 observer） ==========
-(function() {
-  function updateMessage() {
-    var msg = document.querySelector('.pagefind-ui__message');
-    if (!msg) return;
-    var text = msg.textContent.trim();
-    if (!text.startsWith('pagefind')) {
-      msg.textContent = 'pagefind' + text;
-    }
-    // 统计信息只能通过全文本模块手动触发，这里仅添加前缀
-  }
-
-  // 页面加载后等一小会儿再执行，避免冲突
-  setTimeout(updateMessage, 400);
-
-  // 暴露全局函数，供全文本模块在注入后调用一次
-  window.updatePagefindMessage = function(stats) {
-    var msg = document.querySelector('.pagefind-ui__message');
-    if (!msg) return;
-    var base = msg.textContent.trim();
-    // 移除旧统计
-    base = base.replace(/\s*\[精准匹配共 \d+ 条，过滤 \d+ 个重复结果\]$/, '');
-    // 添加新统计
-    if (stats) {
-      var removed = stats.duplicateCount || 0;
-      base += ' [精准匹配共 ' + stats.totalMatched + ' 条，过滤 ' + removed + ' 个重复结果]';
-    }
-    msg.textContent = base;
-  };
 })();
