@@ -374,6 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sep = page.url.includes('?') ? '&' : '?';
         link.href = page.url + sep + 'q=' + encodeURIComponent(query);
         link.textContent = page.title;
+        link.style.fontWeight = 'bold'; 
       }
 
       // 生成摘要
