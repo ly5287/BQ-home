@@ -1,23 +1,23 @@
----
-title: "87档案室"
----
-<div style="text-align: center;">
+---  
+title: "87档案室"  
+---  
+<div style="text-align: center;">  
 
-##### ——关于他的故事和心动，都安放在这里。 
+##### ——关于他的故事和心动，都安放在这里。   
 
-</div>
+</div>  
 
-这里包含以下几个主要版块：
+这里包含以下几个主要版块：  
 
-<span style="font-size:25px">
+<span style="font-size:25px">  
 
-<style>
-#R-body-inner .children-list {
-    display: block !important;
-    column-count: 1 !important;
-    grid-template-columns: none !important;
-}
-</style>
+<style>  
+#R-body-inner .children-list {  
+    display: block !important;  
+    column-count: 1 !important;  
+    grid-template-columns: none !important;  
+}  
+</style>  
 
 
-{{% children type="tree" description="true" %}}
+{{% children type="tree" description="true" %}}  

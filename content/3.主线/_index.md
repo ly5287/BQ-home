@@ -1,28 +1,28 @@
----
-title: "主线"
-weight: 30
----
-<div style="text-align: center;">
+---  
+title: "主线"  
+weight: 30  
+---  
+<div style="text-align: center;">  
 
 ##### ——从特遣B-7到总指挥官，他每一步都走得很扎实。     
 
-</div>
+</div>  
 
 
 
 
 
-<span style="font-size:25px">
+<span style="font-size:25px">  
 
-<style>
-#R-body-inner .children-list {
-    display: block !important;
-    column-count: 1 !important;
-    grid-template-columns: none !important;
-}
-</style>
+<style>  
+#R-body-inner .children-list {  
+    display: block !important;  
+    column-count: 1 !important;  
+    grid-template-columns: none !important;  
+}  
+</style>  
 
 
 
-{{%children type="tree"%}}
+{{%children type="tree"%}}  
 

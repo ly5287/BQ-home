@@ -1,6 +1,6 @@
----
-title: "活动解锁"
-weight: 30
----
+---  
+title: "活动解锁"  
+weight: 30  
+---  
 
-{{%children type="tree"%}}
+{{%children type="tree"%}}  

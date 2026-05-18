@@ -1,23 +1,25 @@
----
-title: "2.初遇阴谋"
-weight: 2  # <--- 添加这一行，数字越小越靠前
----
+---  
+title: "2.初遇阴谋"  
+weight: 2  # <--- 添加这一行，数字越小越靠前  
+---  
 
-##### 白起剧情相关章节：
+> Evolver是怎么回事？超进化人类什么的，真的存在吗？
 
-<style>
-.children-list li {
-    margin-bottom: -7px !important;
-    line-height: 1!important;
-}
-</style>
+##### 白起剧情相关章节：  
+
+<style>  
+.children-list li {  
+    margin-bottom: -7px !important;  
+    line-height: 1!important;  
+}  
+</style>  
 
 
-{{%children type="tree"%}}
+{{%children type="tree"%}}  
 
----
+---  
 
-##### 本章剧情概述：
+##### 本章剧情概述：  
 
 - 你抓住眼前的机会向李泽言据理力争，希望他能重新考虑撤资的事情，不料却直接遭到了拒绝。  
 - “听好了，我不会再救你第二次。”  

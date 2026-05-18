@@ -1,24 +1,24 @@
----
-title: "1.最后的节目"
-weight: 1  # <--- 添加这一行，数字越小越靠前
----
+---  
+title: "1.最后的节目"  
+weight: 1  # <--- 添加这一行，数字越小越靠前  
+---  
 
-##### 白起剧情相关章节：
-
-
-<style>
-.children-list li {
-    margin-bottom: -7px !important;
-    line-height: 1!important;
-}
-</style>
+##### 白起剧情相关章节：  
 
 
-{{%children type="tree"%}}
+<style>  
+.children-list li {  
+    margin-bottom: -7px !important;  
+    line-height: 1!important;  
+}  
+</style>  
 
----
 
-##### 本章剧情概述：
+{{%children type="tree"%}}  
+
+---  
+
+##### 本章剧情概述：  
 
 - 自从继承了父亲的小型影视公司，两年来，作为节目制作人的你每天都在忙碌地奔走。  
 - 而这天早上，你突然接到一个噩耗：公司最大的投资方华锐集团决定撤资。  

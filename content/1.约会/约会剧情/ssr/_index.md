@@ -1,6 +1,6 @@
----
-title: "ssr"
-weight: 10
----
+---  
+title: "ssr"  
+weight: 10  
+---  
 
-{{%children type="tree"%}}
+{{%children type="tree"%}}  

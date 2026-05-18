@@ -1,19 +1,19 @@
----
-title: "传闻秘事"
-weight: 20
----
+---  
+title: "传闻秘事"  
+weight: 20  
+---  
 
 
 
-<span style="font-size:25px">
+<span style="font-size:25px">  
 
-<style>
-#R-body-inner .children-list {
-    display: block !important;
-    column-count: 1 !important;
-    grid-template-columns: none !important;
-}
-</style>
+<style>  
+#R-body-inner .children-list {  
+    display: block !important;  
+    column-count: 1 !important;  
+    grid-template-columns: none !important;  
+}  
+</style>  
 
 
-{{%children type="tree"%}}
+{{%children type="tree"%}}  

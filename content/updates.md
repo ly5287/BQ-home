@@ -1,15 +1,15 @@
----
-title: 归档记录
-pagefind: false
-hidden: true
-build:
-  list: never
-  render: true
----
+---  
+title: 归档记录  
+pagefind: false  
+hidden: true  
+build:  
+  list: never  
+  render: true  
+---  
 
-2026-05-17  优化：搜索功能 
+2026-05-17  优化：搜索功能   
 
-2026-05-16  新增：@白起7微博归档完毕
+2026-05-16  新增：@白起7微博归档完毕  
 
 2026-05-15  新增：约会、传闻秘事归档完毕  
 
