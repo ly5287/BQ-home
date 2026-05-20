@@ -3,16 +3,23 @@
   <channel>
     <title>二、极暗之时（11-14） :: 87档案室</title>
     <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/index.html</link>
-    <description>12.风的救赎</description>
+    <description>11.最后的宁静&#xD;12.风的救赎</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>11.最后的宁静</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/11.%E6%9C%80%E5%90%8E%E7%9A%84%E5%AE%81%E9%9D%99/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/11.%E6%9C%80%E5%90%8E%E7%9A%84%E5%AE%81%E9%9D%99/index.html</guid>
+      <description>我们来自未来，只为人类更好的进化。&#xA;白起剧情相关章节： 11-1&#xD;11-24</description>
+    </item>
     <item>
       <title>12.风的救赎</title>
       <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/12.%E9%A3%8E%E7%9A%84%E6%95%91%E8%B5%8E/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/%E4%BA%8C%E6%9E%81%E6%9A%97%E4%B9%8B%E6%97%B6/12.%E9%A3%8E%E7%9A%84%E6%95%91%E8%B5%8E/index.html</guid>
-      <description>白起剧情相关章节： 该目录下暂无内容。</description>
+      <description>白起回过头，眼神充满了冰冷和陌生。&#xA;白起剧情相关章节： 12-1&#xD;12-3&#xD;12-4&#xD;12-6&#xD;12-8&#xD;12-10</description>
     </item>
   </channel>
 </rss>
