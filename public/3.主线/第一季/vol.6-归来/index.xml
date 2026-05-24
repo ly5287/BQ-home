@@ -3,7 +3,7 @@
   <channel>
     <title>VOL.6 归来（25-28） :: 87档案室</title>
     <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/index.html</link>
-    <description>26.进化的终点</description>
+    <description>26.进化的终点&#xD;27.寻找无名岛&#xD;28.末日游乐园</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,21 @@
       <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/26.%E8%BF%9B%E5%8C%96%E7%9A%84%E7%BB%88%E7%82%B9/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/26.%E8%BF%9B%E5%8C%96%E7%9A%84%E7%BB%88%E7%82%B9/index.html</guid>
-      <description>白起剧情相关章节： 该目录下暂无内容。</description>
+      <description>我……现在已经没有 Evol 了。&#xA;白起剧情相关章节： 26-7&#xD;26-9&#xD;26-10&#xD;26-11&#xD;26-12&#xD;26-15</description>
+    </item>
+    <item>
+      <title>27.寻找无名岛</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/27.%E5%AF%BB%E6%89%BE%E6%97%A0%E5%90%8D%E5%B2%9B/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/27.%E5%AF%BB%E6%89%BE%E6%97%A0%E5%90%8D%E5%B2%9B/index.html</guid>
+      <description>从这些实验结果来看，进化舱增强 Evol 的成功率几乎为零。&#xA;白起剧情相关章节： 27-1&#xD;27-2&#xD;27-3&#xD;27-4&#xD;27-5</description>
+    </item>
+    <item>
+      <title>28.末日游乐园</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/28.%E6%9C%AB%E6%97%A5%E6%B8%B8%E4%B9%90%E5%9B%AD/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/vol.6-%E5%BD%92%E6%9D%A5/28.%E6%9C%AB%E6%97%A5%E6%B8%B8%E4%B9%90%E5%9B%AD/index.html</guid>
+      <description>和爸爸留给我的，一模一样的笔记本……&#xA;白起剧情相关章节： 28-15</description>
     </item>
   </channel>
 </rss>
