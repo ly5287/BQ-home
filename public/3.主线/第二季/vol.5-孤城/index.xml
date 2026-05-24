@@ -3,16 +3,37 @@
   <channel>
     <title>VOL.5 孤城（14-17） :: 87档案室</title>
     <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/index.html</link>
-    <description>1.新的抉择</description>
+    <description>14.开局&#xD;15.反攻&#xD;16.过载&#xD;17.终局</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>1.新的抉择</title>
-      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/1.%E6%96%B0%E7%9A%84%E6%8A%89%E6%8B%A9/index.html</link>
+      <title>14.开局</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/14.%E5%BC%80%E5%B1%80/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/1.%E6%96%B0%E7%9A%84%E6%8A%89%E6%8B%A9/index.html</guid>
-      <description>这场彻底洗牌之后的命运之局、追逐游戏已经拉开了序幕。&#xA;白起剧情相关章节： 1-1 往日如常 本章剧情概述：</description>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/14.%E5%BC%80%E5%B1%80/index.html</guid>
+      <description>如果我找到了捷径，是否就能离你更近一点？&#xA;白起剧情相关章节： 1-1 往日如常 本章剧情概述：</description>
+    </item>
+    <item>
+      <title>15.反攻</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/15.%E5%8F%8D%E6%94%BB/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/15.%E5%8F%8D%E6%94%BB/index.html</guid>
+      <description>将游戏掌握在自己手中，才能全盘获胜。&#xA;白起剧情相关章节： 1-1 往日如常 本章剧情概述：</description>
+    </item>
+    <item>
+      <title>16.过载</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/16.%E8%BF%87%E8%BD%BD/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/16.%E8%BF%87%E8%BD%BD/index.html</guid>
+      <description>如何描述风的形状？以凯歌，以沉默。&#xA;白起剧情相关章节： 1-1 往日如常 本章剧情概述：</description>
+    </item>
+    <item>
+      <title>17.终局</title>
+      <link>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/17.%E7%BB%88%E5%B1%80/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/vol.5-%E5%AD%A4%E5%9F%8E/17.%E7%BB%88%E5%B1%80/index.html</guid>
+      <description>我会不停奔跑，直到抵达约定的目标。&#xA;白起剧情相关章节： 1-1 往日如常 本章剧情概述：</description>
     </item>
   </channel>
 </rss>
