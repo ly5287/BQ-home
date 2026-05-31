@@ -3,7 +3,7 @@
   <channel>
     <title>杂篇 :: 87档案室</title>
     <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/index.html</link>
-    <description>—— 杂七杂八的全塞这儿了，你自己翻。 签到语&#xD;百日活动&#xD;公司项目&#xD;活动剧情&#xD;小屋</description>
+    <description>—— 杂七杂八的全塞这儿了，你自己翻。 签到语&#xD;百日活动&#xD;公司项目&#xD;活动剧情&#xD;漫步特殊剧情&#xD;小屋</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
@@ -33,7 +33,14 @@
       <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/index.html</guid>
-      <description>SSR-百无规束&#xD;R-心花交融&#xD;R-清风徐来&#xD;R-云染晴空</description>
+      <description>SSR-百无规束&#xD;R&#xD;回归剧情</description>
+    </item>
+    <item>
+      <title>漫步特殊剧情</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%BC%AB%E6%AD%A5%E7%89%B9%E6%AE%8A%E5%89%A7%E6%83%85/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%BC%AB%E6%AD%A5%E7%89%B9%E6%AE%8A%E5%89%A7%E6%83%85/index.html</guid>
+      <description>该部分标题均为根据内容随机提取，非官方标题&#xA;面具展&#xD;吃饱减肥&#xD;追小偷&#xD;一捧玫瑰&#xD;买水果&#xD;喂鸽子&#xD;健身强度&#xD;偷玉竹的熊猫&#xD;买鼠标&#xD;双双加班&#xD;因为你在风里&#xD;地铁站骗子&#xD;夹娃娃&#xD;送错快递&#xD;是白哥的女朋友吗&#xD;手机丢了&#xD;“中暑”的人&#xD;反串公主&#xD;追小偷&#xD;丢失的手链&#xD;买牛奶&#xD;买衣柜&#xD;买饭致谢&#xD;仓鼠肥肥&#xD;你不知道拒绝吗&#xD;修电脑&#xD;创可贴&#xD;复印资料&#xD;取花&#xD;天王盖地虎&#xD;韩野助攻again&#xD;帮你省钱&#xD;帮取证物&#xD;平安福袋&#xD;一天没吃饭&#xD;手别藏了&#xD;打水&#xD;找猫&#xD;抓嫌犯&#xD;海豚咬人&#xD;桃花劫&#xD;爱心午餐&#xD;玫瑰饼&#xD;生日礼物&#xD;电影院火灾&#xD;相约运动&#xD;看电影&#xD;约会迟到&#xD;萤火虫&#xD;阻止跳湖&#xD;邱师傅枣泥糕&#xD;违法乱纪古董店&#xD;路遇车祸&#xD;走失儿童&#xD;调音师&#xD;蟹黄包&#xD;办公用品&#xD;钢琴主题电影</description>
     </item>
     <item>
       <title>小屋</title>

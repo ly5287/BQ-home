@@ -53,6 +53,7 @@ defaultContentLanguage = "zh"
 
 [params]
   themeVariant = "blue"
+  font = "system-ui, -apple-system, Microsoft YaHei, sans-serif"  # 全局字体（优先系统无衬线，更清爽）
   custom_css = ["css/custom.css"]
   custom_js = ["/js/custom.js"]
   alwaysopen = false

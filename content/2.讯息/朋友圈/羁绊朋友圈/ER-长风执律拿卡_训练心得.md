@@ -1,5 +1,5 @@
 ---  
-title: 银河告白  
+title: 训练心得 
 tags: ["ER-长风执律"]  
 weight: 428  
 ---  
