@@ -55,12 +55,12 @@ weight: 10
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">长假我要慢慢计划，首先要先为白警官破案庆祝一下\~</option>
+    <option value="o2-1">长假我要慢慢计划，首先要先为白警官破案庆祝一下~</option>
     <option value="o2-2">看电影、滑冰……想做的事情实在太多了，一时不知道该先做什么！</option>
     <option value="o2-3">长假的意思是……我们可以去长途旅游吗！</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：长假我要慢慢计划，首先要先为白警官破案庆祝一下\~  <br>
+ <strong>[玩家姓名]</strong> ：长假我要慢慢计划，首先要先为白警官破案庆祝一下~  <br>
 
  <strong>白起：</strong> 那和以前一样一起去吃顿大餐怎么样？  <br>
 
@@ -95,7 +95,7 @@ weight: 10
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">当然可以！不过白警官辛苦了这么久，不需要先好好休息一下吗？</option>
     <option value="o3-2">非常想答应！可惜今晚要加班……</option>
-    <option value="o3-3">好啊，那你什么时候下班呀\~</option>
+    <option value="o3-3">好啊，那你什么时候下班呀~</option>
   </select>
   <div id="o3-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：当然可以！不过白警官辛苦了这么久，不需要先好好休息一下吗？  <br>
@@ -116,7 +116,7 @@ weight: 10
 
   </div>
   <div id="o3-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：好啊，那你什么时候下班呀\~  <br>
+ <strong>[玩家姓名]</strong> ：好啊，那你什么时候下班呀~  <br>
 
  <strong>白起：</strong> 我已经在你楼下了。  <br>
 

@@ -15,12 +15,12 @@ weight: 3
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">如果把我们俩的嫌疑都排除的话，我觉得是被风送过来的\~</option>
+    <option value="o1-1">如果把我们俩的嫌疑都排除的话，我觉得是被风送过来的~</option>
     <option value="o1-2">我是没放，不过这几天倒是老看到有麻雀飞过，可能是它们留下来的。</option>
     <option value="o1-3">猜错咯，我看你在盆里填了新土，还以为你要种东西，就没动。</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：如果把我们俩的嫌疑都排除的话，我觉得是被风送过来的\~  <br>
+ <strong>[玩家姓名]</strong> ：如果把我们俩的嫌疑都排除的话，我觉得是被风送过来的~  <br>
 
  <strong>白起：</strong> 确实有这种可能。  <br>
 
@@ -55,12 +55,12 @@ weight: 3
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">虽然只是抽芽，我很好奇会是什么东西的种子诶\~</option>
+    <option value="o2-1">虽然只是抽芽，我很好奇会是什么东西的种子诶~</option>
     <option value="o2-2">所以这些意外光顾我们家的种子，现在长势如何？</option>
     <option value="o2-3">既然来到我们家，就是我家的植物了，好好照顾它们吧。</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：虽然只是抽芽，我很好奇会是什么东西的种子诶\~  <br>
+ <strong>[玩家姓名]</strong> ：虽然只是抽芽，我很好奇会是什么东西的种子诶~  <br>
 
  <strong>白起：</strong> 我也不清楚，不过我最近被安利了一个“拍照识草”软件。  <br>
 
@@ -95,12 +95,12 @@ weight: 3
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">那按照惯例，还请白队给它们也起一个好名字吧\~</option>
-    <option value="o3-2">从今天开始我们可以接力照顾“新植物”了\~责任重大啊白队。</option>
+    <option value="o3-1">那按照惯例，还请白队给它们也起一个好名字吧~</option>
+    <option value="o3-2">从今天开始我们可以接力照顾“新植物”了~责任重大啊白队。</option>
     <option value="o3-3">太好了，真期待风信子开花的那一天。</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：那按照惯例，还请白队给它们也起一个好名字吧\~  <br>
+ <strong>[玩家姓名]</strong> ：那按照惯例，还请白队给它们也起一个好名字吧~  <br>
 
  <strong>白起：</strong> 在你问之前，我想过这个问题。  <br>
 
@@ -110,7 +110,7 @@ weight: 3
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：从今天开始我们可以接力照顾“新植物”了\~责任重大啊白队。  <br>
+ <strong>[玩家姓名]</strong> ：从今天开始我们可以接力照顾“新植物”了~责任重大啊白队。  <br>
 
  <strong>白起：</strong> 是，我已经查阅很多养殖资料了。  <br>
 

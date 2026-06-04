@@ -103,7 +103,7 @@ weight: 42
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o4-1">如果可以的话，我想跟你一起照顾它。</option>
-    <option value="o4-2">好想看一看这只小鸟呀，肯定很可爱\~</option>
+    <option value="o4-2">好想看一看这只小鸟呀，肯定很可爱~</option>
   </select>
   <div id="o4-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：如果可以的话，我想跟你一起照顾它。  <br>
@@ -114,7 +114,7 @@ weight: 42
 
   </div>
   <div id="o4-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：好想看一看这只小鸟呀，肯定很可爱\~  <br>
+ <strong>[玩家姓名]</strong> ：好想看一看这只小鸟呀，肯定很可爱~  <br>
 
  <strong>白起：</strong> 咳，想看的话，到时候逛完花鸟市场，去我家看吧。  <br>
 

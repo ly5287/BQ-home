@@ -15,12 +15,12 @@ weight: 16
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">可爱吧？“叮叮当、叮叮当，铃儿响叮当\~！”</option>
-    <option value="o1-2">这可是我刚刚现场录的\~</option>
-    <option value="o1-3">我最近很喜欢这首圣诞歌\~</option>
+    <option value="o1-1">可爱吧？“叮叮当、叮叮当，铃儿响叮当~！”</option>
+    <option value="o1-2">这可是我刚刚现场录的~</option>
+    <option value="o1-3">我最近很喜欢这首圣诞歌~</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：可爱吧？“叮叮当、叮叮当，铃儿响叮当\~！”  <br>
+ <strong>[玩家姓名]</strong> ：可爱吧？“叮叮当、叮叮当，铃儿响叮当~！”  <br>
 
  <strong>白起：</strong> 的确是很轻松的歌谣。  <br>
 
@@ -28,7 +28,7 @@ weight: 16
 
   </div>
   <div id="o1-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：这可是我刚刚现场录的\~  <br>
+ <strong>[玩家姓名]</strong> ：这可是我刚刚现场录的~  <br>
 
  <strong>白起：</strong> 嗯，看出来了。  <br>
 
@@ -36,7 +36,7 @@ weight: 16
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：我最近很喜欢这首圣诞歌\~  <br>
+ <strong>[玩家姓名]</strong> ：我最近很喜欢这首圣诞歌~  <br>
 
  <strong>白起：</strong> 这首歌的确很经典。  <br>
 
@@ -49,12 +49,12 @@ weight: 16
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">我知道你说的那家商场！听说今晚还会有限定大餐哦\~</option>
+    <option value="o2-1">我知道你说的那家商场！听说今晚还会有限定大餐哦~</option>
     <option value="o2-2">每次听我都觉得心情很好，比如现在就是……甚至好到有点想吃大餐。</option>
     <option value="o2-3">说到商场，今天好像有圣诞限定大餐。</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：我知道你说的那家商场！听说今晚还会有限定大餐哦\~  <br>
+ <strong>[玩家姓名]</strong> ：我知道你说的那家商场！听说今晚还会有限定大餐哦~  <br>
 
  <strong>白起：</strong> 嗯，我也听说了。  <br>
 

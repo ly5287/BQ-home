@@ -11,12 +11,12 @@ weight: 24
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">拍你嘛，不用技术高超\~反正不论怎么拍都很好看！</option>
+    <option value="o1-1">拍你嘛，不用技术高超~反正不论怎么拍都很好看！</option>
     <option value="o1-2">没想到我素材这么丰富吧！</option>
     <option value="o1-3">是不是突然发现自己很帅气？</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：拍你嘛，不用技术高超\~反正不论怎么拍都很好看！  <br>
+ <strong>[玩家姓名]</strong> ：拍你嘛，不用技术高超~反正不论怎么拍都很好看！  <br>
 
  <strong>白起：</strong> 其实下回不用拍我，拍风景就好。  <br>
 
@@ -49,12 +49,12 @@ weight: 24
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">这些可都是我的宝藏\~毕竟这些可爱的样子，除了我之外谁也不知道。</option>
+    <option value="o2-1">这些可都是我的宝藏~毕竟这些可爱的样子，除了我之外谁也不知道。</option>
     <option value="o2-2">这些素材，留到我们以后老了再看……肯定会超有趣的！</option>
     <option value="o2-3">我准备把所有与你有关的回忆都收藏起来！</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：这些可都是我的宝藏\~毕竟这些可爱的样子，除了我之外谁也不知道。  <br>
+ <strong>[玩家姓名]</strong> ：这些可都是我的宝藏~毕竟这些可爱的样子，除了我之外谁也不知道。  <br>
 
  <strong>白起：</strong> 好，那这些宝藏都归你。  <br>
 

@@ -19,12 +19,12 @@ weight: 25
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">感觉拍得很真实，剧情也很烧脑，上头了\~</option>
+    <option value="o1-1">感觉拍得很真实，剧情也很烧脑，上头了~</option>
     <option value="o1-2">感觉角色塑造得特别立体，每一个都有血有肉！我最近特别沉迷。</option>
     <option value="o1-3">感觉剧情特别棒，很引人深思，每一集都让人意犹未尽！</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：感觉拍得很真实，剧情也很烧脑，上头了\~  <br>
+ <strong>[玩家姓名]</strong> ：感觉拍得很真实，剧情也很烧脑，上头了~  <br>
 
  <strong>白起：</strong> 难怪你最近都抱着手机。  <br>
 
@@ -89,7 +89,7 @@ weight: 25
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">有道理!那我们还是回归生活，展望一下即将到来的美好周末！</option>
     <option value="o3-2">这么说来……你最近有没有类似这样的危险任务……</option>
-    <option value="o3-3">听起来很有道理……但最后还是要把这部剧安利给你\~</option>
+    <option value="o3-3">听起来很有道理……但最后还是要把这部剧安利给你~</option>
   </select>
   <div id="o3-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：有道理!那我们还是回归生活，展望一下即将到来的美好周末！  <br>
@@ -108,7 +108,7 @@ weight: 25
 
   </div>
   <div id="o3-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：听起来很有道理……但最后还是要把这部剧安利给你\~  <br>
+ <strong>[玩家姓名]</strong> ：听起来很有道理……但最后还是要把这部剧安利给你~  <br>
 
  <strong>白起：</strong> 好，我们周末一起看。  <br>
 

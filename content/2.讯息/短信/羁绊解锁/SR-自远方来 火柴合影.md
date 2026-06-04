@@ -16,8 +16,8 @@ weight: 12
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o1-1">这几个火柴人有什么特殊含义吗？</option>
-    <option value="o1-2">这个照片好特别好可爱啊，怎么是四个小火柴人哈哈哈\~</option>
-    <option value="o1-3">夹在你特遣署的合照里面啦\~这几个小人该不会是顾征唐朝他们吧？</option>
+    <option value="o1-2">这个照片好特别好可爱啊，怎么是四个小火柴人哈哈哈~</option>
+    <option value="o1-3">夹在你特遣署的合照里面啦~这几个小人该不会是顾征唐朝他们吧？</option>
   </select>
   <div id="o1-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：这几个火柴人有什么特殊含义吗？  <br>
@@ -30,7 +30,7 @@ weight: 12
 
   </div>
   <div id="o1-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：这个照片好特别好可爱啊，怎么是四个小火柴人哈哈哈\~  <br>
+ <strong>[玩家姓名]</strong> ：这个照片好特别好可爱啊，怎么是四个小火柴人哈哈哈~  <br>
 
  <strong>白起：</strong> 我们当年因为身份原因不能拍合影，就用这种方式留念了一下。  <br>
 
@@ -40,7 +40,7 @@ weight: 12
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：夹在你特遣署的合照里面啦\~这几个小人该不会是顾征唐朝他们吧？  <br>
+ <strong>[玩家姓名]</strong> ：夹在你特遣署的合照里面啦~这几个小人该不会是顾征唐朝他们吧？  <br>
 
  <strong>白起：</strong> 不是，是以前的队友们。  <br>
 

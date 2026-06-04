@@ -78,7 +78,7 @@ weight: 46
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">不行，我受刺激了，从没抓到过的我一定要一雪前耻。</option>
-    <option value="o3-2">好啊好啊，感觉到时候会让现场其他人羡慕嫉妒恨呢\~</option>
+    <option value="o3-2">好啊好啊，感觉到时候会让现场其他人羡慕嫉妒恨呢~</option>
     <option value="o3-3">不，我一定要自己抓！</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -90,7 +90,7 @@ weight: 46
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：好啊好啊，感觉到时候会让现场其他人羡慕嫉妒恨呢\~  <br>
+ <strong>[玩家姓名]</strong> ：好啊好啊，感觉到时候会让现场其他人羡慕嫉妒恨呢~  <br>
 
  <strong>白起：</strong> 其实抓这个是有技巧的。  <br>
 

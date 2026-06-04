@@ -7,7 +7,7 @@ weight: 52
 > 获取途径：SR-琥珀时光三星 解锁
 
 
-**[玩家姓名]** ：学长，今晚的龙虾真的好好吃\~
+**[玩家姓名]** ：学长，今晚的龙虾真的好好吃~
 
 **白起：** 嗯，味道确实很不错。
 
@@ -50,7 +50,7 @@ weight: 52
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">学长今晚吃尽兴了吗？</option>
-    <option value="o2-2">我现在依然意犹未尽呢\~</option>
+    <option value="o2-2">我现在依然意犹未尽呢~</option>
     <option value="o2-3">因为超好吃，所以我今晚吃了好多……</option>
   </select>
   <div id="o2-1" class="opt-content">
@@ -62,7 +62,7 @@ weight: 52
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：我现在依然意犹未尽呢\~  <br>
+ <strong>[玩家姓名]</strong> ：我现在依然意犹未尽呢~  <br>
 
  <strong>白起：</strong> 你今晚其实已经吃了不少了……  <br>
 

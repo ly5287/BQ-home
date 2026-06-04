@@ -17,7 +17,7 @@ weight: 2
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o1-1">嘿嘿，我想看看你能不能通过这张图，猜到我现在在哪。</option>
     <option value="o1-2">我就是想看看白警官能从这张什么都没有的照片里，得到什么信息。</option>
-    <option value="o1-3">我故意拍成这样的，想考考白警官能看出什么\~如果太难，可以给你一点提示。</option>
+    <option value="o1-3">我故意拍成这样的，想考考白警官能看出什么~如果太难，可以给你一点提示。</option>
   </select>
   <div id="o1-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：嘿嘿，我想看看你能不能通过这张图，猜到我现在在哪。  <br>
@@ -40,7 +40,7 @@ weight: 2
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：我故意拍成这样的，想考考白警官能看出什么\~如果太难，可以给你一点提示。  <br>
+ <strong>[玩家姓名]</strong> ：我故意拍成这样的，想考考白警官能看出什么~如果太难，可以给你一点提示。  <br>
 
  <strong>白起：</strong> 不用。  <br>
 

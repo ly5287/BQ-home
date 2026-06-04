@@ -15,12 +15,12 @@ weight: 18
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">等一会儿你就知道了\~</option>
+    <option value="o1-1">等一会儿你就知道了~</option>
     <option value="o1-2">要猜猜看吗？</option>
     <option value="o1-3">是近几天，我发现的最棒的食谱！</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：等一会儿你就知道了\~  <br>
+ <strong>[玩家姓名]</strong> ：等一会儿你就知道了~  <br>
 
  <strong>白起：</strong> 好。  <br>
 
@@ -92,7 +92,7 @@ weight: 18
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">嘿嘿，想让你吃上更多家常料理。</option>
-    <option value="o3-2">毕竟上次一起逛家居城的时候买了烤箱\~忍不住就会多做点儿。</option>
+    <option value="o3-2">毕竟上次一起逛家居城的时候买了烤箱~忍不住就会多做点儿。</option>
     <option value="o3-3">那要不要我一会儿把食谱也分享给你？</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -106,7 +106,7 @@ weight: 18
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：毕竟上次一起逛家居城的时候买了烤箱\~忍不住就会多做点儿。  <br>
+ <strong>[玩家姓名]</strong> ：毕竟上次一起逛家居城的时候买了烤箱~忍不住就会多做点儿。  <br>
 
  <strong>白起：</strong> 一并买的装饰画我也挂起来了。  <br>
 

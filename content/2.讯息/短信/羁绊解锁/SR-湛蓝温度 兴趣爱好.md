@@ -52,7 +52,7 @@ weight: 39
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">我不会累，这是我的工作！虽然有时候也会有纠结……</option>
-    <option value="o2-2">谢谢你白起\~剪完这个也确实该放个假了！</option>
+    <option value="o2-2">谢谢你白起~剪完这个也确实该放个假了！</option>
     <option value="o2-3">我也觉得自己太累了，需要释放一下，比如哭哭什么的……</option>
   </select>
   <div id="o2-1" class="opt-content">
@@ -64,7 +64,7 @@ weight: 39
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：谢谢你白起\~剪完这个也确实该放个假了！  <br>
+ <strong>[玩家姓名]</strong> ：谢谢你白起~剪完这个也确实该放个假了！  <br>
 
  <strong>白起：</strong> 不用客气，关心你是必要的。  <br>
 
@@ -88,7 +88,7 @@ weight: 39
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">比拳击和射击更好玩吗？</option>
-    <option value="o3-2">我们去冲浪吧！好久没体验水上漂的感觉啦\~</option>
+    <option value="o3-2">我们去冲浪吧！好久没体验水上漂的感觉啦~</option>
     <option value="o3-3">我们去爬山吧！想站在高处看看这座城市，没准就有灵感了！</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -102,7 +102,7 @@ weight: 39
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：我们去冲浪吧！好久没体验水上漂的感觉啦\~  <br>
+ <strong>[玩家姓名]</strong> ：我们去冲浪吧！好久没体验水上漂的感觉啦~  <br>
 
  <strong>白起：</strong> 冲浪？  <br>
 

@@ -96,7 +96,7 @@ weight: 11
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">白警官表演才艺！我！也！要！看！！（超大声）</option>
-    <option value="o3-2">热热闹闹\~的确是爷爷奶奶们会喜欢的。</option>
+    <option value="o3-2">热热闹闹~的确是爷爷奶奶们会喜欢的。</option>
     <option value="o3-3">哈哈哈什么才艺？胸口碎大石那种吗？</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -110,7 +110,7 @@ weight: 11
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：热热闹闹\~的确是爷爷奶奶们会喜欢的。  <br>
+ <strong>[玩家姓名]</strong> ：热热闹闹~的确是爷爷奶奶们会喜欢的。  <br>
 
  <strong>白起：</strong> 除了表演才艺，还有一个乒乓球打得很好的老大爷，每次都要拉着我们打到天黑。  <br>
 

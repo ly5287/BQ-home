@@ -96,8 +96,8 @@ weight: 7
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">那……我要你选中的第一个东西！</option>
-    <option value="o3-2">不可以通过询问本人的方式作弊\~</option>
-    <option value="o3-3">你选的我都会喜欢哟\~</option>
+    <option value="o3-2">不可以通过询问本人的方式作弊~</option>
+    <option value="o3-3">你选的我都会喜欢哟~</option>
   </select>
   <div id="o3-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：那……我要你选中的第一个东西！  <br>
@@ -110,7 +110,7 @@ weight: 7
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：不可以通过询问本人的方式作弊\~  <br>
+ <strong>[玩家姓名]</strong> ：不可以通过询问本人的方式作弊~  <br>
 
  <strong>白起：</strong> 集思广益而已，不算作弊。  <br>
 
@@ -120,7 +120,7 @@ weight: 7
 
   </div>
   <div id="o3-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：你选的我都会喜欢哟\~  <br>
+ <strong>[玩家姓名]</strong> ：你选的我都会喜欢哟~  <br>
 
  <strong>白起：</strong> ……我现在算是越来越知道，自己以前给你的回答有多难对付了。  <br>
 

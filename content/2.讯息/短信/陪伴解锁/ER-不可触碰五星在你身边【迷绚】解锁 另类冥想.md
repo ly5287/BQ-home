@@ -3,7 +3,7 @@ title: 另类冥想
 weight: 5
 ---
 
-> 获取途径：ER-不可触碰五星在你身边【迷绚】解锁 解锁
+> 获取途径：ER-不可触碰五星在你身边【迷绚】解锁
 
 
 **白起：** 最近老是看你一个人在那发呆，是出什么事了吗？
@@ -16,7 +16,7 @@ weight: 5
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o1-1">因为曼陀罗风铃带来的灵感，让我突然意识到“日常生活中可以随时冥想”。</option>
     <option value="o1-2">我表面上看是在发呆，其实那都是我抽空在冥想，猜不到吧。</option>
-    <option value="o1-3">不是发呆啦，这是我最新研究的“生活冥想”法，很有用的\~</option>
+    <option value="o1-3">不是发呆啦，这是我最新研究的“生活冥想”法，很有用的~</option>
   </select>
   <div id="o1-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：因为曼陀罗风铃带来的灵感，让我突然意识到“日常生活中可以随时冥想”。  <br>
@@ -39,7 +39,7 @@ weight: 5
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：不是发呆啦，这是我最新研究的“生活冥想”法，很有用的\~  <br>
+ <strong>[玩家姓名]</strong> ：不是发呆啦，这是我最新研究的“生活冥想”法，很有用的~  <br>
 
  <strong>白起：</strong> “生活冥想”？这我还是第一次听说。  <br>
 
@@ -94,12 +94,12 @@ weight: 5
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">既然如此，要不要试试一起冥想，取长补短，让压力统统飞走\~</option>
+    <option value="o3-1">既然如此，要不要试试一起冥想，取长补短，让压力统统飞走~</option>
     <option value="o3-2">听起来特遣署的冥想怎么和锻炼差不多，还是我的冥想更适合普罗大众。</option>
     <option value="o3-3">是我从没想过的冥想方式了，白队不如抽空也教教我。</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：既然如此，要不要试试一起冥想，取长补短，让压力统统飞走\~  <br>
+ <strong>[玩家姓名]</strong> ：既然如此，要不要试试一起冥想，取长补短，让压力统统飞走~  <br>
 
  <strong>白起：</strong> 乐意参与。  <br>
 

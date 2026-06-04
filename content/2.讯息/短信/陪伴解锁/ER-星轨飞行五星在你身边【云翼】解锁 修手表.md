@@ -3,7 +3,7 @@ title: 修手表
 weight: 9
 ---
 
-> 获取途径：ER-星轨飞行五星在你身边【云翼】解锁 解锁
+> 获取途径：ER-星轨飞行五星在你身边【云翼】解锁
 
 
 **白起：** 手表修好了。
@@ -48,12 +48,12 @@ weight: 9
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">不过，我今天才知道，白警官还会修手表呢\~</option>
+    <option value="o2-1">不过，我今天才知道，白警官还会修手表呢~</option>
     <option value="o2-2">所以具体为什么指针停了？是里面什么东西被我摔歪了吗？</option>
     <option value="o2-3">我听人说手表修过以后，要经常拿去店里检修才行。</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：不过，我今天才知道，白警官还会修手表呢\~  <br>
+ <strong>[玩家姓名]</strong> ：不过，我今天才知道，白警官还会修手表呢~  <br>
 
  <strong>白起：</strong> 也是刚学会没多久。  <br>
 
@@ -84,7 +84,7 @@ weight: 9
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">昨天没看到白警官认真修手表的样子，觉得有点可惜！</option>
     <option value="o3-2">刚摔的时候我还挺愧疚的……毕竟你才刚送我没多久……</option>
-    <option value="o3-3">这次要怎么答谢白警官呢\~\~</option>
+    <option value="o3-3">这次要怎么答谢白警官呢~~</option>
   </select>
   <div id="o3-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：昨天没看到白警官认真修手表的样子，觉得有点可惜！  <br>
@@ -107,7 +107,7 @@ weight: 9
 
   </div>
   <div id="o3-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：这次要怎么答谢白警官呢\~\~  <br>
+ <strong>[玩家姓名]</strong> ：这次要怎么答谢白警官呢~~  <br>
 
  <strong>白起：</strong> 那戴上上次给你买的手链吧。  <br>
 

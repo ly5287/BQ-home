@@ -3,7 +3,7 @@ title: 海盐奶盖
 weight: 13
 ---
 
-> 获取途径：ER-海风旅人五星在你身边【醉香】解锁 解锁
+> 获取途径：ER-海风旅人五星在你身边【醉香】解锁
 
 
 **白起：** 冰箱里好像放了一大碗奶油，是你打算做蛋糕用的吗？
@@ -54,12 +54,12 @@ weight: 13
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">从今日开始可以实施居家自制冷饮计划\~</option>
-    <option value="o2-2">下次还可以试试其它饮料配奶盖\~比如鸡尾酒。</option>
+    <option value="o2-1">从今日开始可以实施居家自制冷饮计划~</option>
+    <option value="o2-2">下次还可以试试其它饮料配奶盖~比如鸡尾酒。</option>
     <option value="o2-3">别喝太多冰的，小心别喝坏肚子了</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：从今日开始可以实施居家自制冷饮计划\~  <br>
+ <strong>[玩家姓名]</strong> ：从今日开始可以实施居家自制冷饮计划~  <br>
 
  <strong>白起：</strong> 好，这个计划我也可以帮忙。  <br>
 
@@ -69,7 +69,7 @@ weight: 13
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：下次还可以试试其它饮料配奶盖\~比如鸡尾酒。  <br>
+ <strong>[玩家姓名]</strong> ：下次还可以试试其它饮料配奶盖~比如鸡尾酒。  <br>
 
  <strong>白起：</strong> 可以，正好前几天有朋友教了我几招调酒的方法，等我回家试试。  <br>
 
@@ -94,12 +94,12 @@ weight: 13
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">那就这周末一起喝一点，这次你可不能喝到一半就装醉了哦\~</option>
+    <option value="o3-1">那就这周末一起喝一点，这次你可不能喝到一半就装醉了哦~</option>
     <option value="o3-2">那我要喝蜜桃味的，家里还有石榴、芒果……都可以试试。</option>
     <option value="o3-3">喝！这次一定要和你一决胜负，看看你酒量的极限在哪。</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：那就这周末一起喝一点，这次你可不能喝到一半就装醉了哦\~  <br>
+ <strong>[玩家姓名]</strong> ：那就这周末一起喝一点，这次你可不能喝到一半就装醉了哦~  <br>
 
  <strong>白起：</strong> 装醉只是和顾征他们一起喝酒时的策略，免得他们一直拉着我闹。  <br>
 

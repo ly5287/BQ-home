@@ -15,12 +15,12 @@ weight: 70
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">有没有被吓了一跳！其实是我在水里化了一颗沐浴球\~</option>
-    <option value="o1-2">没错！这次不是相机滤镜，而是沐浴球的真实效果哦\~</option>
-    <option value="o1-3">是的\~我在浴缸里放了沐浴球，水就渐渐变成了这种颜色！</option>
+    <option value="o1-1">有没有被吓了一跳！其实是我在水里化了一颗沐浴球~</option>
+    <option value="o1-2">没错！这次不是相机滤镜，而是沐浴球的真实效果哦~</option>
+    <option value="o1-3">是的~我在浴缸里放了沐浴球，水就渐渐变成了这种颜色！</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：有没有被吓了一跳！其实是我在水里化了一颗沐浴球\~  <br>
+ <strong>[玩家姓名]</strong> ：有没有被吓了一跳！其实是我在水里化了一颗沐浴球~  <br>
 
  <strong>白起：</strong> 倒没有吓到，只是有点意外。  <br>
 
@@ -28,7 +28,7 @@ weight: 70
 
   </div>
   <div id="o1-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：没错！这次不是相机滤镜，而是沐浴球的真实效果哦\~  <br>
+ <strong>[玩家姓名]</strong> ：没错！这次不是相机滤镜，而是沐浴球的真实效果哦~  <br>
 
  <strong>白起：</strong> 挺特别的，看起来像你上次煮完菠菜的水。  <br>
 
@@ -38,7 +38,7 @@ weight: 70
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：是的\~我在浴缸里放了沐浴球，水就渐渐变成了这种颜色！  <br>
+ <strong>[玩家姓名]</strong> ：是的~我在浴缸里放了沐浴球，水就渐渐变成了这种颜色！  <br>
 
  <strong>白起：</strong> 第一眼我还以为看错了。  <br>
 
@@ -85,12 +85,12 @@ weight: 70
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">嗯！下次你也用用看吧\~</option>
-    <option value="o3-2">嗯！我已经在考虑下次要放什么颜色的沐浴球了\~</option>
-    <option value="o3-3">嗯！最近的沐浴产品真的很有创意\~</option>
+    <option value="o3-1">嗯！下次你也用用看吧~</option>
+    <option value="o3-2">嗯！我已经在考虑下次要放什么颜色的沐浴球了~</option>
+    <option value="o3-3">嗯！最近的沐浴产品真的很有创意~</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：嗯！下次你也用用看吧\~  <br>
+ <strong>[玩家姓名]</strong> ：嗯！下次你也用用看吧~  <br>
 
  <strong>白起：</strong> 咳，我就算了。  <br>
 
@@ -100,7 +100,7 @@ weight: 70
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：嗯！我已经在考虑下次要放什么颜色的沐浴球了\~  <br>
+ <strong>[玩家姓名]</strong> ：嗯！我已经在考虑下次要放什么颜色的沐浴球了~  <br>
 
  <strong>白起：</strong> 你喜欢的颜色都好。  <br>
 
@@ -108,7 +108,7 @@ weight: 70
 
   </div>
   <div id="o3-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：嗯！最近的沐浴产品真的很有创意\~  <br>
+ <strong>[玩家姓名]</strong> ：嗯！最近的沐浴产品真的很有创意~  <br>
 
  <strong>白起：</strong> 听署里的人说，最近有种叫作浴盐的东西也很火。  <br>
 

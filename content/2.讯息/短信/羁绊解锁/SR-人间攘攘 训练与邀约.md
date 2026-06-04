@@ -55,12 +55,12 @@ weight: 4
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">其实我还做了点别的安排，可以的话，想要你一整天的时间\~</option>
-    <option value="o2-2">不过训练只是一部分，更多还是想跟你一起出门走走\~</option>
+    <option value="o2-1">其实我还做了点别的安排，可以的话，想要你一整天的时间~</option>
+    <option value="o2-2">不过训练只是一部分，更多还是想跟你一起出门走走~</option>
     <option value="o2-3">有你在身边，总觉得离我变成摩托车高手不远了！</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：其实我还做了点别的安排，可以的话，想要你一整天的时间\~  <br>
+ <strong>[玩家姓名]</strong> ：其实我还做了点别的安排，可以的话，想要你一整天的时间~  <br>
 
  <strong>白起：</strong> 我的时间都是你的。  <br>
 
@@ -70,7 +70,7 @@ weight: 4
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：不过训练只是一部分，更多还是想跟你一起出门走走\~  <br>
+ <strong>[玩家姓名]</strong> ：不过训练只是一部分，更多还是想跟你一起出门走走~  <br>
 
  <strong>白起：</strong> 这一点算是被你抢先了。  <br>
 

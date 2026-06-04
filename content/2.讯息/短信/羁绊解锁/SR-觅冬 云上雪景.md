@@ -50,7 +50,7 @@ weight: 8
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">！！我刚刚才发现我的相机忘了充电，待会恐怕拍不了照片了。</option>
-    <option value="o2-2">太好了\~那我待会要多带点好吃的，好风景搭配美食才会更开心嘛\~</option>
+    <option value="o2-2">太好了~那我待会要多带点好吃的，好风景搭配美食才会更开心嘛~</option>
     <option value="o2-3">那岂不是待会就能看到了吗？需不需要做什么特别准备？</option>
   </select>
   <div id="o2-1" class="opt-content">
@@ -62,7 +62,7 @@ weight: 8
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：太好了\~那我待会要多带点好吃的，好风景搭配美食才会更开心嘛\~  <br>
+ <strong>[玩家姓名]</strong> ：太好了~那我待会要多带点好吃的，好风景搭配美食才会更开心嘛~  <br>
 
  <strong>白起：</strong> 那我也帮你拿点，分摊些重量。  <br>
 
@@ -84,7 +84,7 @@ weight: 8
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">那在回家之前，白队还有什么想做的事嘛？</option>
-    <option value="o3-2">感觉我们的返程之旅肯定会很有意思\~</option>
+    <option value="o3-2">感觉我们的返程之旅肯定会很有意思~</option>
     <option value="o3-3">这么想想我们来的时候只看到了夜景，如果不是返程安排在白天就要错过了。</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -96,7 +96,7 @@ weight: 8
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：感觉我们的返程之旅肯定会很有意思\~  <br>
+ <strong>[玩家姓名]</strong> ：感觉我们的返程之旅肯定会很有意思~  <br>
 
  <strong>白起：</strong> 其实这次训练过程中还发生了不少有意思的事。  <br>
 

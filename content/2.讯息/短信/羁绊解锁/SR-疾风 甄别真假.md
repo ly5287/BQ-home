@@ -15,12 +15,12 @@ weight: 20
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">不用啦，你的批注写得好详细\~</option>
+    <option value="o1-1">不用啦，你的批注写得好详细~</option>
     <option value="o1-2">稍等一下，还有两份事件报告我汇总一下发给你！</option>
-    <option value="o1-3">我把最近的奇异事件报告多看两遍，再想一想\~</option>
+    <option value="o1-3">我把最近的奇异事件报告多看两遍，再想一想~</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：不用啦，你的批注写得好详细\~  <br>
+ <strong>[玩家姓名]</strong> ：不用啦，你的批注写得好详细~  <br>
 
  <strong>白起：</strong> 那就好。  <br>
 
@@ -36,7 +36,7 @@ weight: 20
 
   </div>
   <div id="o1-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：我把最近的奇异事件报告多看两遍，再想一想\~  <br>
+ <strong>[玩家姓名]</strong> ：我把最近的奇异事件报告多看两遍，再想一想~  <br>
 
  <strong>白起：</strong> 好，不急。  <br>
 
@@ -51,7 +51,7 @@ weight: 20
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">说起来有点好奇，会有让你也难辨真假的奇异事件吗？</option>
     <option value="o2-2">不过这样麻烦你，会不会影响你的日常工作？</option>
-    <option value="o2-3">感觉你知道得好多\~</option>
+    <option value="o2-3">感觉你知道得好多~</option>
   </select>
   <div id="o2-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：说起来有点好奇，会有让你也难辨真假的奇异事件吗？  <br>
@@ -72,7 +72,7 @@ weight: 20
 
   </div>
   <div id="o2-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：感觉你知道得好多\~  <br>
+ <strong>[玩家姓名]</strong> ：感觉你知道得好多~  <br>
 
  <strong>白起：</strong> 这是我的专业所在。  <br>
 

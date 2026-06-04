@@ -53,11 +53,11 @@ weight: 38
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">谢谢你！但是我可以自己搞定啦\~</option>
-    <option value="o2-2">啊，这种事就不麻烦你啦，点外卖的时间还是有的\~</option>
+    <option value="o2-1">谢谢你！但是我可以自己搞定啦~</option>
+    <option value="o2-2">啊，这种事就不麻烦你啦，点外卖的时间还是有的~</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：谢谢你！但是我可以自己搞定啦\~  <br>
+ <strong>[玩家姓名]</strong> ：谢谢你！但是我可以自己搞定啦~  <br>
 
  <strong>白起：</strong> 不要见外。  <br>
 
@@ -67,7 +67,7 @@ weight: 38
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：啊，这种事就不麻烦你啦，点外卖的时间还是有的\~  <br>
+ <strong>[玩家姓名]</strong> ：啊，这种事就不麻烦你啦，点外卖的时间还是有的~  <br>
 
  <strong>白起：</strong> 听话。  <br>
 

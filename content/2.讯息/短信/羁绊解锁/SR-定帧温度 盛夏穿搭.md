@@ -84,7 +84,7 @@ weight: 6
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o3-1">上次那张戴发卡的照片因为过于可爱，现在已经是我的手机屏保了。</option>
-    <option value="o3-2">是不是上次拍完发卡照片，你就喜欢上可爱风了\~</option>
+    <option value="o3-2">是不是上次拍完发卡照片，你就喜欢上可爱风了~</option>
     <option value="o3-3">别的不敢说，这方面就交给我吧，保证让白队接下来可爱又帅气！</option>
   </select>
   <div id="o3-1" class="opt-content">
@@ -98,7 +98,7 @@ weight: 6
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：是不是上次拍完发卡照片，你就喜欢上可爱风了\~  <br>
+ <strong>[玩家姓名]</strong> ：是不是上次拍完发卡照片，你就喜欢上可爱风了~  <br>
 
  <strong>白起：</strong> 那时候只是拍照，暂时不算数。  <br>
 

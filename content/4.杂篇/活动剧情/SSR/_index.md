@@ -1,6 +1,6 @@
 ---  
-title: "SSR" 
-weight: 20 
+title: "SSR"   
+weight: 20   
 ---  
 
 

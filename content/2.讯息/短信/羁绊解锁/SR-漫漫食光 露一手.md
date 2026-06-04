@@ -55,7 +55,7 @@ weight: 27
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">需要我帮忙打打下手吗？</option>
     <option value="o2-2">差点忘了这茬……我去我去！</option>
-    <option value="o2-3">有关吃的事情一切都没问题\~</option>
+    <option value="o2-3">有关吃的事情一切都没问题~</option>
   </select>
   <div id="o2-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：需要我帮忙打打下手吗？  <br>
@@ -74,7 +74,7 @@ weight: 27
 
   </div>
   <div id="o2-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：有关吃的事情一切都没问题\~  <br>
+ <strong>[玩家姓名]</strong> ：有关吃的事情一切都没问题~  <br>
 
  <strong>白起：</strong> 有什么特别想吃的吗？  <br>
 
@@ -87,12 +87,12 @@ weight: 27
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">我一定会把所有菜吃得一干二净的\~</option>
+    <option value="o3-1">我一定会把所有菜吃得一干二净的~</option>
     <option value="o3-2">听你这么一说，我就要把期待值提到最高了！</option>
     <option value="o3-3">这次换我吹你，只要是你做的我都爱吃都喜欢。</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：我一定会把所有菜吃得一干二净的\~  <br>
+ <strong>[玩家姓名]</strong> ：我一定会把所有菜吃得一干二净的~  <br>
 
  <strong>白起：</strong> 好，那我就多做几道。  <br>
 

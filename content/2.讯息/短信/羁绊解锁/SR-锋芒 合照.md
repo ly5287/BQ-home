@@ -51,12 +51,12 @@ weight: 28
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">我就猜是落在你那里了！看来我还是蛮聪明的嘛\~</option>
+    <option value="o2-1">我就猜是落在你那里了！看来我还是蛮聪明的嘛~</option>
     <option value="o2-2">我说怎么到处都找不到……那张照片拍得超好看，丢了就太可惜了</option>
     <option value="o2-3">啊，真的忘了！我之前还想着到家门口时再跟你要呢……</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：我就猜是落在你那里了！看来我还是蛮聪明的嘛\~  <br>
+ <strong>[玩家姓名]</strong> ：我就猜是落在你那里了！看来我还是蛮聪明的嘛~  <br>
 
  <strong>白起：</strong> 是我最聪明的女孩  <br>
 

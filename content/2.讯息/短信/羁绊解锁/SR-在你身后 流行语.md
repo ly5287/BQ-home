@@ -47,12 +47,12 @@ weight: 47
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">这是之前的网络流行语，还有配套的表情包呢\~</option>
+    <option value="o2-1">这是之前的网络流行语，还有配套的表情包呢~</option>
     <option value="o2-2">因为我打算做个流行语的节目，搜集了一些，在找各种人试试反应。</option>
     <option value="o2-3">吓到你了不好意思啊</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：这是之前的网络流行语，还有配套的表情包呢\~  <br>
+ <strong>[玩家姓名]</strong> ：这是之前的网络流行语，还有配套的表情包呢~  <br>
 
  <strong>白起：</strong> ……我用不来表情包，默认表情都很少发。  <br>
 

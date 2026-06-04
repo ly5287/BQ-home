@@ -15,12 +15,12 @@ weight: 9
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">只要和你一起，怎么庆祝都可以\~</option>
+    <option value="o1-1">只要和你一起，怎么庆祝都可以~</option>
     <option value="o1-2">嘿嘿，我们晚上吃顿好的吧！</option>
     <option value="o1-3">你今天不是忙了一天嘛，竟然还注意到这个啦！</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：只要和你一起，怎么庆祝都可以\~  <br>
+ <strong>[玩家姓名]</strong> ：只要和你一起，怎么庆祝都可以~  <br>
 
  <strong>白起：</strong> 你上了一天班，要先吃饱。  <br>
 
@@ -53,12 +53,12 @@ weight: 9
 <!-- 第2组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o2-1">如果我说想吃你亲自下厨做的饭呢\~</option>
+    <option value="o2-1">如果我说想吃你亲自下厨做的饭呢~</option>
     <option value="o2-2">想吃顿过瘾的烤肉！</option>
     <option value="o2-3">有白警官一起庆祝，想吃麻麻辣辣的海鲜大咖！</option>
   </select>
   <div id="o2-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：如果我说想吃你亲自下厨做的饭呢\~  <br>
+ <strong>[玩家姓名]</strong> ：如果我说想吃你亲自下厨做的饭呢~  <br>
 
  <strong>白起：</strong> 当然没问题，我提前在网上订好菜。  <br>
 
@@ -91,12 +91,12 @@ weight: 9
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">我决定学你“翘班”了，正好今天没事，换我提前下班去接你吧\~</option>
-    <option value="o3-2">来自美食的诱惑，已经让我迫不及待想下班了\~</option>
+    <option value="o3-1">我决定学你“翘班”了，正好今天没事，换我提前下班去接你吧~</option>
+    <option value="o3-2">来自美食的诱惑，已经让我迫不及待想下班了~</option>
     <option value="o3-3">嘿嘿，我们白Sir就是最贴心的！</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：我决定学你“翘班”了，正好今天没事，换我提前下班去接你吧\~  <br>
+ <strong>[玩家姓名]</strong> ：我决定学你“翘班”了，正好今天没事，换我提前下班去接你吧~  <br>
 
  <strong>白起：</strong> 那我尽快把手头的事忙完。  <br>
 
@@ -106,7 +106,7 @@ weight: 9
 
   </div>
   <div id="o3-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：来自美食的诱惑，已经让我迫不及待想下班了\~  <br>
+ <strong>[玩家姓名]</strong> ：来自美食的诱惑，已经让我迫不及待想下班了~  <br>
 
  <strong>白起：</strong> 就知道会这样。  <br>
 

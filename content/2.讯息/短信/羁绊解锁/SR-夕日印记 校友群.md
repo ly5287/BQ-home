@@ -15,12 +15,12 @@ weight: 23
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">看群名猜不出来吧哈哈，不过我还是希望你可以猜一下\~</option>
+    <option value="o1-1">看群名猜不出来吧哈哈，不过我还是希望你可以猜一下~</option>
     <option value="o1-2">是恋语高中的校友群哦！</option>
     <option value="o1-3">啊啊我拉错人了！！不过好像也没关系…</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：看群名猜不出来吧哈哈，不过我还是希望你可以猜一下\~  <br>
+ <strong>[玩家姓名]</strong> ：看群名猜不出来吧哈哈，不过我还是希望你可以猜一下~  <br>
 
  <strong>白起：</strong> 我看了你在群里的昵称。  <br>
 

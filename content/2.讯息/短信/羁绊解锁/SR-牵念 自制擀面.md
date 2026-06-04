@@ -15,12 +15,12 @@ weight: 1
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o1-1">No no\~是块面团哦！猜猜我要把它做成什么？</option>
-    <option value="o1-2">是块面团啦！我打算用它做手擀面\~</option>
+    <option value="o1-1">No no~是块面团哦！猜猜我要把它做成什么？</option>
+    <option value="o1-2">是块面团啦！我打算用它做手擀面~</option>
     <option value="o1-3">噗……它看起来这么小吗？我重新找了个参照物，你再看看？</option>
   </select>
   <div id="o1-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：No no\~是块面团哦！猜猜我要把它做成什么？  <br>
+ <strong>[玩家姓名]</strong> ：No no~是块面团哦！猜猜我要把它做成什么？  <br>
 
  <strong>白起：</strong> 嗯……手擀面吗？  <br>
 
@@ -30,7 +30,7 @@ weight: 1
 
   </div>
   <div id="o1-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：是块面团啦！我打算用它做手擀面\~  <br>
+ <strong>[玩家姓名]</strong> ：是块面团啦！我打算用它做手擀面~  <br>
 
  <strong>白起：</strong> 难怪你昨天在看自动擀面机。  <br>
 
@@ -56,8 +56,8 @@ weight: 1
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
     <option value="o2-1">面团发酵还需要时间嘛，我提前动手，等你回来我们就能开工了！</option>
-    <option value="o2-2">教程说发酵的效果会受外部条件影响，所以我想先试试这个和面配方能不能成功\~</option>
-    <option value="o2-3">擀面条当然要等你一起了\~不过你回来之前，我想先试着摊几张手抓饼\~</option>
+    <option value="o2-2">教程说发酵的效果会受外部条件影响，所以我想先试试这个和面配方能不能成功~</option>
+    <option value="o2-3">擀面条当然要等你一起了~不过你回来之前，我想先试着摊几张手抓饼~</option>
   </select>
   <div id="o2-1" class="opt-content">
  <strong>[玩家姓名]</strong> ：面团发酵还需要时间嘛，我提前动手，等你回来我们就能开工了！  <br>
@@ -70,7 +70,7 @@ weight: 1
 
   </div>
   <div id="o2-2" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：教程说发酵的效果会受外部条件影响，所以我想先试试这个和面配方能不能成功\~  <br>
+ <strong>[玩家姓名]</strong> ：教程说发酵的效果会受外部条件影响，所以我想先试试这个和面配方能不能成功~  <br>
 
  <strong>白起：</strong> 我之前听食堂的面点师傅说过，太冷或太热的天气都不利于发酵。  <br>
 
@@ -80,7 +80,7 @@ weight: 1
 
   </div>
   <div id="o2-3" class="opt-content" style="display:none;">
- <strong>[玩家姓名]</strong> ：擀面条当然要等你一起了\~不过你回来之前，我想先试着摊几张手抓饼\~  <br>
+ <strong>[玩家姓名]</strong> ：擀面条当然要等你一起了~不过你回来之前，我想先试着摊几张手抓饼~  <br>
 
  <strong>白起：</strong> 好巧，快下班那会儿顾征他们吵着说要去吃手抓饼。  <br>
 
@@ -95,12 +95,12 @@ weight: 1
 <!-- 第3组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
-    <option value="o3-1">报告，因为白警官还没到家，所以我刚刚偷揪了块面团捏了个小白警官\~</option>
+    <option value="o3-1">报告，因为白警官还没到家，所以我刚刚偷揪了块面团捏了个小白警官~</option>
     <option value="o3-2">估算了一下，这块面团做出来的面感觉不够两个人吃……我再揉一团吧！</option>
     <option value="o3-3">不过我一直“水多了加面，面多了加水”，现在面团比我预想中大了一倍……</option>
   </select>
   <div id="o3-1" class="opt-content">
- <strong>[玩家姓名]</strong> ：报告，因为白警官还没到家，所以我刚刚偷揪了块面团捏了个小白警官\~  <br>
+ <strong>[玩家姓名]</strong> ：报告，因为白警官还没到家，所以我刚刚偷揪了块面团捏了个小白警官~  <br>
 
  <strong>白起：</strong> 报告，白警官已经在全速回家的路上。  <br>
 
