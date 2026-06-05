@@ -20,24 +20,42 @@ document.addEventListener('DOMContentLoaded', function () {
   const articleBody = document.querySelector('#R-body-inner');
   if (!articleBody) return;
 
-  // 同时处理段落和列表项（应对选项中的对话）
+  /**
+   * 检测 HTML 片段是否以特定角色的对话开头，并上色
+   */
+  function colorizeLine(htmlSnippet) {
+    // 白起（蓝色）
+    if (/^\s*<strong>白起[：:]<\/strong>/i.test(htmlSnippet)) {
+      return `<span style="color: #1c90f3;">${htmlSnippet}</span>`;
+    }
+    // 玩家（金色）
+    if (/^\s*<strong>(?:&ldquo;玩家名称&rdquo;|“玩家名称”|"玩家名称"|\[玩家姓名\])[：:]<\/strong>/i.test(htmlSnippet)) {
+      return `<span style="color: #E2B245;">${htmlSnippet}</span>`;
+    }
+    // 其他角色或叙述，原样返回
+    return htmlSnippet;
+  }
+
   const elements = articleBody.querySelectorAll('p, li');
-
-  const baiqiRegex = /(<strong>白起[：:]<\/strong>)([^<]*(?:<(?!br\s*\/?>)[^<]*)*)(?=<br\s*\/?>|$)/gi;
-  const playerRegex = /(<strong>(?:&ldquo;玩家名称&rdquo;|“玩家名称”|"玩家名称"|\[玩家姓名\])[：:]<\/strong>)([^<]*(?:<(?!br\s*\/?>)[^<]*)*)(?=<br\s*\/?>|$)/gi;
-
   elements.forEach(el => {
     let html = el.innerHTML;
 
-    html = html.replace(baiqiRegex, (match, strong, content) => {
-      return `<span style="color: #1c90f3;">${strong}${content}</span>`;
-    });
+    // 按 <br> 或 <br/> 或 <br /> 分割，并保留分割符
+    const parts = html.split(/(<br\s*\/?>)/gi);
+    let newHtml = '';
 
-    html = html.replace(playerRegex, (match, strong, content) => {
-      return `<span style="color: #E2B245;">${strong}${content}</span>`;
-    });
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      // 如果是 <br> 标签本身，直接保留
+      if (/^<br\s*\/?>$/i.test(part)) {
+        newHtml += part;
+      } else {
+        // 对非 <br> 的片段进行上色判断
+        newHtml += colorizeLine(part);
+      }
+    }
 
-    el.innerHTML = html;
+    el.innerHTML = newHtml;
   });
 });
 
