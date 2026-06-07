@@ -58,3 +58,7 @@ defaultContentLanguage = "zh"
   custom_js = ["/js/custom.js"]
   alwaysopen = false
   collapsibleMenu = true
+  showVisitedLinks = false
+  [params.search]
+    [params.search.index]
+      disable = true

@@ -16,6 +16,8 @@ function fixSearchForm() {
 }
 fixSearchForm();
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const articleBody = document.querySelector('#R-body-inner');
   if (!articleBody) return;
@@ -568,3 +570,32 @@ window.getBreadcrumb = function(url) {
   setInterval(addAll, 500);
   window.addBreadcrumbs = addAll;
 })();
+
+// 侧边栏搜索跳转（适配无按钮结构）
+(function() {
+  var input = document.querySelector('#R-search-by');
+  var icon = document.querySelector('.searchbox .fa-search');
+  if (!input) return;
+
+  function doSearch() {
+    var q = input.value.trim();
+    if (q) {
+      window.location.href = '/search/?q=' + encodeURIComponent(q);
+    }
+  }
+
+  // 回车键跳转
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      doSearch();
+    }
+  });
+
+  // 点击搜索图标跳转
+  if (icon) {
+    icon.style.cursor = 'pointer'; // 提示可点击
+    icon.addEventListener('click', doSearch);
+  }
+})();
+

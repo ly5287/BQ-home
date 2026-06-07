@@ -3,7 +3,7 @@
   <channel>
     <title>外编 :: 87档案室</title>
     <link>http://localhost:3001/5.%E5%A4%96%E7%BC%96/index.html</link>
-    <description>——屏幕之外，也有他留下的温度。 设定集&#xD;微博</description>
+    <description>——屏幕之外，也有他留下的温度。 设定集&#xD;微博&#xD;手写信</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/5.%E5%A4%96%E7%BC%96/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/5.%E5%A4%96%E7%BC%96/%E5%BE%AE%E5%8D%9A/index.html</guid>
       <description>@白起7&#xD;@恋与制作人</description>
+    </item>
+    <item>
+      <title>手写信</title>
+      <link>http://localhost:3001/5.%E5%A4%96%E7%BC%96/%E6%89%8B%E5%86%99%E4%BF%A1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/5.%E5%A4%96%E7%BC%96/%E6%89%8B%E5%86%99%E4%BF%A1/index.html</guid>
+      <description>周年手写信&#xD;百日手写信&#xD;各类礼盒&#xD;其他信件&#xD;周边/联名&#xD;其他便签&#xD;生日手写卡</description>
     </item>
   </channel>
 </rss>
