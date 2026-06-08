@@ -4,7 +4,34 @@
       <h1 class="post-title">{{ .Title }}</h1>
     </header>
     <div class="post-content">
+
+<div class="search-mode-selector">
+<div class="mode-card active" data-mode="default">
+  <h3>默认模式 <span class="mode-arrow">▾</span></h3>
+  <p>全站搜索，包含精准搜索及少量模糊搜索。同一页面包含多处搜索词时仅显示一次</p>
+</div>
+<div class="mode-card" data-mode="full">
+  <h3>完整模式 <span class="mode-arrow">▾</span></h3>
+  <p>全站搜索，仅包含精准搜索，同一页面包含多处搜索词时逐一显示</p>
+</div>
+<div class="mode-card" data-mode="local">
+  <h3>局部搜索 <span class="mode-arrow">▾</span></h3>
+  <p>在指定栏目中搜索，仅包含精准搜索，同一页面包含多处搜索词时逐一显示</p>
+</div>
+</div>
+
       <div id="pagefind-search"></div>
+
+<div id="precise-search-container" style="display:none; border:none; background:transparent; box-shadow:none;">
+  <div class="precise-search-box">
+    <span class="precise-search-icon"></span>
+    <input type="text" class="precise-search-input" placeholder="搜索..." autofocus>
+    <button class="precise-search-clear" type="button" title="清除搜索">✕</button>
+  </div>
+  <div class="precise-search-stats"></div>
+  <div class="precise-search-results"></div>
+</div>
+
       <link href="{{ "pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
       <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
 <script>

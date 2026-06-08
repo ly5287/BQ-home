@@ -12,6 +12,7 @@ defaultContentLanguage = "zh"
   baseName = "fulltext"
   isPlainText = true
   notAlternative = true
+
 # 为首页启用该输出（home 是 Hugo 的首页页面类型）
 [outputs]
   home = ["HTML", "RSS", "FulltextJSON"]
@@ -59,6 +60,4 @@ defaultContentLanguage = "zh"
   alwaysopen = false
   collapsibleMenu = true
   showVisitedLinks = false
-  [params.search]
-    [params.search.index]
-      disable = true
+  disableMetaDescription = true

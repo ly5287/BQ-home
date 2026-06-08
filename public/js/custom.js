@@ -185,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => res.json())
       .then(data => {
         fulltextData = data;
+        window.fulltextData = fulltextData;
         console.log('全文本索引加载完成，共', data.length, '个页面');
         const q = getCurrentQuery();
         if (q) injectFulltextResults(q);
@@ -194,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function getCurrentQuery() {
+    loadFulltextIndex();  // 确保索引开始加载
     const urlQ = (new URLSearchParams(window.location.search)).get('q')?.trim();
     if (urlQ) return urlQ;
     const input = document.querySelector('.pagefind-ui__search-input');
@@ -455,11 +457,28 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
+
+    // 首次聚焦搜索框时加载索引
+    input.addEventListener('focus', function() {
+      loadFulltextIndex();
+    }, { once: true });
+
+
     const initialQ = getCurrentQuery();
     if (initialQ) {
       input.value = initialQ;
       injectFulltextResults(initialQ);
     }
+
+if (initialQ && !fulltextData) {
+  const waitForData = setInterval(() => {
+    if (fulltextData) {
+      clearInterval(waitForData);
+      injectFulltextResults(initialQ);
+    }
+  }, 200);
+}
+
 
     window.addEventListener('pageshow', function(event) {
       const currentQ = getCurrentQuery();
@@ -515,12 +534,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  loadFulltextIndex();
+//   loadFulltextIndex();
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bindSearchTrigger);
   } else {
     bindSearchTrigger();
   }
+
+  window.injectFulltextResults = injectFulltextResults;
+  window.preciseSearch = function(query) {
+    if (!window.fulltextData || !query) return [];
+    var allMatches = window.fulltextData.filter(function(page) {
+      return (page.title + ' ' + page.content).toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    });
+    // 转为片段列表（多匹配）
+    var fragments = [];
+    allMatches.forEach(function(page) {
+      var content = page.content;
+      var lowerContent = content.toLowerCase();
+      var queryLower = query.toLowerCase();
+      var pos = lowerContent.indexOf(queryLower);
+      var count = 0;
+      while (pos !== -1 && count < 10) {
+        var start = Math.max(0, pos - 40);
+        var end = Math.min(content.length, pos + queryLower.length + 60);
+        var snippet = content.substring(start, end);
+        if (start > 0) snippet = '…' + snippet;
+        if (end < content.length) snippet += '…';
+        fragments.push({ page: page, excerpt: snippet, matchIndex: count });
+        count++;
+        pos = lowerContent.indexOf(queryLower, pos + 1);
+      }
+      if (count === 0) {
+        fragments.push({ page: page, excerpt: page.content.substring(0, 80) + '…', matchIndex: 0 });
+      }
+    });
+    return fragments;
+  };
 })();
 
 // ========== 搜索结果层级（全局函数 + 定时器） ==========
@@ -599,3 +649,173 @@ window.getBreadcrumb = function(url) {
   }
 })();
 
+
+
+
+
+
+
+
+// ========== 搜索模式管理（独立精准搜索） ==========
+(function() {
+  var currentMode = 'default';
+  var pagefindContainer = document.getElementById('pagefind-search');
+  var preciseContainer = document.getElementById('precise-search-container');
+  var preciseInput = null;
+  var preciseResultsDiv = null;
+
+  // 切换模式
+  function setMode(mode) {
+    currentMode = mode;
+    window.searchMode = mode;
+
+    if (mode === 'default') {
+      // 显示 Pagefind，隐藏精准搜索
+      if (pagefindContainer) pagefindContainer.style.display = '';
+      if (preciseContainer) preciseContainer.style.display = 'none';
+      // 恢复 Pagefind 结果
+      var container = document.querySelector('.pagefind-ui__results');
+      if (container) {
+        container.querySelectorAll('.pagefind-ui__result').forEach(function(el) {
+          el.style.display = '';
+        });
+      }
+      // 重新触发默认搜索
+      var q = (new URLSearchParams(location.search)).get('q')?.trim();
+      if (q && window.injectFulltextResults) {
+        window.injectFulltextResults(q);
+      }
+    } else {
+      // 隐藏 Pagefind，显示精准搜索
+      if (pagefindContainer) pagefindContainer.style.display = 'none';
+      if (preciseContainer) {
+        preciseContainer.style.display = '';
+        if (!preciseInput) {
+          preciseInput = preciseContainer.querySelector('.precise-search-input');
+          preciseResultsDiv = preciseContainer.querySelector('.precise-search-results');
+          // 绑定输入事件
+          preciseInput.addEventListener('input', function() {
+            var query = this.value.trim();
+            if (!query) {
+              preciseResultsDiv.innerHTML = '';
+              return;
+            }
+            var fragments = window.preciseSearch(query);
+            renderPreciseResults(fragments, query);
+          });
+        }
+        // 如果地址栏有查询词，自动填入并搜索
+        var q = (new URLSearchParams(location.search)).get('q')?.trim();
+        if (q) {
+          preciseInput.value = q;
+          var fragments = window.preciseSearch(q);
+          renderPreciseResults(fragments, q);
+        } else {
+          preciseInput.value = '';
+          preciseResultsDiv.innerHTML = '';
+        }
+      }
+    }
+  }
+
+  // 渲染精准结果（按页面分组，多预览）
+function renderPreciseResults(fragments, query) {
+  if (!preciseResultsDiv) return;
+  var statsDiv = document.querySelector('.precise-search-stats');
+  
+  if (!fragments || fragments.length === 0) {
+    preciseResultsDiv.innerHTML = '';
+    if (statsDiv) statsDiv.style.display = 'none';
+    return;
+  }
+
+  // 按页面分组
+  var pagesMap = {};
+  fragments.forEach(function(frag) {
+    var url = frag.page.url;
+    if (!pagesMap[url]) {
+      pagesMap[url] = { page: frag.page, excerpts: [] };
+    }
+    pagesMap[url].excerpts.push(frag.excerpt);
+  });
+
+  var pageCount = Object.keys(pagesMap).length;
+  var totalMatches = fragments.length;
+
+  // 更新统计栏（只此一处）
+  if (statsDiv) {
+    statsDiv.textContent = '共找到 ' + pageCount + ' 个页面，精准匹配 ' + totalMatches + ' 处';
+    statsDiv.style.display = '';
+  }
+
+  // 构建结果 HTML（不包含统计行）
+  var html = '';
+  var pageKeys = Object.keys(pagesMap);
+  for (var i = 0; i < pageKeys.length; i++) {
+    var key = pageKeys[i];
+    var group = pagesMap[key];
+    var page = group.page;
+    var url = page.url + (page.url.includes('?') ? '&' : '?') + 'q=' + encodeURIComponent(query);
+    var breadcrumb = (typeof window.getBreadcrumb === 'function') ? window.getBreadcrumb(page.url) : '';
+
+    html += '<div style="margin-bottom:1.5em;border-bottom:1px solid #eee;padding-bottom:1em;">';
+    html += '<a href="' + url + '" style="font-size:1.1em;font-weight:bold;">' + page.title + '</a>';
+    if (breadcrumb) {
+      html += '<div style="color:#888;font-size:0.85em;margin-top:0.2em;">' + breadcrumb + '</div>';
+    }
+    for (var j = 0; j < group.excerpts.length; j++) {
+      var excerpt = group.excerpts[j].replace(
+        new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+        '<mark class="search">$&</mark>'
+      );
+html += '<p style="color:#555;margin:0.3em 0 0 0;"><span style="font-weight:bold;color:#000;margin-right:0.4em;">' + (j + 1) + '.</span>' + excerpt + '</p>';
+    }
+    html += '</div>';
+  }
+
+  preciseResultsDiv.innerHTML = html;
+}
+
+  // 初始化卡片
+  function init() {
+    var cards = document.querySelectorAll('.mode-card');
+    if (!cards.length) return;
+
+    // 默认选中第一个卡片
+    cards[0].classList.add('active');
+    setMode('default');
+
+    cards.forEach(function(card) {
+      // 箭头点击展开/折叠描述
+      var arrow = card.querySelector('.mode-arrow');
+      if (arrow) {
+        arrow.addEventListener('click', function(e) {
+          e.stopPropagation(); // 阻止触发卡片点击
+          card.classList.toggle('expanded');
+        });
+      }
+
+      // 卡片点击切换模式
+      card.addEventListener('click', function() {
+        cards.forEach(function(c) { c.classList.remove('active'); });
+        card.classList.add('active');
+        setMode(card.dataset.mode);
+      });
+    });
+  }
+
+  // 确保精准搜索函数存在
+  if (!window.preciseSearch) {
+    console.error('preciseSearch 函数未定义，请先在全文本模块中添加暴露');
+    return;
+  }
+
+  // 等待容器就绪
+  var observer = new MutationObserver(function() {
+    if (document.querySelector('.mode-card') && document.getElementById('pagefind-search')) {
+      init();
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
