@@ -561,7 +561,13 @@ if (initialQ && !fulltextData) {
         var snippet = content.substring(start, end);
         if (start > 0) snippet = '…' + snippet;
         if (end < content.length) snippet += '…';
-        fragments.push({ page: page, excerpt: snippet, matchIndex: count });
+        fragments.push({
+          page: page,
+          excerpt: snippet,
+          matchIndex: count,
+          _start: pos,                    // 匹配起始位置
+          _end: pos + queryLower.length   // 匹配结束位置
+        });
         count++;
         pos = lowerContent.indexOf(queryLower, pos + 1);
       }
@@ -569,7 +575,35 @@ if (initialQ && !fulltextData) {
         fragments.push({ page: page, excerpt: page.content.substring(0, 80) + '…', matchIndex: 0 });
       }
     });
-    return fragments;
+    // 合并相邻片段（间隔小于 40 个字符则合并）
+    var merged = [];
+    fragments.forEach(function(frag) {
+      var last = merged[merged.length - 1];
+      if (last && last.page.url === frag.page.url && (frag._start - last._end) < 40) {
+        // 与上一个片段相邻：扩展合并范围
+        last._end = frag._end; // 扩展结束位置
+        // 重新生成合并后的摘要
+        var start = Math.max(0, last._start - 40);
+        var end = Math.min(last.page.content.length, last._end + 40);
+        var snippet = last.page.content.substring(start, end);
+        if (start > 0) snippet = '…' + snippet;
+        if (end < last.page.content.length) snippet += '…';
+        last.excerpt = snippet;
+        // 保持 matchIndex 不变（仍为上一个片段的 matchIndex）
+      } else {
+        // 非相邻：直接加入
+        merged.push({
+          page: frag.page,
+          excerpt: frag.excerpt,
+          matchIndex: frag.matchIndex,
+          _start: frag._start,
+          _end: frag._end
+        });
+      }
+    });
+    // 保留原始匹配总数
+    merged.totalMatches = fragments.length;
+    return merged;
   };
 })();
 
@@ -655,14 +689,54 @@ window.getBreadcrumb = function(url) {
 
 
 
-
 // ========== 搜索模式管理（独立精准搜索） ==========
 (function() {
   var currentMode = 'default';
+  var scopePrefixes = {
+    "约会": "/1.%E7%BA%A6%E4%BC%9A/",
+    "讯息": "/2.%E8%AE%AF%E6%81%AF/",
+    "主线": "/3.%E4%B8%BB%E7%BA%BF/",
+    "杂篇": "/4.%E6%9D%82%E7%AF%87/",
+    "外编": "/5.%E5%A4%96%E7%BC%96/"
+  };
   var pagefindContainer = document.getElementById('pagefind-search');
   var preciseContainer = document.getElementById('precise-search-container');
   var preciseInput = null;
   var preciseResultsDiv = null;
+
+  // 清空精准搜索结果
+  function clearPreciseResults() {
+    if (preciseResultsDiv) preciseResultsDiv.innerHTML = '';
+    var statsDiv = document.querySelector('.precise-search-stats');
+    if (statsDiv) statsDiv.style.display = 'none';
+  }
+
+  // 更新局部搜索（按栏目过滤）
+  function updateLocalSearch() {
+    if (!preciseInput || !preciseResultsDiv) return;
+    var query = preciseInput.value.trim();
+    var statsDiv = document.querySelector('.precise-search-stats');
+    if (!query) {
+      preciseResultsDiv.innerHTML = '';
+      if (statsDiv) statsDiv.style.display = 'none';
+      return;
+    }
+    var selectedScope = document.getElementById('scope-selector')?.value;
+    if (!selectedScope) {
+      renderPreciseResults([], query);
+      return;
+    }
+    var prefix = scopePrefixes[selectedScope];
+    if (!prefix) {
+      renderPreciseResults([], query);
+      return;
+    }
+    var allFragments = window.preciseSearch(query);
+    var filtered = allFragments.filter(function(frag) {
+      return frag.page.url.indexOf(prefix) === 0;
+    });
+    renderPreciseResults(filtered, query);
+  }
 
   // 切换模式
   function setMode(mode) {
@@ -673,14 +747,12 @@ window.getBreadcrumb = function(url) {
       // 显示 Pagefind，隐藏精准搜索
       if (pagefindContainer) pagefindContainer.style.display = '';
       if (preciseContainer) preciseContainer.style.display = 'none';
-      // 恢复 Pagefind 结果
       var container = document.querySelector('.pagefind-ui__results');
       if (container) {
         container.querySelectorAll('.pagefind-ui__result').forEach(function(el) {
           el.style.display = '';
         });
       }
-      // 重新触发默认搜索
       var q = (new URLSearchParams(location.search)).get('q')?.trim();
       if (q && window.injectFulltextResults) {
         window.injectFulltextResults(q);
@@ -693,26 +765,60 @@ window.getBreadcrumb = function(url) {
         if (!preciseInput) {
           preciseInput = preciseContainer.querySelector('.precise-search-input');
           preciseResultsDiv = preciseContainer.querySelector('.precise-search-results');
+          var clearBtn = preciseContainer.querySelector('.precise-search-clear');
+          var statsDiv = preciseContainer.querySelector('.precise-search-stats');
           // 绑定输入事件
           preciseInput.addEventListener('input', function() {
             var query = this.value.trim();
+            if (clearBtn) clearBtn.style.display = query ? 'inline-block' : 'none';
             if (!query) {
               preciseResultsDiv.innerHTML = '';
+              if (statsDiv) statsDiv.style.display = 'none';
               return;
             }
-            var fragments = window.preciseSearch(query);
-            renderPreciseResults(fragments, query);
+            if (currentMode === 'local') {
+              updateLocalSearch();
+            } else {
+              var fragments = window.preciseSearch(query);
+              renderPreciseResults(fragments, query);
+            }
           });
         }
-        // 如果地址栏有查询词，自动填入并搜索
-        var q = (new URLSearchParams(location.search)).get('q')?.trim();
-        if (q) {
-          preciseInput.value = q;
-          var fragments = window.preciseSearch(q);
-          renderPreciseResults(fragments, q);
+        var scopeSelector = document.getElementById('scope-selector');
+        if (mode === 'local') {
+          if (scopeSelector) {
+            scopeSelector.style.display = '';
+            if (scopeSelector.options.length <= 1) {
+              Object.keys(scopePrefixes).forEach(function(name) {
+                var opt = document.createElement('option');
+                opt.value = name;
+                opt.textContent = name;
+                scopeSelector.appendChild(opt);
+              });
+              scopeSelector.onchange = function() {
+                updateLocalSearch();
+              };
+            }
+          }
+          var q = (new URLSearchParams(location.search)).get('q')?.trim();
+          if (q) {
+            preciseInput.value = q;
+            updateLocalSearch();
+          } else {
+            preciseInput.value = '';
+            clearPreciseResults();
+          }
         } else {
-          preciseInput.value = '';
-          preciseResultsDiv.innerHTML = '';
+          if (scopeSelector) scopeSelector.style.display = 'none';
+          var q = (new URLSearchParams(location.search)).get('q')?.trim();
+          if (q) {
+            preciseInput.value = q;
+            var fragments = window.preciseSearch(q);
+            renderPreciseResults(fragments, q);
+          } else {
+            preciseInput.value = '';
+            clearPreciseResults();
+          }
         }
       }
     }
@@ -740,7 +846,7 @@ function renderPreciseResults(fragments, query) {
   });
 
   var pageCount = Object.keys(pagesMap).length;
-  var totalMatches = fragments.length;
+  var totalMatches = fragments.totalMatches || fragments.length;
 
   // 更新统计栏（只此一处）
   if (statsDiv) {
