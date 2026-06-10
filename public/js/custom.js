@@ -575,16 +575,16 @@ if (initialQ && !fulltextData) {
         fragments.push({ page: page, excerpt: page.content.substring(0, 80) + '…', matchIndex: 0 });
       }
     });
-    // 合并相邻片段（间隔小于 30 个字符则合并）
+    // 合并相邻片段（间隔小于 40 个字符则合并）
     var merged = [];
     fragments.forEach(function(frag) {
       var last = merged[merged.length - 1];
-      if (last && last.page.url === frag.page.url && (frag._start - last._end) < 30) {
+      if (last && last.page.url === frag.page.url && (frag._start - last._end) < 40) {
         // 与上一个片段相邻：扩展合并范围
         last._end = frag._end; // 扩展结束位置
         // 重新生成合并后的摘要
         var start = Math.max(0, last._start - 40);
-        var end = Math.min(last.page.content.length, last._end + 60);
+        var end = Math.min(last.page.content.length, last._end + 40);
         var snippet = last.page.content.substring(start, end);
         if (start > 0) snippet = '…' + snippet;
         if (end < last.page.content.length) snippet += '…';
