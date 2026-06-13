@@ -8,6 +8,13 @@
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>标签 :: AU</title>
+      <link>http://localhost:3001/tags/au/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/au/index.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>标签 :: ER-斑驳印记</title>
       <link>http://localhost:3001/tags/er-%E6%96%91%E9%A9%B3%E5%8D%B0%E8%AE%B0/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

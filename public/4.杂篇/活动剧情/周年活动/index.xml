@@ -3,7 +3,7 @@
   <channel>
     <title>周年活动 :: 87档案室</title>
     <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/index.html</link>
-    <description>二周年-时光地下铁&#xD;三周年-愿岁相守&#xD;八周年-岁岁安好</description>
+    <description>二周年-时光地下铁&#xD;三周年-愿岁相守&#xD;四周年-缘岁相伴&#xD;五周年-拾岁同行&#xD;八周年-岁岁安好</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%B8%89%E5%91%A8%E5%B9%B4-%E6%84%BF%E5%B2%81%E7%9B%B8%E5%AE%88/index.html</guid>
       <description>朝夕与共&#xD;恋爱嘉年华&#xD;烟火之邀&#xD;幕后之谈 三周年手写信点击跳转</description>
+    </item>
+    <item>
+      <title>四周年-缘岁相伴</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E5%9B%9B%E5%91%A8%E5%B9%B4-%E7%BC%98%E5%B2%81%E7%9B%B8%E4%BC%B4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E5%9B%9B%E5%91%A8%E5%B9%B4-%E7%BC%98%E5%B2%81%E7%9B%B8%E4%BC%B4/index.html</guid>
+      <description>环城之恋&#xD;东宁区&#xD;晏北区&#xD;清南区&#xD;西月区&#xD;特遣署&#xD;嘉年华</description>
+    </item>
+    <item>
+      <title>五周年-拾岁同行</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%BA%94%E5%91%A8%E5%B9%B4-%E6%8B%BE%E5%B2%81%E5%90%8C%E8%A1%8C/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%BA%94%E5%91%A8%E5%B9%B4-%E6%8B%BE%E5%B2%81%E5%90%8C%E8%A1%8C/index.html</guid>
+      <description>恋与爱世界&#xD;其他剧情&#xD;给下一年</description>
     </item>
     <item>
       <title>八周年-岁岁安好</title>
