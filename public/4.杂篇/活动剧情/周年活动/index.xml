@@ -3,7 +3,7 @@
   <channel>
     <title>周年活动 :: 87档案室</title>
     <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/index.html</link>
-    <description>二周年-时光地下铁&#xD;三周年-愿岁相守&#xD;四周年-缘岁相伴&#xD;五周年-拾岁同行&#xD;八周年-岁岁安好</description>
+    <description>二周年-时光地下铁&#xD;三周年-愿岁相守&#xD;四周年-缘岁相伴&#xD;五周年-拾岁同行&#xD;六周年-佳岁与共&#xD;七周年-情岁久长&#xD;八周年-岁岁安好</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
@@ -33,7 +33,21 @@
       <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%BA%94%E5%91%A8%E5%B9%B4-%E6%8B%BE%E5%B2%81%E5%90%8C%E8%A1%8C/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%BA%94%E5%91%A8%E5%B9%B4-%E6%8B%BE%E5%B2%81%E5%90%8C%E8%A1%8C/index.html</guid>
-      <description>恋与爱世界&#xD;其他剧情&#xD;给下一年</description>
+      <description>恋与爱世界&#xD;吐槽大会&#xD;给下一年</description>
+    </item>
+    <item>
+      <title>六周年-佳岁与共</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E5%85%AD%E5%91%A8%E5%B9%B4-%E4%BD%B3%E5%B2%81%E4%B8%8E%E5%85%B1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E5%85%AD%E5%91%A8%E5%B9%B4-%E4%BD%B3%E5%B2%81%E4%B8%8E%E5%85%B1/index.html</guid>
+      <description>恋爱环游记&#xD;其他剧情&#xD;给下一年</description>
+    </item>
+    <item>
+      <title>七周年-情岁久长</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%B8%83%E5%91%A8%E5%B9%B4-%E6%83%85%E5%B2%81%E4%B9%85%E9%95%BF/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%91%A8%E5%B9%B4%E6%B4%BB%E5%8A%A8/%E4%B8%83%E5%91%A8%E5%B9%B4-%E6%83%85%E5%B2%81%E4%B9%85%E9%95%BF/index.html</guid>
+      <description>爱在有你的城市&#xD;六周年明信片&#xD;七周年信笺&#xD;爱的瞬间</description>
     </item>
     <item>
       <title>八周年-岁岁安好</title>
