@@ -10,8 +10,6 @@ weight: 53
 **白起：** 今天你说想做一个有关电动游戏的节目，有问题的话可以问我
 
 
-<br>
-
 <!-- 第1组 -->
 <div class="opt-group">
   <select class="opt-select" style="padding:3px 6px;border-radius:3px;border:1px solid #ccc;">
@@ -19,7 +17,7 @@ weight: 53
     <option value="o1-2">完全想象不出你打电动的样子</option>
     <option value="o1-3">我就知道你会有一些特别的爱好</option>
   </select>
-  <div id="o1-1" class="opt-content" style="display:none;">
+  <div id="o1-1" class="opt-content" >
  <strong>[玩家姓名]</strong> ：没想到你竟然喜欢打电动  <br>
 
  <strong>白起：</strong> 那你觉得我会喜欢什么呢，没有爱好是不是更像我的人设？  <br>
