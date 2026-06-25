@@ -1,6 +1,6 @@
 ---  
 title: "SSR-斗兽"  
-tags: "SSR-斗兽"  
+tags: ["SSR-斗兽", "AU"]  
 weight: 121  
 ---  
 

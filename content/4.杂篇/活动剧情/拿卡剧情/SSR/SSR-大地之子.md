@@ -1,6 +1,6 @@
 ---  
 title: "SSR-大地之子"  
-tags: "SSR-大地之子"  
+tags:  ["SSR-大地之子", "AU"]  
 weight: 131  
 ---  
 

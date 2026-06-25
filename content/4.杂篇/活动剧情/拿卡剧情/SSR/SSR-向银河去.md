@@ -1,6 +1,6 @@
 ---  
 title: "SSR-向银河去"  
-tags: "SSR-向银河去"  
+tags:  ["SSR-向银河去", "AU"]  
 weight: 120  
 ---  
 

@@ -1,6 +1,6 @@
 ---  
 title: "SSR-渎神之誓"  
-tags: "SSR-渎神之誓"  
+tags: ["SSR-渎神之誓", "AU"]   
 weight: 127  
 ---  
 

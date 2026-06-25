@@ -1,6 +1,6 @@
 ---  
 title: "SSR-生命凯歌"  
-tags: "SSR-生命凯歌"  
+tags: ["SSR-生命凯歌", "AU"]  
 weight: 122  
 ---  
 
