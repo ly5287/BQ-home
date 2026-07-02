@@ -1,6 +1,6 @@
 ---  
 title: "设定集"  
-weight: 10  
+weight: 2  
 ---  
 
 
