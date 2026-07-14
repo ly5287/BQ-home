@@ -3,7 +3,7 @@
   <channel>
     <title>活动剧情 :: 87档案室</title>
     <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/index.html</link>
-    <description>拿卡剧情&#xD;周年活动&#xD;回归剧情</description>
+    <description>拿卡剧情&#xD;周年活动&#xD;夏日活动&#xD;回归剧情</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/index.xml" rel="self" type="application/rss+xml" />
@@ -22,11 +22,18 @@
       <description>二周年-时光地下铁&#xD;三周年-愿岁相守&#xD;四周年-缘岁相伴&#xD;五周年-拾岁同行&#xD;六周年-佳岁与共&#xD;七周年-情岁久长&#xD;八周年-岁岁安好</description>
     </item>
     <item>
+      <title>夏日活动</title>
+      <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%A4%8F%E6%97%A5%E6%B4%BB%E5%8A%A8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%A4%8F%E6%97%A5%E6%B4%BB%E5%8A%A8/index.html</guid>
+      <description>2026逐夏音浪</description>
+    </item>
+    <item>
       <title>回归剧情</title>
       <link>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%9B%9E%E5%BD%92%E5%89%A7%E6%83%85/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/%E5%9B%9E%E5%BD%92%E5%89%A7%E6%83%85/index.html</guid>
-      <description>旧版&#xD;新版（2026.5更新）</description>
+      <description>1.0&#xD;2.0&#xD;3.0（2026.5更新）</description>
     </item>
   </channel>
 </rss>

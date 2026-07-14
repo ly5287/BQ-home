@@ -692,13 +692,52 @@ window.getBreadcrumb = function(url) {
 // ========== 搜索模式管理（独立精准搜索） ==========
 (function() {
   var currentMode = 'default';
+  // 扩展路径映射，增加主线二级目录（URL编码中文路径）
   var scopePrefixes = {
-    "约会": "/1.%E7%BA%A6%E4%BC%9A/",
-    "讯息": "/2.%E8%AE%AF%E6%81%AF/",
-    "主线": "/3.%E4%B8%BB%E7%BA%BF/",
-    "杂篇": "/4.%E6%9D%82%E7%AF%87/",
-    "外编": "/5.%E5%A4%96%E7%BC%96/"
+      // 约会一级+全部二级
+      "约会": "/1.%E7%BA%A6%E4%BC%9A/",
+      "约会-约会剧情": "/1.%E7%BA%A6%E4%BC%9A/%E7%BA%A6%E4%BC%9A%E5%89%A7%E6%83%85/",
+      "约会-传闻秘事": "/1.%E7%BA%A6%E4%BC%9A/%E4%BC%A0%E9%97%BB%E7%A7%98%E4%BA%8B/",
+      "约会-心灵探秘": "/1.%E7%BA%A6%E4%BC%9A/%E5%BF%83%E7%81%B5%E6%8E%A2%E7%A7%98/",
+      "约会-在你身边": "/1.%E7%BA%A6%E4%BC%9A/%E5%9C%A8%E4%BD%A0%E8%BA%AB%E8%BE%B9/",
+
+      // 讯息一级+全部二级
+      "讯息": "/2.%E8%AE%AF%E6%81%AF/",
+      "讯息-电话": "/2.%E8%AE%AF%E6%81%AF/%E7%94%B5%E8%AF%9D/",
+      "讯息-短信": "/2.%E8%AE%AF%E6%81%AF/%E7%9F%AD%E4%BF%A1/",
+      "讯息-朋友圈": "/2.%E8%AE%AF%E6%81%AF/%E6%9C%8B%E5%8F%8B%E5%9C%88/",
+
+      // 主线原有不变
+      "主线（全部）": "/3.%E4%B8%BB%E7%BA%BF/",
+      "主线-第一季": "/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%80%E5%AD%A3/",
+      "主线-第二季": "/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%BA%8C%E5%AD%A3/",
+      "主线-第三季": "/3.%E4%B8%BB%E7%BA%BF/%E7%AC%AC%E4%B8%89%E5%AD%A3/",
+
+      // 杂篇一级+全部二级
+      "杂篇": "/4.%E6%9D%82%E7%AF%87/",
+      "杂篇-卡面语": "/4.%E6%9D%82%E7%AF%87/%E5%8D%A1%E9%9D%A2%E8%AF%AD/",
+      "杂篇-签到语": "/4.%E6%9D%82%E7%AF%87/%E7%AD%BE%E5%88%B0%E8%AF%AD/",
+      "杂篇-邮件": "/4.%E6%9D%82%E7%AF%87/%E9%82%AE%E4%BB%B6/",
+      "杂篇-活动剧情": "/4.%E6%9D%82%E7%AF%87/%E6%B4%BB%E5%8A%A8%E5%89%A7%E6%83%85/",
+      "杂篇-百日活动": "/4.%E6%9D%82%E7%AF%87/%E7%99%BE%E6%97%A5%E6%B4%BB%E5%8A%A8/",
+      "杂篇-公司项目": "/4.%E6%9D%82%E7%AF%87/%E5%85%AC%E5%8F%B8%E9%A1%B9%E7%9B%AE/",
+      "杂篇-去见他语音": "/4.%E6%9D%82%E7%AF%87/%E5%8E%BB%E8%A7%81%E4%BB%96%E8%AF%AD%E9%9F%B3/",
+      "杂篇-拍摄副本": "/4.%E6%9D%82%E7%AF%87/%E6%8B%8D%E6%91%84%E5%89%AF%E6%9C%AC/",
+      "杂篇-小屋": "/4.%E6%9D%82%E7%AF%87/%E5%B0%8F%E5%B1%8B/",
+      "杂篇-宠物系统": "/4.%E6%9D%82%E7%AF%87/%E5%AE%A0%E7%89%A9/",
+      "杂篇-生日剧情": "/4.%E6%9D%82%E7%AF%87/%E7%94%9F%E6%97%A5%E5%89%A7%E6%83%85/",
+      "杂篇-漫步特殊剧情": "/4.%E6%9D%82%E7%AF%87/%E6%BC%AB%E6%AD%A5%E7%89%B9%E6%AE%8A%E5%89%A7%E6%83%85/",
+
+
+      // 外编一级+全部二级
+      "外编": "/5.%E5%A4%96%E7%BC%96/",
+      "外编-设定集": "/5.%E5%A4%96%E7%BC%96/%E8%AE%BE%E5%AE%9A%E9%9B%86/",
+      "外编-微博": "/5.%E5%A4%96%E7%BC%96/%E5%BE%AE%E5%8D%9A/",
+      "外编-手写信": "/5.%E5%A4%96%E7%BC%96/%E6%89%8B%E5%86%99%E4%BF%A1/",
+
   };
+
+
   var pagefindContainer = document.getElementById('pagefind-search');
   var preciseContainer = document.getElementById('precise-search-container');
   var preciseInput = null;
@@ -732,9 +771,19 @@ window.getBreadcrumb = function(url) {
       return;
     }
     var allFragments = window.preciseSearch(query);
-    var filtered = allFragments.filter(function(frag) {
-      return frag.page.url.indexOf(prefix) === 0;
-    });
+var filtered = allFragments.filter(function(frag) {
+  // 统一标准化路径：去除首尾斜杠，统一对比前缀
+  const rawUrl = frag.page.url;
+  const targetPrefix = prefix;
+  // 两种校验：精准前缀匹配，避免子目录/父目录交叉匹配
+  const fullMatch = rawUrl.startsWith(targetPrefix);
+  // 兼容末尾无斜杠的页面路径
+  const noSlashMatch = rawUrl.startsWith(targetPrefix.replace(/\/$/, ""));
+  return fullMatch || noSlashMatch;
+});
+
+
+
     renderPreciseResults(filtered, query);
   }
 
@@ -786,20 +835,116 @@ window.getBreadcrumb = function(url) {
         }
         var scopeSelector = document.getElementById('scope-selector');
         if (mode === 'local') {
-          if (scopeSelector) {
-            scopeSelector.style.display = '';
-            if (scopeSelector.options.length <= 1) {
-              Object.keys(scopePrefixes).forEach(function(name) {
-                var opt = document.createElement('option');
-                opt.value = name;
-                opt.textContent = name;
-                scopeSelector.appendChild(opt);
-              });
-              scopeSelector.onchange = function() {
-                updateLocalSearch();
-              };
-            }
-          }
+          
+         if (scopeSelector) {
+    scopeSelector.style.display = '';
+    // 清空旧选项，仅保留默认提示
+    scopeSelector.innerHTML = '<option value="">栏目选择</option>';
+
+    // ========== 1. 约会分组 ==========
+    const dateGroup = document.createElement('optgroup');
+    dateGroup.label = "约会";
+    const dateItems = [
+        { key: "约会", label: "约会（全部）" },
+        { key: "约会-约会剧情", label: "约会 - 约会剧情" },
+        { key: "约会-传闻秘事", label: "约会 - 传闻秘事" },
+        { key: "约会-心灵探秘", label: "约会 - 心灵探秘" },
+        { key: "约会-在你身边", label: "约会 - 在你身边" }
+    ];
+    dateItems.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.key;
+        opt.textContent = item.label;
+        dateGroup.appendChild(opt);
+    });
+    scopeSelector.appendChild(dateGroup);
+
+    // ========== 2. 讯息分组 ==========
+    const msgGroup = document.createElement('optgroup');
+    msgGroup.label = "讯息";
+    const msgItems = [
+        { key: "讯息", label: "讯息（全部）" },
+        { key: "讯息-电话", label: "讯息 - 电话" },
+        { key: "讯息-短信", label: "讯息 - 短信" },
+        { key: "讯息-朋友圈", label: "讯息 - 朋友圈" }
+    ];
+    msgItems.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.key;
+        opt.textContent = item.label;
+        msgGroup.appendChild(opt);
+    });
+    scopeSelector.appendChild(msgGroup);
+
+    // ========== 3. 主线分组（原有） ==========
+    const mainGroup = document.createElement('optgroup');
+    mainGroup.label = "主线";
+    const mainItems = [
+        { key: "主线（全部）", label: "主线（全部）" },
+        { key: "主线-第一季", label: "主线 - 第一季" },
+        { key: "主线-第二季", label: "主线 - 第二季" },
+        { key: "主线-第三季", label: "主线 - 第三季" }
+    ];
+    mainItems.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.key;
+        opt.textContent = item.label;
+        mainGroup.appendChild(opt);
+    });
+    scopeSelector.appendChild(mainGroup);
+
+    // ========== 4. 杂篇分组 ==========
+    const miscGroup = document.createElement('optgroup');
+    miscGroup.label = "杂篇";
+    const miscItems = [
+        { key: "杂篇", label: "杂篇（全部）" },
+        { key: "杂篇-卡面语", label: "杂篇 - 卡面语" },
+        { key: "杂篇-签到语", label: "杂篇 - 签到语" },
+        { key: "杂篇-邮件", label: "杂篇 - 邮件" },
+        { key: "杂篇-活动剧情", label: "杂篇 - 活动剧情" },
+        { key: "杂篇-百日活动", label: "杂篇 - 百日活动" },
+        { key: "杂篇-公司项目", label: "杂篇 - 公司项目" },
+        { key: "杂篇-去见他语音", label: "杂篇 - 去见他语音" },
+        { key: "杂篇-拍摄副本", label: "杂篇 - 拍摄副本" },
+        { key: "杂篇-小屋", label: "杂篇 - 小屋" },
+        { key: "杂篇-宠物系统", label: "杂篇 - 宠物系统" },
+        { key: "杂篇-生日剧情", label: "杂篇 - 生日剧情" },
+        { key: "杂篇-漫步特殊剧情", label: "杂篇 - 漫步特殊剧情" }
+    ];
+    miscItems.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.key;
+        opt.textContent = item.label;
+        miscGroup.appendChild(opt);
+    });
+    scopeSelector.appendChild(miscGroup);
+
+    // ========== 5. 外编分组 ==========
+    const extraGroup = document.createElement('optgroup');
+    extraGroup.label = "外编";
+    const extraItems = [
+        { key: "外编", label: "外编（全部）" },
+        { key: "外编-设定集", label: "外编 - 设定集" },
+        { key: "外编-微博", label: "外编 - 微博" },
+        { key: "外编-手写信", label: "外编 - 手写信" }
+    ];
+    extraItems.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.key;
+        opt.textContent = item.label;
+        extraGroup.appendChild(opt);
+    });
+    scopeSelector.appendChild(extraGroup);
+
+    // 切换下拉自动重新检索
+    scopeSelector.onchange = function() {
+        if (preciseInput.value.trim()) {
+            updateLocalSearch();
+        }
+    };
+}
+
+
           var q = (new URLSearchParams(location.search)).get('q')?.trim();
           if (q) {
             preciseInput.value = q;
@@ -830,10 +975,14 @@ function renderPreciseResults(fragments, query) {
   var statsDiv = document.querySelector('.precise-search-stats');
   
   if (!fragments || fragments.length === 0) {
-    preciseResultsDiv.innerHTML = '';
-    if (statsDiv) statsDiv.style.display = 'none';
-    return;
+  preciseResultsDiv.innerHTML = '';
+  if (statsDiv) {
+    statsDiv.textContent = '共找到 0 个页面，精准匹配 0 处';
+    statsDiv.style.display = '';
   }
+  return;
+}
+
 
   // 按页面分组
   var pagesMap = {};

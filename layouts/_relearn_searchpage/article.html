@@ -25,8 +25,23 @@
 <div id="precise-search-container" style="display:none; border:none; background:transparent; box-shadow:none;">
   <div class="precise-search-box">
  
+    <!-- 升级为带分组的多级下拉选择器 -->
     <select id="scope-selector" class="scope-selector" style="display:none;">
       <option value="">栏目选择</option>
+      <!-- 一级普通栏目 -->
+      <option value="/1.约会/">约会</option>
+      <option value="/2.讯息/">讯息</option>
+      <!-- 主线分组，包含二级子栏目 -->
+      <optgroup label="主线">
+        <option value="/3.主线/">主线（全部）</option>
+        <option value="/3.主线/第一季/">主线 - 第一季</option>
+        <option value="/3.主线/第二季/">主线 - 第二季</option>
+        <option value="/3.主线/第三季/">主线 - 第三季</option>
+      </optgroup>
+      <!-- 其余一级栏目 -->
+      <option value="/4.杂篇/">杂篇</option>
+      <option value="/5.外编/">外编</option>
+      <option value="/6.附录/">附录</option>
     </select>
 
    <span class="precise-search-icon"></span>
@@ -46,15 +61,27 @@
       return;
     }
 
+const scopeSelector = document.getElementById('scope-selector');
+let currentSearchScope = "";
+// 监听下拉切换，更新搜索范围
+scopeSelector.addEventListener('change', function(){
+  currentSearchScope = this.value;
+  // 触发一次重新搜索
+  const input = document.querySelector('.pagefind-ui__search-input');
+  if(input.value.trim()){
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+});
+
 new PagefindUI({
   element: "#pagefind-search",
   baseUrl: {{ if or (hasPrefix site.BaseURL "https://ly5287.github.io") (eq hugo.Environment "development") }}"/BQ-home/"{{ else }}"/"{{ end }},
   showSubResults: false,
-  maxResults: 200,           // ← 添加这一行，默认 20，现在扩大到 200
+  maxResults: 200,
   processResult: (result) => {
-    result.sub_results = [];  // 保持去重
+    result.sub_results = [];
 
-    // 附加搜索词到结果链接（关键恢复）
+    // 附加搜索词到结果链接
     const input = document.querySelector('.pagefind-ui__search-input');
     const currentQ = input?.value?.trim();
     if (currentQ && result.url) {
@@ -64,14 +91,20 @@ new PagefindUI({
       result.url = url.pathname + url.search + url.hash;
     }
 
-    // 暂时移除 return null 的过滤逻辑，避免误伤
-    // 如果您需要精确过滤，稍后再用 DOM 隐藏方式安全实现
+    // 局部搜索模式下，过滤不匹配路径的结果
+    const activeMode = document.querySelector('.mode-card.active')?.dataset.mode;
+    if(activeMode === "local" && currentSearchScope){
+      // 路径前缀匹配，只保留选中目录下的页面
+      if(!result.url.startsWith(currentSearchScope)){
+        return null; // 过滤掉不在当前栏目内的结果
+      }
+    }
 
     return result;
   }
 });
 
-// 下面的自动填充代码保留不变
+// 页面URL参数回填搜索词
 const urlParams = new URLSearchParams(window.location.search);
 const q = urlParams.get('q');
 if (q) {
