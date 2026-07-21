@@ -1,6 +1,6 @@
 ---  
-title: "小屋" 
-weight: 30 
+title: "小屋"   
+weight: 30   
 ---  
 
 
