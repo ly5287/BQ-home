@@ -1,7 +1,3 @@
-/* 隐藏文章页面的日期（footline 区域） */
-.footline {
-    display: none;
-}
 
 /* 仅针对 children 短代码生成的列表缩进 */
 .children-list {

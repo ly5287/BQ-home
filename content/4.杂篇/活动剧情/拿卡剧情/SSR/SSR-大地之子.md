@@ -2,6 +2,7 @@
 title: "SSR-大地之子"  
 tags:  ["SSR-大地之子", "AU"]  
 weight: 131  
+date: 2026-06-03
 ---  
 
 ### 活动页面台词  

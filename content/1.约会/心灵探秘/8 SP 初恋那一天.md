@@ -2,6 +2,7 @@
 title: "初恋那一天"  
 tags: ["SP-初恋那一天"]  
 weight: 8  
+date: 2023-01-17
 ---  
 
 ### Chapter 1  

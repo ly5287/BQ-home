@@ -1,7 +1,8 @@
 ---  
 title: 弹吉他  
 tags: "SR-风中起舞"  
-weight: 36  
+weight: 1136  
+date: 2018-05-04
 ---  
 
 > 获取途径：SR-风中起舞进化 解锁  
@@ -12,7 +13,6 @@ weight: 36
 **白起：** 什么琴？  
 
 
-<br>  
 
 <!-- 第1组 -->  
 <div class="opt-group">  

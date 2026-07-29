@@ -2,6 +2,7 @@
 title: 催眠挑战  
 tags: ["SSR-默利哀"]  
 weight: 420  
+date: 2026-03-22
 ---  
 
 > 获取途径：SSR-默利哀四星  

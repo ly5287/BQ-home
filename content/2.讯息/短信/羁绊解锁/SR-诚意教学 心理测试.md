@@ -1,7 +1,8 @@
 ---  
 title: 心理测试  
 tags: "SR-诚意教学"  
-weight: 51  
+weight: 1151  
+date: 2017-12-20
 ---  
 
 > 获取途径：SR-诚意教学三星 解锁  
@@ -11,8 +12,6 @@ weight: 51
 
 **白起：** 为什么问这个？  
 
-
-<br>  
 
 <!-- 第1组 -->  
 <div class="opt-group">  

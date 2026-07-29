@@ -1,7 +1,8 @@
 ---  
 title: 新名词  
 tags: "SR-记忆重叠"  
-weight: 37  
+weight: 1137  
+date: 2018-05-04
 ---  
 
 > 获取途径：SR-记忆重叠进化 解锁  
@@ -13,8 +14,6 @@ weight: 37
 
 **白起：** 怎么突然说起这个了。  
 
-
-<br>  
 
 <!-- 第1组 -->  
 <div class="opt-group">  

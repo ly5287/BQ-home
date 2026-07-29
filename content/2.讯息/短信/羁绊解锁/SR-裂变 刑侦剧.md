@@ -1,7 +1,8 @@
 ---  
 title: 刑侦剧  
 tags: "SR-裂变"  
-weight: 25  
+weight: 1125  
+date: 2019-09-06
 ---  
 
 > 获取途径：SR-裂变进化 解锁  
@@ -13,8 +14,6 @@ weight: 25
 
 **白起：** 你很喜欢？  
 
-
-<br>  
 
 <!-- 第1组 -->  
 <div class="opt-group">  

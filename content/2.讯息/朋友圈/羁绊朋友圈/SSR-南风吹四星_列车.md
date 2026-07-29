@@ -2,6 +2,7 @@
 title: 列车  
 tags: ["SSR-南风吹"]  
 weight: 80  
+date: 2019-08-01
 ---  
 
 > 获取途径：SSR-南风吹四星  

@@ -2,6 +2,7 @@
 title: "SSR-渎神之誓"  
 tags: ["SSR-渎神之誓", "AU"]   
 weight: 127  
+date: 2025-10-28
 ---  
 
 ### 魔法挑战  

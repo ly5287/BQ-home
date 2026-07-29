@@ -1,7 +1,8 @@
 ---  
 title: 街舞  
 tags: "SR-昼行闪耀"  
-weight: 34  
+weight: 1134  
+date: 2018-05-04
 ---  
 
 > 获取途径：SR-昼行闪耀进化 解锁  

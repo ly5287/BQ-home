@@ -2,6 +2,7 @@
 title: 定力训练  
 tags: ["SSR-俘获"]  
 weight: 215  
+date: 2022-04-27
 ---  
 
 > 获取途径：SSR-俘获四星  

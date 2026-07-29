@@ -2,6 +2,7 @@
 title: 雨季晾衣  
 tags: ["SSR-百炼"]  
 weight: 264  
+date: 2023-03-22
 ---  
 
 > 获取途径：SSR-百炼四星  

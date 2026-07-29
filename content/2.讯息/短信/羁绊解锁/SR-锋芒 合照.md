@@ -1,7 +1,8 @@
 ---  
 title: 合照  
 tags: "SR-锋芒"  
-weight: 28  
+weight: 1128  
+date: 2018-10-19
 ---  
 
 > 获取途径：SR-锋芒进化 解锁  
@@ -9,8 +10,6 @@ weight: 28
 
 **白起：** 今天玩得开心吗？  
 
-
-<br>  
 
 <!-- 第1组 -->  
 <div class="opt-group">  
