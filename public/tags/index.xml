@@ -6,8 +6,36 @@
     <description></description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:3001/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>标签 :: AU</title>
+      <link>http://localhost:3001/tags/au/index.html</link>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/au/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标签 :: R-刻风雅</title>
+      <link>http://localhost:3001/tags/r-%E5%88%BB%E9%A3%8E%E9%9B%85/index.html</link>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/r-%E5%88%BB%E9%A3%8E%E9%9B%85/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标签 :: SR-共筑心屿</title>
+      <link>http://localhost:3001/tags/sr-%E5%85%B1%E7%AD%91%E5%BF%83%E5%B1%BF/index.html</link>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/sr-%E5%85%B1%E7%AD%91%E5%BF%83%E5%B1%BF/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标签 :: SSR-御风行</title>
+      <link>http://localhost:3001/tags/ssr-%E5%BE%A1%E9%A3%8E%E8%A1%8C/index.html</link>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/ssr-%E5%BE%A1%E9%A3%8E%E8%A1%8C/index.html</guid>
+      <description></description>
+    </item>
     <item>
       <title>标签 :: R-旌旗迎风</title>
       <link>http://localhost:3001/tags/r-%E6%97%8C%E6%97%97%E8%BF%8E%E9%A3%8E/index.html</link>
@@ -27,13 +55,6 @@
       <link>http://localhost:3001/tags/r-%E6%B3%A0%E7%84%B6%E9%A3%8E%E8%AF%AD/index.html</link>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/tags/r-%E6%B3%A0%E7%84%B6%E9%A3%8E%E8%AF%AD/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>标签 :: AU</title>
-      <link>http://localhost:3001/tags/au/index.html</link>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/tags/au/index.html</guid>
       <description></description>
     </item>
     <item>
