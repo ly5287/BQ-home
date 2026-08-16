@@ -1,7 +1,7 @@
 ---  
 title: 心理测试  
 tags: "SR-诚意教学"  
-weight: 1151  
+weight: 2017122020  
 date: 2017-12-20
 ---  
 

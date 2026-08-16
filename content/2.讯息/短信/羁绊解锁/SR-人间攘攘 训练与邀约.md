@@ -1,7 +1,7 @@
 ---  
 title: 训练与邀约  
 tags: "SR-人间攘攘"  
-weight: 1104  
+weight: 2025072901  
 date: 2025-07-29
 ---  
 

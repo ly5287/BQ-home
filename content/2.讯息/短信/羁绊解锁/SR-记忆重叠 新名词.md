@@ -1,7 +1,7 @@
 ---  
 title: 新名词  
 tags: "SR-记忆重叠"  
-weight: 1137  
+weight: 2018050402  
 date: 2018-05-04
 ---  
 
