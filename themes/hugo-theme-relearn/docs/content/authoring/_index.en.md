@@ -1,13 +1,13 @@
-+++
-categories = ['reference']
-title = 'Authoring'
-type = 'chapter'
-weight = 3
++++  
+categories = ['reference']  
+title = 'Authoring'  
+type = 'chapter'  
+weight = 3  
 
-[params]
-  menuPre = "<i class='fa-fw fab fa-markdown'></i> "
-+++
+[params]  
+  menuPre = "<i class='fa-fw fab fa-markdown'></i> "  
++++  
 
-Learn how to create and organize your content pages.
+Learn how to create and organize your content pages.  
 
-{{% children type="list" description=true %}}
+{{% children type="list" description=true %}}  

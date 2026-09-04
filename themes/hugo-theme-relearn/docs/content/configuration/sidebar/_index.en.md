@@ -1,11 +1,11 @@
-+++
-categories = ['reference']
-description = 'Configure all things sidebar'
-title = 'Sidebar'
-weight = 3
++++  
+categories = ['reference']  
+description = 'Configure all things sidebar'  
+title = 'Sidebar'  
+weight = 3  
 
-[params]
-  alwaysopen = false
-+++
+[params]  
+  alwaysopen = false  
++++  
 
-{{% children type="list" description=true %}}
+{{% children type="list" description=true %}}  

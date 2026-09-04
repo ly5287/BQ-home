@@ -1,10 +1,10 @@
-+++
-title = 'Version 7'
-type = 'changelog'
-weight = -7
++++  
+title = 'Version 7'  
+type = 'changelog'  
+weight = -7  
 
-[params]
-  disableToc = false
-+++
+[params]  
+  disableToc = false  
++++  
 
-{{% pages showhidden="true" showdivider="true" %}}
+{{% pages showhidden="true" showdivider="true" %}}  

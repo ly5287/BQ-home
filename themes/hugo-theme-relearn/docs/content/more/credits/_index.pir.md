@@ -1,10 +1,10 @@
-+++
-title = 'Crrredits'
++++  
+title = 'Crrredits'  
 
-[build]
-  list = 'never'
+[build]  
+  list = 'never'  
 
-[params]
-  menuPre = "<i class='fa-fw fas fa-bullhorn'></i> "
-+++
-{{< piratify >}}
+[params]  
+  menuPre = "<i class='fa-fw fas fa-bullhorn'></i> "  
++++  
+{{< piratify >}}  

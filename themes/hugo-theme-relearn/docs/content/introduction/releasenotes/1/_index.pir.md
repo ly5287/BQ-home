@@ -1,10 +1,10 @@
-+++
-title = 'Version 1'
-type = 'releasenotes'
-weight = -1
++++  
+title = 'Version 1'  
+type = 'releasenotes'  
+weight = -1  
 
-[params]
-  disableToc = false
-  minHugoVersion = '0.65.0'
-+++
-{{< piratify >}}
+[params]  
+  disableToc = false  
+  minHugoVersion = '0.65.0'  
++++  
+{{< piratify >}}  

@@ -1,5 +1,5 @@
-+++
-singulartitle = 'Tagga'
-title = 'Tag-a-taggs'
-+++
-{{< piratify >}}
++++  
+singulartitle = 'Tagga'  
+title = 'Tag-a-taggs'  
++++  
+{{< piratify >}}  

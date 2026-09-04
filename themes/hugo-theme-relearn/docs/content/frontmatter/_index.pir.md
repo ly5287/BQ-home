@@ -1,5 +1,5 @@
-+++
-singulartitle = 'Front Matter'
-title = 'Front Matter'
-+++
-{{< piratify >}}
++++  
+singulartitle = 'Front Matter'  
+title = 'Front Matter'  
++++  
+{{< piratify >}}  

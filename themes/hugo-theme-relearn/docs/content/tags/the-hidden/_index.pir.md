@@ -1,4 +1,4 @@
-+++
-title = 'hush, matey'
-+++
-{{< piratify >}}
++++  
+title = 'hush, matey'  
++++  
+{{< piratify >}}  

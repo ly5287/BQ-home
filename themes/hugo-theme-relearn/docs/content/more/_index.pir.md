@@ -1,7 +1,7 @@
-+++
-[build]
-  render = 'never'
-  list = 'never'
-  publishResources = false
-+++
-{{< piratify >}}
++++  
+[build]  
+  render = 'never'  
+  list = 'never'  
+  publishResources = false  
++++  
+{{< piratify >}}  

@@ -1,10 +1,10 @@
-+++
-title = 'Version 5.16'
-type = 'changelog'
-weight = -16
++++  
+title = 'Version 5.16'  
+type = 'changelog'  
+weight = -16  
 
-[params]
-  disableToc = false
-  hidden = true
-+++
-{{< piratify >}}
+[params]  
+  disableToc = false  
+  hidden = true  
++++  
+{{< piratify >}}  

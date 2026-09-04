@@ -6,8 +6,15 @@
     <description></description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 09 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:3001/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>标签 :: SSR-风有栖时</title>
+      <link>http://localhost:3001/tags/ssr-%E9%A3%8E%E6%9C%89%E6%A0%96%E6%97%B6/index.html</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/ssr-%E9%A3%8E%E6%9C%89%E6%A0%96%E6%97%B6/index.html</guid>
+      <description></description>
+    </item>
     <item>
       <title>标签 :: AU</title>
       <link>http://localhost:3001/tags/au/index.html</link>
@@ -1486,17 +1493,17 @@
       <description></description>
     </item>
     <item>
+      <title>标签 :: R-翼向远方</title>
+      <link>http://localhost:3001/tags/r-%E7%BF%BC%E5%90%91%E8%BF%9C%E6%96%B9/index.html</link>
+      <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3001/tags/r-%E7%BF%BC%E5%90%91%E8%BF%9C%E6%96%B9/index.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>标签 :: SR-恋恋炽鸣</title>
       <link>http://localhost:3001/tags/sr-%E6%81%8B%E6%81%8B%E7%82%BD%E9%B8%A3/index.html</link>
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:3001/tags/sr-%E6%81%8B%E6%81%8B%E7%82%BD%E9%B8%A3/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>标签 :: R-翼向远方</title>
-      <link>http://localhost:3001/tags/r-%E7%BF%BC%E5%90%91%E8%BF%9C%E6%96%B9/index.html</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3001/tags/r-%E7%BF%BC%E5%90%91%E8%BF%9C%E6%96%B9/index.html</guid>
       <description></description>
     </item>
     <item>

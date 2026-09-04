@@ -1,5 +1,5 @@
-+++
-[params.children]
-  type = 'card'
-+++
-{{< piratify >}}
++++  
+[params.children]  
+  type = 'card'  
++++  
+{{< piratify >}}  

@@ -1,5 +1,5 @@
-+++
-singulartitle = 'Option'
-title = 'Options'
-+++
-{{< piratify >}}
++++  
+singulartitle = 'Option'  
+title = 'Options'  
++++  
+{{< piratify >}}  

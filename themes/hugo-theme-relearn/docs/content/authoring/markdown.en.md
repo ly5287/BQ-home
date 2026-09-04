@@ -1,915 +1,915 @@
-+++
-categories = ['howto', 'reference']
-description = 'Reference of CommonMark and Markdown extensions'
-title = 'Markdown Syntax'
-weight = 4
-+++
++++  
+categories = ['howto', 'reference']  
+description = 'Reference of CommonMark and Markdown extensions'  
+title = 'Markdown Syntax'  
+weight = 4  
++++  
 
-Let's face it: Writing content for the web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.
+Let's face it: Writing content for the web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.  
 
-**Markdown** is a better way to write **HTML**, without all the complexities and ugliness that usually accompanies it.
+**Markdown** is a better way to write **HTML**, without all the complexities and ugliness that usually accompanies it.  
 
-Some of the key benefits are:
+Some of the key benefits are:  
 
-1. Markdown is simple to learn, with minimal extra characters so it's also quicker to write content.
-2. Less chance of errors when writing in Markdown.
-3. Produces valid HTML output.
-4. Keeps the content and the visual display separate, so you cannot mess up the look of your site.
-5. Write in any text editor or Markdown application you like.
-6. Markdown is a joy to use!
+1. Markdown is simple to learn, with minimal extra characters so it's also quicker to write content.  
+2. Less chance of errors when writing in Markdown.  
+3. Produces valid HTML output.  
+4. Keeps the content and the visual display separate, so you cannot mess up the look of your site.  
+5. Write in any text editor or Markdown application you like.  
+6. Markdown is a joy to use!  
 
-John Gruber, the author of Markdown, puts it like this:
+John Gruber, the author of Markdown, puts it like this:  
 
-> The overriding design goal for Markdown's formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions. While Markdown's syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown's syntax is the format of plain text email.
-> <cite>John Gruber</cite>
+> The overriding design goal for Markdown's formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions. While Markdown's syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown's syntax is the format of plain text email.  
+> <cite>John Gruber</cite>  
 
-{{% notice tip %}}
-{{% icon bookmark %}} Bookmark this page for easy future reference!
-{{% /notice %}}
+{{% notice tip %}}  
+{{% icon bookmark %}} Bookmark this page for easy future reference!  
+{{% /notice %}}  
 
-## Standard and Extensions
+## Standard and Extensions  
 
-If not otherwise noted, the shown examples adhere to the [CommonMark](https://commonmark.org/help/) standard. In addition the theme supports the following extensions that [can be activated](https://gohugo.io/getting-started/configuration-markup/#goldmark) in your `hugo.toml` or are built into the theme:
+If not otherwise noted, the shown examples adhere to the [CommonMark](https://commonmark.org/help/) standard. In addition the theme supports the following extensions that [can be activated](https://gohugo.io/getting-started/configuration-markup/#goldmark) in your `hugo.toml` or are built into the theme:  
 
-- {{% badge style="gfm" %}}GFM{{% /badge %}} Extension on top of standard Markdown adhering to [GitHub Flavored Markdown](https://github.github.com/gfm/).
+- {{% badge style="gfm" %}}GFM{{% /badge %}} Extension on top of standard Markdown adhering to [GitHub Flavored Markdown](https://github.github.com/gfm/).  
 
-- {{% badge style="php" %}}PHP{{% /badge %}} Extension on top of standard Markdown adhering to [PHP Markdown](https://michelf.ca/projects/php-markdown/extra/).
+- {{% badge style="php" %}}PHP{{% /badge %}} Extension on top of standard Markdown adhering to [PHP Markdown](https://michelf.ca/projects/php-markdown/extra/).  
 
-- {{% badge style="pants" %}}Pants{{% /badge %}} Extension by John Gruber adhering to [SmartyPants](https://daringfireball.net/projects/smartypants/).
+- {{% badge style="pants" %}}Pants{{% /badge %}} Extension by John Gruber adhering to [SmartyPants](https://daringfireball.net/projects/smartypants/).  
 
-- {{% badge style="hugo" %}}Hugo{{% /badge %}} [Hugo Extra Extension](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) supported by Hugo.
+- {{% badge style="hugo" %}}Hugo{{% /badge %}} [Hugo Extra Extension](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) supported by Hugo.  
 
-- {{% badge style="obsidian" %}}Obsidian{{% /badge %}} Extension implemented by [Obsidian](https://obsidian.md/).
+- {{% badge style="obsidian" %}}Obsidian{{% /badge %}} Extension implemented by [Obsidian](https://obsidian.md/).  
 
-- {{% badge style="html" %}}HTML{{% /badge %}} If the [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe) is allowed, the theme supports styling for further HTML elements.
+- {{% badge style="html" %}}HTML{{% /badge %}} If the [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe) is allowed, the theme supports styling for further HTML elements.  
 
-- {{% badge style="relearn" %}}Relearn{{% /badge %}} Extension specific to this theme.
+- {{% badge style="relearn" %}}Relearn{{% /badge %}} Extension specific to this theme.  
 
-## Paragraphs
+## Paragraphs  
 
-In Markdown your content usually spans the whole available document width. This is called a block. Blocks are always separated by whitespace to their adjacent blocks in the resulting document.
+In Markdown your content usually spans the whole available document width. This is called a block. Blocks are always separated by whitespace to their adjacent blocks in the resulting document.  
 
-Any text not starting with a special sign is written as normal, plain text paragraph block and must be separated to its adjacent blocks by empty lines.
+Any text not starting with a special sign is written as normal, plain text paragraph block and must be separated to its adjacent blocks by empty lines.  
 
-````md
-Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.
+````md  
+Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.  
 
-Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
-````
+Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.
+{{% notice style="code" icon="eye" title="Result" %}}  
+Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.  
 
-Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
-{{% /notice %}}
+Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.  
+{{% /notice %}}  
 
-## Headings
+## Headings  
 
-A good idea is to structure your content using headings and subheadings. HTML-headings from `h1` through `h6` are constructed with a `#` for each level.
+A good idea is to structure your content using headings and subheadings. HTML-headings from `h1` through `h6` are constructed with a `#` for each level.  
 
-In Hugo you usually don't use `h1` as this is generated by your theme and you should only have one such element in a document.
+In Hugo you usually don't use `h1` as this is generated by your theme and you should only have one such element in a document.  
 
-````md
-# h1 Heading
+````md  
+# h1 Heading  
 
-## h2 Heading
+## h2 Heading  
 
-### h3 Heading
+### h3 Heading  
 
-#### h4 Heading
+#### h4 Heading  
 
-##### h5 Heading
+##### h5 Heading  
 
-###### h6 Heading
-````
+###### h6 Heading  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
 
-# h1 Heading
+# h1 Heading  
 
-## h2 Heading
+## h2 Heading  
 
-### h3 Heading
+### h3 Heading  
 
-#### h4 Heading
+#### h4 Heading  
 
-##### h5 Heading
+##### h5 Heading  
 
-###### h6 Heading
-{{% /notice %}}
+###### h6 Heading  
+{{% /notice %}}  
 
-## Horizontal Rules
+## Horizontal Rules  
 
-To further structure your content you can add horizontal rules. They create a "thematic break" between paragraph blocks. In Markdown, you can create it with three consecutive dashes `---`.
+To further structure your content you can add horizontal rules. They create a "thematic break" between paragraph blocks. In Markdown, you can create it with three consecutive dashes `---`.  
 
-````md
-Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.
+````md  
+Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.  
 
----
+---  
 
-Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
-````
+Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.
+{{% notice style="code" icon="eye" title="Result" %}}  
+Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus.  
 
----
+---  
 
-Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
-{{% /notice %}}
+Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.  
+{{% /notice %}}  
 
-## Blockquotes
+## Blockquotes  
 
-### Quotations
+### Quotations  
 
-For quoting blocks of content from another source within your document add `>` before any text you want to quote.
+For quoting blocks of content from another source within your document add `>` before any text you want to quote.  
 
-Blockquotes can also be nested.
+Blockquotes can also be nested.  
 
-````md
-> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue, aliquam non hendrerit ac, commodo vel nisi.
->
-> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
->
-> Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.
-````
+````md  
+> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue, aliquam non hendrerit ac, commodo vel nisi.  
+>  
+> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.  
+>  
+> Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue, aliquam non hendrerit ac, commodo vel nisi.
->
-> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
->
-> Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue, aliquam non hendrerit ac, commodo vel nisi.  
+>  
+> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.  
+>  
+> Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.  
+{{% /notice %}}  
 
-### GitHub Alerts
+### GitHub Alerts  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} Since Hugo {{% badge style="hugo" %}}0.132.0{{% /badge %}} [GitHub alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) are also supported. Please note, that coloring and icons of severities may defer between GitHub and this theme.
+{{% badge style="gfm" %}}GFM{{% /badge %}} Since Hugo {{% badge style="hugo" %}}0.132.0{{% /badge %}} [GitHub alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) are also supported. Please note, that coloring and icons of severities may defer between GitHub and this theme.  
 
-If you are in need of more advanced options to style your alerts, like icons, use the [notice shortcode](shortcodes/notice).
+If you are in need of more advanced options to style your alerts, like icons, use the [notice shortcode](shortcodes/notice).  
 
-````md
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+````md  
+> [!CAUTION]  
+> Advises about risks or negative outcomes of certain actions.  
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+> [!IMPORTANT]  
+> Key information users need to know to achieve their goal.  
 
-> [!INFO]
-> Information that users <ins>_might_</ins> find interesting.
+> [!INFO]  
+> Information that users <ins>_might_</ins> find interesting.  
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+> [!NOTE]  
+> Useful information that users should know, even when skimming content.  
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
+> [!TIP]  
+> Helpful advice for doing things better or more easily.  
 
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-````
+> [!WARNING]  
+> Urgent info that needs immediate user attention to avoid problems.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+{{% notice style="code" icon="eye" title="Result" %}}  
+> [!CAUTION]  
+> Advises about risks or negative outcomes of certain actions.  
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+> [!IMPORTANT]  
+> Key information users need to know to achieve their goal.  
 
-> [!INFO]
-> Information that users <ins>_might_</ins> find interesting.
+> [!INFO]  
+> Information that users <ins>_might_</ins> find interesting.  
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+> [!NOTE]  
+> Useful information that users should know, even when skimming content.  
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
+> [!TIP]  
+> Helpful advice for doing things better or more easily.  
 
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-{{% /notice %}}
+> [!WARNING]  
+> Urgent info that needs immediate user attention to avoid problems.  
+{{% /notice %}}  
 
-### Obsidian Callouts
+### Obsidian Callouts  
 
-{{% badge style="obsidian" %}}Obsidian{{% /badge %}} Since Hugo {{% badge style="hugo" %}}0.134.0{{% /badge %}} [Obsidian callouts](https://help.obsidian.md/Editing+and+formatting/Callouts#Change+the+title) are also supported. Which enables configurable title text and expand/collapse.
+{{% badge style="obsidian" %}}Obsidian{{% /badge %}} Since Hugo {{% badge style="hugo" %}}0.134.0{{% /badge %}} [Obsidian callouts](https://help.obsidian.md/Editing+and+formatting/Callouts#Change+the+title) are also supported. Which enables configurable title text and expand/collapse.  
 
-If you are in need of more advanced options to style your alerts, like icons, use the [notice shortcode](shortcodes/notice).
+If you are in need of more advanced options to style your alerts, like icons, use the [notice shortcode](shortcodes/notice).  
 
-````md
-> [!tip] Callouts can have **custom** titles
-> Like this one.
+````md  
+> [!tip] Callouts can have **custom** titles  
+> Like this one.  
 
-> [!tip] Title-only callout
+> [!tip] Title-only callout  
 
-> [!note]- Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when the callout is collapsed
+> [!note]- Are callouts foldable?  
+> Yes! In a foldable callout, the contents are hidden when the callout is collapsed  
 
-> [!note]+ Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when the callout is collapsed
-````
+> [!note]+ Are callouts foldable?  
+> Yes! In a foldable callout, the contents are hidden when the callout is collapsed  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-> [!tip] Callouts can have **custom** titles
-> Like this one.
+{{% notice style="code" icon="eye" title="Result" %}}  
+> [!tip] Callouts can have **custom** titles  
+> Like this one.  
 
-> [!tip] Title-only callout
+> [!tip] Title-only callout  
 
-> [!note]- Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when the callout is collapsed
+> [!note]- Are callouts foldable?  
+> Yes! In a foldable callout, the contents are hidden when the callout is collapsed  
 
-> [!note]+ Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when the callout is collapsed
-{{% /notice %}}
+> [!note]+ Are callouts foldable?  
+> Yes! In a foldable callout, the contents are hidden when the callout is collapsed  
+{{% /notice %}}  
 
-## Text Markers
+## Text Markers  
 
-### Bold
+### Bold  
 
-You can show importance of a snippet of text with a heavier font-weight by enclosing it with two asterisks `**`.
+You can show importance of a snippet of text with a heavier font-weight by enclosing it with two asterisks `**`.  
 
-````md
-I am rendered with **bold text**
-````
+````md  
+I am rendered with **bold text**  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-I am rendered with **bold text**
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+I am rendered with **bold text**  
+{{% /notice %}}  
 
-### Italics
+### Italics  
 
-You can emphasize a snippet of text with italics by enclosing it with underscores `_`.
+You can emphasize a snippet of text with italics by enclosing it with underscores `_`.  
 
-````md
-I am rendered with _italicized text_
-````
+````md  
+I am rendered with _italicized text_  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-I am rendered with _italicized text_
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+I am rendered with _italicized text_  
+{{% /notice %}}  
 
-### Marked Text
+### Marked Text  
 
-You can mark text in the predefined accent color of your stylesheet.
+You can mark text in the predefined accent color of your stylesheet.  
 
-{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`
+{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`  
 
-````md
-==Parts== of this text ==are marked!==
-````
+````md  
+==Parts== of this text ==are marked!==  
+````  
 
-{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).
+{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).  
 
-````html
-<mark>Parts</mark> of this text <mark>are marked!</mark>
-````
+````html  
+<mark>Parts</mark> of this text <mark>are marked!</mark>  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-<mark>Parts</mark> of this text <mark>are marked!</mark>
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+<mark>Parts</mark> of this text <mark>are marked!</mark>  
+{{% /notice %}}  
 
-### Inserted Text
+### Inserted Text  
 
-You can mark text additions to existing text.
+You can mark text additions to existing text.  
 
-{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`
+{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`  
 
-````md
-The ++hot, new++ stuff
-````
+````md  
+The ++hot, new++ stuff  
+````  
 
-{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).
+{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).  
 
-````html
-The <ins>hot, new</ins> stuff
-````
+````html  
+The <ins>hot, new</ins> stuff  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-The ++hot, new++ stuff
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+The ++hot, new++ stuff  
+{{% /notice %}}  
 
-### Deleted Text
+### Deleted Text  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} You can do strikethroughs by enclosing text with two tildes `~~`. See [Hugo's documentation remarks](https://gohugo.io/getting-started/configuration-markup/#extras) if you want to use this together with the subscript syntax.
+{{% badge style="gfm" %}}GFM{{% /badge %}} You can do strikethroughs by enclosing text with two tildes `~~`. See [Hugo's documentation remarks](https://gohugo.io/getting-started/configuration-markup/#extras) if you want to use this together with the subscript syntax.  
 
-````md
-~~Strike through~~ this text
-````
+````md  
+~~Strike through~~ this text  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-~~Strike through~~ this text
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+~~Strike through~~ this text  
+{{% /notice %}}  
 
-## Special Typesetting
+## Special Typesetting  
 
-### Text Substitution
+### Text Substitution  
 
-{{% badge style="pants" %}}Pants{{% /badge %}} You can combine multiple punctuation characters to single typographic entities. This will only be applied to text outside of code blocks or inline code.
+{{% badge style="pants" %}}Pants{{% /badge %}} You can combine multiple punctuation characters to single typographic entities. This will only be applied to text outside of code blocks or inline code.  
 
-````md
-Double quotes `"` and single quotes `'` of enclosed text are replaced by **"double curly quotes"** and **'single curly quotes'**.
+````md  
+Double quotes `"` and single quotes `'` of enclosed text are replaced by **"double curly quotes"** and **'single curly quotes'**.  
 
-Double dashes `--` and triple dashes `---` are replaced by en-dash **--** and em-dash **---** entities.
+Double dashes `--` and triple dashes `---` are replaced by en-dash **--** and em-dash **---** entities.  
 
-Double arrows pointing left `<<` or right `>>` are replaced by arrow **<<** and **>>** entities.
+Double arrows pointing left `<<` or right `>>` are replaced by arrow **<<** and **>>** entities.  
 
-Three consecutive dots `...` are replaced by an ellipsis **...** entity.
-````
+Three consecutive dots `...` are replaced by an ellipsis **...** entity.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Double quotes `"` and single quotes `'` of enclosed text are replaced by **"double curly quotes"** and **'single curly quotes'**.
+{{% notice style="code" icon="eye" title="Result" %}}  
+Double quotes `"` and single quotes `'` of enclosed text are replaced by **"double curly quotes"** and **'single curly quotes'**.  
 
-Double dashes `--` and triple dashes `---` are replaced by en-dash **--** and em-dash **---** entities.
+Double dashes `--` and triple dashes `---` are replaced by en-dash **--** and em-dash **---** entities.  
 
-Double arrows pointing left `<<` or right `>>` are replaced by arrow **<<** and **>>** entities.
+Double arrows pointing left `<<` or right `>>` are replaced by arrow **<<** and **>>** entities.  
 
-Three consecutive dots `...` are replaced by an ellipsis **...** entity.
-{{% /notice %}}
+Three consecutive dots `...` are replaced by an ellipsis **...** entity.  
+{{% /notice %}}  
 
-### Subscript and Superscript
+### Subscript and Superscript  
 
-You can also use  subscript and superscript text. For more complex stuff, you can use the [`math` shortcode](shortcodes/math).
+You can also use  subscript and superscript text. For more complex stuff, you can use the [`math` shortcode](shortcodes/math).  
 
-{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`
+{{% badge style="hugo" %}}Hugo{{% /badge %}} Since Hugo 0.126.0, you can [activate this through the _Hugo Extra Extension_](https://github.com/gohugoio/hugo-goldmark-extensions?tab=readme-ov-file#extras-extension) in your `hugo.toml`  
 
-````md
-How many liters H~2~O fit into 1dm^3^?
-````
+````md  
+How many liters H~2~O fit into 1dm^3^?  
+````  
 
-{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).
+{{% badge style="html" %}}HTML{{% /badge %}} You can also use it by configuring Hugo for [usage of HTML](https://gohugo.io/getting-started/configuration-markup/#rendererunsafe).  
 
-````html
-How many liters H<sub>2</sub>O fit into 1dm<sup>3</sup>?
-````
+````html  
+How many liters H<sub>2</sub>O fit into 1dm<sup>3</sup>?  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-How many liters H~2~O fit into 1dm^3^?
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+How many liters H~2~O fit into 1dm^3^?  
+{{% /notice %}}  
 
-### Keyboard Shortcuts
+### Keyboard Shortcuts  
 
-{{% badge style="html" %}}HTML{{% /badge %}} You can use the `<kbd>` element to style keyboard shortcuts.
+{{% badge style="html" %}}HTML{{% /badge %}} You can use the `<kbd>` element to style keyboard shortcuts.  
 
-````html
-Press <kbd>STRG</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd> to end your shift early.
-````
+````html  
+Press <kbd>STRG</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd> to end your shift early.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Press <kbd>STRG</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd> to end your shift early.
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+Press <kbd>STRG</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd> to end your shift early.  
+{{% /notice %}}  
 
-## Lists
+## Lists  
 
-### Unordered
+### Unordered  
 
-You can write a list of items in which the order of the items does not explicitly matter.
+You can write a list of items in which the order of the items does not explicitly matter.  
 
-It is possible to nest lists by indenting an item for the next sublevel.
+It is possible to nest lists by indenting an item for the next sublevel.  
 
-You may use any of `-`, `*` or `+` to denote bullets for each list item but should not switch between those symbols inside one whole list.
+You may use any of `-`, `*` or `+` to denote bullets for each list item but should not switch between those symbols inside one whole list.  
 
-````md
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-  - Vestibulum laoreet porttitor sem
-  - Ac tristique libero volutpat at
-- Nulla volutpat aliquam velit
-  - Phasellus iaculis neque
-  - Purus sodales ultricies
-- Faucibus porta lacus fringilla vel
-````
+````md  
+- Lorem ipsum dolor sit amet  
+- Consectetur adipiscing elit  
+  - Vestibulum laoreet porttitor sem  
+  - Ac tristique libero volutpat at  
+- Nulla volutpat aliquam velit  
+  - Phasellus iaculis neque  
+  - Purus sodales ultricies  
+- Faucibus porta lacus fringilla vel  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-  - Vestibulum laoreet porttitor sem
-  - Ac tristique libero volutpat at
-- Nulla volutpat aliquam velit
-  - Phasellus iaculis neque
-  - Purus sodales ultricies
-- Faucibus porta lacus fringilla vel
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+- Lorem ipsum dolor sit amet  
+- Consectetur adipiscing elit  
+  - Vestibulum laoreet porttitor sem  
+  - Ac tristique libero volutpat at  
+- Nulla volutpat aliquam velit  
+  - Phasellus iaculis neque  
+  - Purus sodales ultricies  
+- Faucibus porta lacus fringilla vel  
+{{% /notice %}}  
 
-### Ordered
+### Ordered  
 
-You can create a list of items in which the order of items does explicitly matter.
+You can create a list of items in which the order of items does explicitly matter.  
 
-It is possible to nest lists by indenting an item for the next sublevel.
+It is possible to nest lists by indenting an item for the next sublevel.  
 
-Markdown will automatically number each of your items consecutively. This means, the order number you are providing is irrelevant.
+Markdown will automatically number each of your items consecutively. This means, the order number you are providing is irrelevant.  
 
-````md
-1. Lorem ipsum dolor sit amet
-3. Consectetur adipiscing elit
-    1. Integer molestie lorem at massa
-    7. Facilisis in pretium nisl aliquet
-99. Nulla volutpat aliquam velit
-    1. Faucibus porta lacus fringilla vel
-    1. Aenean sit amet erat nunc
-17. Eget porttitor lorem
-````
+````md  
+1. Lorem ipsum dolor sit amet  
+3. Consectetur adipiscing elit  
+    1. Integer molestie lorem at massa  
+    7. Facilisis in pretium nisl aliquet  
+99. Nulla volutpat aliquam velit  
+    1. Faucibus porta lacus fringilla vel  
+    1. Aenean sit amet erat nunc  
+17. Eget porttitor lorem  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-1. Lorem ipsum dolor sit amet
-1. Consectetur adipiscing elit
-    1. Integer molestie lorem at massa
-    7. Facilisis in pretium nisl aliquet
-99. Nulla volutpat aliquam velit
-    1. Faucibus porta lacus fringilla vel
-    1. Aenean sit amet erat nunc
-17. Eget porttitor lorem
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+1. Lorem ipsum dolor sit amet  
+1. Consectetur adipiscing elit  
+    1. Integer molestie lorem at massa  
+    7. Facilisis in pretium nisl aliquet  
+99. Nulla volutpat aliquam velit  
+    1. Faucibus porta lacus fringilla vel  
+    1. Aenean sit amet erat nunc  
+17. Eget porttitor lorem  
+{{% /notice %}}  
 
-### Tasks
+### Tasks  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} You can add task lists resulting in checked or unchecked non-clickable items
+{{% badge style="gfm" %}}GFM{{% /badge %}} You can add task lists resulting in checked or unchecked non-clickable items  
 
-````md
-- [x] Basic Test
-- [ ] More Tests
-  - [x] View
-  - [x] Hear
-  - [ ] Smell
-````
+````md  
+- [x] Basic Test  
+- [ ] More Tests  
+  - [x] View  
+  - [x] Hear  
+  - [ ] Smell  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-- [x] Basic Test
-- [ ] More Tests
-  - [x] View
-  - [x] Hear
-  - [ ] Smell
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+- [x] Basic Test  
+- [ ] More Tests  
+  - [x] View  
+  - [x] Hear  
+  - [ ] Smell  
+{{% /notice %}}  
 
-### Tree
+### Tree  
 
-{{% badge style="relearn" %}}Relearn{{% /badge %}} You can add lists as a tree with configurable icons and colors.
+{{% badge style="relearn" %}}Relearn{{% /badge %}} You can add lists as a tree with configurable icons and colors.  
 
-The name can be followed by an optional pipe (`|`) to define an icon and further optional pipe to define the icon's color.
+The name can be followed by an optional pipe (`|`) to define an icon and further optional pipe to define the icon's color.  
 
-More details can be found in the [`tree` shortcode docs](shortcodes/tree).
+More details can be found in the [`tree` shortcode docs](shortcodes/tree).  
 
-````md
-```tree
-- home | folder
-  - .config | folder
-  - My Documents | folder | gold
-    - index.html
-    - resume.odt | file-word | #df6f40
-  - Images | folder
-    - pic1.jpg
-    - pic2.jpg | file-image | secondary
-  - Code | folder
-    - home.php | fa-fw fab fa-php | #888cc4
-```
-````
+````md  
+```tree  
+- home | folder  
+  - .config | folder  
+  - My Documents | folder | gold  
+    - index.html  
+    - resume.odt | file-word | #df6f40  
+  - Images | folder  
+    - pic1.jpg  
+    - pic2.jpg | file-image | secondary  
+  - Code | folder  
+    - home.php | fa-fw fab fa-php | #888cc4  
+```  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-```tree
-- home | folder
-  - .config | folder
-  - My Documents | folder | gold
-    - index.html
-    - resume.odt | file-word | #df6f40
-  - Images | folder
-    - pic1.jpg
-    - pic2.jpg | file-image | secondary
-  - Code | folder
-    - home.php | fa-fw fab fa-php | #888cc4
-```
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+```tree  
+- home | folder  
+  - .config | folder  
+  - My Documents | folder | gold  
+    - index.html  
+    - resume.odt | file-word | #df6f40  
+  - Images | folder  
+    - pic1.jpg  
+    - pic2.jpg | file-image | secondary  
+  - Code | folder  
+    - home.php | fa-fw fab fa-php | #888cc4  
+```  
+{{% /notice %}}  
 
-### Definitions
+### Definitions  
 
-{{% badge style="php" %}}PHP{{% /badge %}} Definition lists are made of terms and definitions of these terms, much like in a dictionary.
+{{% badge style="php" %}}PHP{{% /badge %}} Definition lists are made of terms and definitions of these terms, much like in a dictionary.  
 
-A definition list in Markdown Extra is made of a single-line term followed by a colon and the definition for that term. You can also associate more than one term to a definition.
+A definition list in Markdown Extra is made of a single-line term followed by a colon and the definition for that term. You can also associate more than one term to a definition.  
 
-If you add empty lines around the definition terms, additional vertical space will be generated. Also multiple paragraphs are possible
+If you add empty lines around the definition terms, additional vertical space will be generated. Also multiple paragraphs are possible  
 
-````md
-Apple
-: Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
-: An American computer company.
+````md  
+Apple  
+: Pomaceous fruit of plants of the genus Malus in the family Rosaceae.  
+: An American computer company.  
 
-Orange
-: The fruit of an evergreen tree of the genus Citrus.
+Orange  
+: The fruit of an evergreen tree of the genus Citrus.  
 
-  You can make juice out of it.
-: A telecommunication company.
+  You can make juice out of it.  
+: A telecommunication company.  
 
-  You can't make juice out of it.
-````
+  You can't make juice out of it.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Apple
-: Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
-: An American computer company.
+{{% notice style="code" icon="eye" title="Result" %}}  
+Apple  
+: Pomaceous fruit of plants of the genus Malus in the family Rosaceae.  
+: An American computer company.  
 
-Orange
-: The fruit of an evergreen tree of the genus Citrus.
+Orange  
+: The fruit of an evergreen tree of the genus Citrus.  
 
-  You can make juice out of it.
-: A telecommunication company.
+  You can make juice out of it.  
+: A telecommunication company.  
 
-  You can't make juice out of it.
-{{% /notice %}}
+  You can't make juice out of it.  
+{{% /notice %}}  
 
-## Code
+## Code  
 
-### Inline Code
+### Inline Code  
 
-Inline snippets of code can be wrapped with backticks `` ` ``.
+Inline snippets of code can be wrapped with backticks `` ` ``.  
 
-````md
-In this example, `<div></div>` is marked as code.
-````
+````md  
+In this example, `<div></div>` is marked as code.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-In this example, `<div></div>` is marked as code.
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+In this example, `<div></div>` is marked as code.  
+{{% /notice %}}  
 
-### Indented Code Block
+### Indented Code Block  
 
-A simple code block can be generated by indenting several lines of code by at least two spaces.
+A simple code block can be generated by indenting several lines of code by at least two spaces.  
 
-````md
-Be impressed by my advanced code:
+````md  
+Be impressed by my advanced code:  
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-````
+    // Some comments  
+    line 1 of code  
+    line 2 of code  
+    line 3 of code  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-Be impressed by my advanced code:
+{{% notice style="code" icon="eye" title="Result" %}}  
+Be impressed by my advanced code:  
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-{{% /notice %}}
+    // Some comments  
+    line 1 of code  
+    line 2 of code  
+    line 3 of code  
+{{% /notice %}}  
 
-### Fenced Code Block
+### Fenced Code Block  
 
-If you want to gain more control of your code block you can enclose your code by at least three backticks ```` ``` ```` a so called fence.
+If you want to gain more control of your code block you can enclose your code by at least three backticks ```` ``` ```` a so called fence.  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} You can also add a language specifier directly after the opening fence, ` ```js `, and syntax highlighting will automatically be applied according to the selected language in the rendered HTML.
+{{% badge style="gfm" %}}GFM{{% /badge %}} You can also add a language specifier directly after the opening fence, ` ```js `, and syntax highlighting will automatically be applied according to the selected language in the rendered HTML.  
 
-See [Code Highlighting](shortcodes/highlight) for additional documentation.
+See [Code Highlighting](shortcodes/highlight) for additional documentation.  
 
-````plaintext
-```js
-{
-    name: "Claus",
-    surname: "Santa",
-    profession: "courier",
-    age: 666,
-    address: {
-        city: "North Pole",
-        postalCode: 1,
-        country: "Arctic"
-    },
-    friends: [ "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donder", "Blitzen", "Rudolph" ]
-};
-```
-````
+````plaintext  
+```js  
+{  
+    name: "Claus",  
+    surname: "Santa",  
+    profession: "courier",  
+    age: 666,  
+    address: {  
+        city: "North Pole",  
+        postalCode: 1,  
+        country: "Arctic"  
+    },  
+    friends: [ "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donder", "Blitzen", "Rudolph" ]  
+};  
+```  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-```js
-{
-    name: "Claus",
-    surname: "Santa",
-    profession: "courier",
-    age: 666,
-    address: {
-        city: "North Pole",
-        postalCode: 1,
-        country: "Arctic"
-    },
-    friends: [ "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donder", "Blitzen", "Rudolph" ]
-};
-```
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+```js  
+{  
+    name: "Claus",  
+    surname: "Santa",  
+    profession: "courier",  
+    age: 666,  
+    address: {  
+        city: "North Pole",  
+        postalCode: 1,  
+        country: "Arctic"  
+    },  
+    friends: [ "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donder", "Blitzen", "Rudolph" ]  
+};  
+```  
+{{% /notice %}}  
 
-## Tables
+## Tables  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} You can create tables by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.
+{{% badge style="gfm" %}}GFM{{% /badge %}} You can create tables by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.  
 
-````md
-| Option | Description |
-|--------|-------------|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-````
+````md  
+| Option | Description |  
+|--------|-------------|  
+| data   | path to data files to supply the data that will be passed into templates. |  
+| engine | engine to be used for processing templates. Handlebars is the default. |  
+| ext    | extension to be used for dest files. |  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-| Option | Description |
-|--------|-------------|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+| Option | Description |  
+|--------|-------------|  
+| data   | path to data files to supply the data that will be passed into templates. |  
+| engine | engine to be used for processing templates. Handlebars is the default. |  
+| ext    | extension to be used for dest files. |  
+{{% /notice %}}  
 
-### Aligned Columns
+### Aligned Columns  
 
-Adding a colon on the left and/or right side of the dashes below any heading will align the text for that column accordingly.
+Adding a colon on the left and/or right side of the dashes below any heading will align the text for that column accordingly.  
 
-````md
-| Option | Number | Description |
-|-------:|:------:|:------------|
-| data   | 1      | path to data files to supply the data that will be passed into templates. |
-| engine | 2      | engine to be used for processing templates. Handlebars is the default. |
-| ext    | 3      | extension to be used for dest files. |
-````
+````md  
+| Option | Number | Description |  
+|-------:|:------:|:------------|  
+| data   | 1      | path to data files to supply the data that will be passed into templates. |  
+| engine | 2      | engine to be used for processing templates. Handlebars is the default. |  
+| ext    | 3      | extension to be used for dest files. |  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-| Option | Number | Description |
-|-------:|:------:|:------------|
-| data   | 1      | path to data files to supply the data that will be passed into templates. |
-| engine | 2      | engine to be used for processing templates. Handlebars is the default. |
-| ext    | 3      | extension to be used for dest files. |
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+| Option | Number | Description |  
+|-------:|:------:|:------------|  
+| data   | 1      | path to data files to supply the data that will be passed into templates. |  
+| engine | 2      | engine to be used for processing templates. Handlebars is the default. |  
+| ext    | 3      | extension to be used for dest files. |  
+{{% /notice %}}  
 
-## Links
+## Links  
 
-### Autolink
+### Autolink  
 
-{{% badge style="gfm" %}}GFM{{% /badge %}} Absolute URLs will automatically be converted into a link.
+{{% badge style="gfm" %}}GFM{{% /badge %}} Absolute URLs will automatically be converted into a link.  
 
-````md
-This is a link to https://example.com.
-````
+````md  
+This is a link to https://example.com.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-This is a link to https://example.com.
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+This is a link to https://example.com.  
+{{% /notice %}}  
 
 
-### Basic Link
+### Basic Link  
 
-You can explicitly define links in case you want to use non-absolute URLs or want to give different text.
+You can explicitly define links in case you want to use non-absolute URLs or want to give different text.  
 
-````md
-[Assemble](http://assemble.io)
-````
+````md  
+[Assemble](http://assemble.io)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-[Assemble](http://assemble.io)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+[Assemble](http://assemble.io)  
+{{% /notice %}}  
 
-### Link with Tooltip
+### Link with Tooltip  
 
-For even further information, you can add an additional text, displayed in a tooltip on hovering over the link.
+For even further information, you can add an additional text, displayed in a tooltip on hovering over the link.  
 
-````md
-[Upstage](https://github.com/upstage/ "Visit Upstage!")
-````
+````md  
+[Upstage](https://github.com/upstage/ "Visit Upstage!")  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-[Upstage](https://github.com/upstage/ "Visit Upstage!")
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+[Upstage](https://github.com/upstage/ "Visit Upstage!")  
+{{% /notice %}}  
 
-### Link References
+### Link References  
 
-Links can be simplyfied for recurring reuse by using a reference ID to later define the URL location. This simplyfies writing if you want to use a link more than once in a document.
+Links can be simplyfied for recurring reuse by using a reference ID to later define the URL location. This simplyfies writing if you want to use a link more than once in a document.  
 
-````md
-[Example][somelinkID]
+````md  
+[Example][somelinkID]  
 
-[somelinkID]: https://example.com "Go to example domain"
-````
+[somelinkID]: https://example.com "Go to example domain"  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-[Example][somelinkID]
+{{% notice style="code" icon="eye" title="Result" %}}  
+[Example][somelinkID]  
 
-[somelinkID]: https://example.com "Go to example domain"
-{{% /notice %}}
+[somelinkID]: https://example.com "Go to example domain"  
+{{% /notice %}}  
 
-### Footnotes
+### Footnotes  
 
-{{% badge style="php" %}}PHP{{% /badge %}} Footnotes work mostly like reference-style links. A footnote is made of two things, a marker in the text that will become a superscript number and a footnote definition that will be placed in a list of footnotes.
+{{% badge style="php" %}}PHP{{% /badge %}} Footnotes work mostly like reference-style links. A footnote is made of two things, a marker in the text that will become a superscript number and a footnote definition that will be placed in a list of footnotes.  
 
-Usually the list of footnotes will be shown at the end of your document. If we use a footnote in a notice box it will instead be listed at the end of its box.
+Usually the list of footnotes will be shown at the end of your document. If we use a footnote in a notice box it will instead be listed at the end of its box.  
 
-Footnotes can contain block elements, which means that you can put multiple paragraphs, lists, blockquotes and so on in a footnote. It works the same as for list items, just indent the following paragraphs by four spaces in the footnote definition.
+Footnotes can contain block elements, which means that you can put multiple paragraphs, lists, blockquotes and so on in a footnote. It works the same as for list items, just indent the following paragraphs by four spaces in the footnote definition.  
 
-````md
-That's some text with a footnote[^1]
+````md  
+That's some text with a footnote[^1]  
 
-[^1]: And that's the footnote.
+[^1]: And that's the footnote.  
 
-That's some more text with a footnote.[^someid]
+That's some more text with a footnote.[^someid]  
 
-[^someid]:
-    Anything of interest goes here.
+[^someid]:  
+    Anything of interest goes here.  
 
-    Blue light glows blue.
-````
+    Blue light glows blue.  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-That's some text with a footnote[^1]
+{{% notice style="code" icon="eye" title="Result" %}}  
+That's some text with a footnote[^1]  
 
-[^1]: And that's the footnote.
+[^1]: And that's the footnote.  
 
-That's some more text with a footnote.[^someid]
+That's some more text with a footnote.[^someid]  
 
-[^someid]:
-    Anything of interest goes here.
+[^someid]:  
+    Anything of interest goes here.  
 
-    Blue light glows blue.
-{{% /notice %}}
+    Blue light glows blue.  
+{{% /notice %}}  
 
-### Link Effects
+### Link Effects  
 
-{{% badge style="relearn" %}}Relearn{{% /badge %}} This theme allows additional non-standard formatting by setting query parameter at the end of the URL. See the [link effects docs](authoring/linking/linkeffects) for a detailed example and how to configure it.
+{{% badge style="relearn" %}}Relearn{{% /badge %}} This theme allows additional non-standard formatting by setting query parameter at the end of the URL. See the [link effects docs](authoring/linking/linkeffects) for a detailed example and how to configure it.  
 
-#### Target
+#### Target  
 
-Add query parameter `target=_self` or `target=_blank` to override [site-wide settings](authoring/frontmatter/linking#opening-links) of [the target behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) individually for each link.
+Add query parameter `target=_self` or `target=_blank` to override [site-wide settings](authoring/frontmatter/linking#opening-links) of [the target behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) individually for each link.  
 
-````md
-[Magic in new window](images/magic.gif?target=_blank)
-````
+````md  
+[Magic in new window](images/magic.gif?target=_blank)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-[Magic in new window](images/magic.gif?target=_blank)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+[Magic in new window](images/magic.gif?target=_blank)  
+{{% /notice %}}  
 
-#### Download
+#### Download  
 
-Add query parameter `download` or `download=myfile.gif` to force your browser [to download the link target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#download) instead of opening it.
+Add query parameter `download` or `download=myfile.gif` to force your browser [to download the link target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#download) instead of opening it.  
 
-````md
-[Magic as a download](images/magic.gif?download)
-````
+````md  
+[Magic as a download](images/magic.gif?download)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-[Magic as a download](images/magic.gif?download)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+[Magic as a download](images/magic.gif?download)  
+{{% /notice %}}  
 
-## Images
+## Images  
 
-### Basic Images
+### Basic Images  
 
-Images have a similar syntax to links but include a preceding exclamation mark.
+Images have a similar syntax to links but include a preceding exclamation mark.  
 
-````md
-![Spock](https://octodex.github.com/images/spocktocat.png)
-````
+````md  
+![Spock](https://octodex.github.com/images/spocktocat.png)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Spock](https://octodex.github.com/images/spocktocat.png?width=20vw)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Spock](https://octodex.github.com/images/spocktocat.png?width=20vw)  
+{{% /notice %}}  
 
-### Image with Tooltip
+### Image with Tooltip  
 
-Like links, images can also be given a tooltip.
+Like links, images can also be given a tooltip.  
 
-````md
-![Picard](https://octodex.github.com/images/jean-luc-picat.jpg "Jean Luc Picard")
-````
+````md  
+![Picard](https://octodex.github.com/images/jean-luc-picat.jpg "Jean Luc Picard")  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Picard](https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw "Jean Luc Picard")
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Picard](https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw "Jean Luc Picard")  
+{{% /notice %}}  
 
-### Image References
+### Image References  
 
-Images can also be linked by reference ID to later define the URL location. This simplyfies writing if you want to use an image more than once in a document.
+Images can also be linked by reference ID to later define the URL location. This simplyfies writing if you want to use an image more than once in a document.  
 
-````md
-![La Forge][laforge]
+````md  
+![La Forge][laforge]  
 
-[laforge]: https://octodex.github.com/images/trekkie.jpg "Geordi La Forge"
-````
+[laforge]: https://octodex.github.com/images/trekkie.jpg "Geordi La Forge"  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![La Forge][laforge]
+{{% notice style="code" icon="eye" title="Result" %}}  
+![La Forge][laforge]  
 
-[laforge]: https://octodex.github.com/images/trekkie.jpg?width=20vw "Geordi La Forge"
-{{% /notice %}}
+[laforge]: https://octodex.github.com/images/trekkie.jpg?width=20vw "Geordi La Forge"  
+{{% /notice %}}  
 
-### Image Effects
+### Image Effects  
 
-{{% badge style="relearn" %}}Relearn{{% /badge %}} This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. See the [image effects docs](authoring/linking/imageeffects) for a detailed example and how to configure it.
+{{% badge style="relearn" %}}Relearn{{% /badge %}} This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. See the [image effects docs](authoring/linking/imageeffects) for a detailed example and how to configure it.  
 
-#### Resizing
+#### Resizing  
 
-Add query parameter `width` and/or `height` to the link image to resize the image. Values are CSS values (default is `auto`).
+Add query parameter `width` and/or `height` to the link image to resize the image. Values are CSS values (default is `auto`).  
 
-````md
-![Minion](https://octodex.github.com/images/minion.png?width=20vw)
-````
+````md  
+![Minion](https://octodex.github.com/images/minion.png?width=20vw)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Minion](https://octodex.github.com/images/minion.png?width=20vw)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Minion](https://octodex.github.com/images/minion.png?width=20vw)  
+{{% /notice %}}  
 
-````md
-![Minion](https://octodex.github.com/images/minion.png?height=50px)
-````
+````md  
+![Minion](https://octodex.github.com/images/minion.png?height=50px)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Minion](https://octodex.github.com/images/minion.png?height=50px)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Minion](https://octodex.github.com/images/minion.png?height=50px)  
+{{% /notice %}}  
 
-````md
-![Minion](https://octodex.github.com/images/minion.png?height=50px&width=40vw)
-````
+````md  
+![Minion](https://octodex.github.com/images/minion.png?height=50px&width=40vw)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Minion](https://octodex.github.com/images/minion.png?height=50px&width=40vw)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Minion](https://octodex.github.com/images/minion.png?height=50px&width=40vw)  
+{{% /notice %}}  
 
-#### CSS Classes
+#### CSS Classes  
 
-Add a query parameter `classes` to the link image to add CSS classes. Add some of the predefined values or even define your own in your CSS.
+Add a query parameter `classes` to the link image to add CSS classes. Add some of the predefined values or even define your own in your CSS.  
 
-##### Shadow
+##### Shadow  
 
-````md
-![Spidertocat](https://octodex.github.com/images/spidertocat.png?classes=shadow)
-````
+````md  
+![Spidertocat](https://octodex.github.com/images/spidertocat.png?classes=shadow)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Spidertocat](https://octodex.github.com/images/spidertocat.png?width=20vw&classes=shadow,noborder)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Spidertocat](https://octodex.github.com/images/spidertocat.png?width=20vw&classes=shadow,noborder)  
+{{% /notice %}}  
 
-##### Border
+##### Border  
 
-````md
-![DrOctocat](https://octodex.github.com/images/droctocat.png?classes=border)
-````
+````md  
+![DrOctocat](https://octodex.github.com/images/droctocat.png?classes=border)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![DrOctocat](https://octodex.github.com/images/droctocat.png?width=20vw&classes=border,noshadow)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![DrOctocat](https://octodex.github.com/images/droctocat.png?width=20vw&classes=border,noshadow)  
+{{% /notice %}}  
 
-##### Left
+##### Left  
 
-````md
-![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?classes=left)
-````
+````md  
+![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?classes=left)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&classes=left)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&classes=left)  
+{{% /notice %}}  
 
-##### Right
+##### Right  
 
-````md
-![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?classes=right)
-````
+````md  
+![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?classes=right)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?width=20vw&classes=right)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?width=20vw&classes=right)  
+{{% /notice %}}  
 
-##### Inline
+##### Inline  
 
-````md
-![Spidertocat](https://octodex.github.com/images/spidertocat.png?classes=inline)
-![DrOctocat](https://octodex.github.com/images/droctocat.png?classes=inline)
-![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?classes=inline)
-![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?classes=inline)
-````
+````md  
+![Spidertocat](https://octodex.github.com/images/spidertocat.png?classes=inline)  
+![DrOctocat](https://octodex.github.com/images/droctocat.png?classes=inline)  
+![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?classes=inline)  
+![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?classes=inline)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Spidertocat](https://octodex.github.com/images/spidertocat.png?width=10vw&classes=inline)
-![DrOctocat](https://octodex.github.com/images/droctocat.png?width=10vw&classes=inline)
-![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&classes=inline)
-![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?width=10vw&classes=inline)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Spidertocat](https://octodex.github.com/images/spidertocat.png?width=10vw&classes=inline)  
+![DrOctocat](https://octodex.github.com/images/droctocat.png?width=10vw&classes=inline)  
+![Supertocat](https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&classes=inline)  
+![Riddlocat](https://octodex.github.com/images/riddlocat.jpg?width=10vw&classes=inline)  
+{{% /notice %}}  
 
-##### Combination
+##### Combination  
 
-````md
-![X-tocat](https://octodex.github.com/images/xtocat.jpg?classes=shadow,border,left)
-````
+````md  
+![X-tocat](https://octodex.github.com/images/xtocat.jpg?classes=shadow,border,left)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![X-tocat](https://octodex.github.com/images/xtocat.jpg?width=20vw&classes=shadow,border,left)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![X-tocat](https://octodex.github.com/images/xtocat.jpg?width=20vw&classes=shadow,border,left)  
+{{% /notice %}}  
 
-#### Lightbox
+#### Lightbox  
 
-Add the query parameter `lightbox=false` to the image link to disable the lightbox.
+Add the query parameter `lightbox=false` to the image link to disable the lightbox.  
 
-````md
-![Homercat](https://octodex.github.com/images/homercat.png?lightbox=false)
-````
+````md  
+![Homercat](https://octodex.github.com/images/homercat.png?lightbox=false)  
+````  
 
-{{% notice style="code" icon="eye" title="Result" %}}
-![Homercat](https://octodex.github.com/images/homercat.png?width=20vw&lightbox=false)
-{{% /notice %}}
+{{% notice style="code" icon="eye" title="Result" %}}  
+![Homercat](https://octodex.github.com/images/homercat.png?width=20vw&lightbox=false)  
+{{% /notice %}}  
 
-{{% notice note %}}
-If you want to wrap an image in a link and `lightbox=true` is your default setting, you have to explicitly disable the lightbox to avoid it to hijacking your link like:
+{{% notice note %}}  
+If you want to wrap an image in a link and `lightbox=true` is your default setting, you have to explicitly disable the lightbox to avoid it to hijacking your link like:  
 
-````md
-[![Homercat](https://octodex.github.com/images/homercat.png?lightbox=false)](https://octodex.github.com/#homercat)
-````
+````md  
+[![Homercat](https://octodex.github.com/images/homercat.png?lightbox=false)](https://octodex.github.com/#homercat)  
+````  
 
-[![Homercat](https://octodex.github.com/images/homercat.png?width=20vw&lightbox=false)](https://octodex.github.com/#homercat)
+[![Homercat](https://octodex.github.com/images/homercat.png?width=20vw&lightbox=false)](https://octodex.github.com/#homercat)  
 
-{{% /notice %}}
+{{% /notice %}}  

@@ -1,6 +1,6 @@
-+++
-categories = ['howto', 'reference']
-description = 'Clickable buttons'
-title = 'Button'
-+++
-{{< piratify >}}
++++  
+categories = ['howto', 'reference']  
+description = 'Clickable buttons'  
+title = 'Button'  
++++  
+{{< piratify >}}  
