@@ -21,3 +21,6 @@ title: "87档案室"
 
 
 {{% children type="tree" description="true" %}}  
+
+
+<p style="font-size:17px;">附：<a href="http://food.87note.com/">今天吃什么·白起版</a></p>
